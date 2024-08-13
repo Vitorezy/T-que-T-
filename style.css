@@ -1,24 +1,54 @@
 @charset "UTF-8";
+@font-face {
+    font-family: 'CryshGraffiti';
+    src: url(fontes/CryshGraffiti-Regular.otf);
+}
+@font-face {
+    font-family: 'fanky';
+    src: url(fontes/FankyBubbleGraffiti-Line.otf);
+}
 body {
     margin: 0px; 
-    background-color: blue;
+    background-image: url(Imagens/wallpaper2.jpg);
     text-align: center;
-    display: grid;
+    
 }
 header { 
-        display: block;
         color: white;
         background-color: rgb(89, 42, 165);
         width: 100%;
-        height: 100px;
+        height: 11%;
         position: fixed;
         z-index: 1;
 }
+header > img { 
+    position: absolute;
+    height: 90px;
+    width: 100px;
+    left: 50%;
+    transform: translate(-50%);
+}
+#links_acesso { 
+    position: absolute;
+    top: 15px;
+    right: 100px;
+    width: 300px;
+    height: 70px;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+}
+#links_acesso > input { 
+    background-color: rgb(98, 0, 179);
+    margin-top: 13px;
+    border: 2px solid gray;
+    width: 200px;
+    height: 30px;
+}
 a { 
-    color: white;
+    color: rgb(190, 119, 119);
 }
 nav {
-    display: block;
     color: white;
     background-color: brown;
     width: 100%;
@@ -28,17 +58,28 @@ nav {
 }
 main {
     position: absolute;
-    top: 100px;
+    top: 17.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: block;
-    background-color: yellow;
-    width: 100%;
+    width: 70%;
     height: fit-content;
     z-index: 0;
+    color: white;
+}
+main > h1 {
+    margin: 0px;
+    font-size: 90px; 
+    letter-spacing: 10px;
+    font-family:'fanky', arial ;
+    background-color: black;
+    border-radius: 25px;
 }
 footer { 
-    background-color: pink;
+    background-color: rgb(0, 0, 0);
     position: fixed;
     bottom: 0px;
     width: 100%;
     height: 30px;
+    color: white;
 }
