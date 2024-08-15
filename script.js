@@ -3,17 +3,14 @@
     var Header = document.querySelector("header")
     var main = document.querySelector('main')
     var imagem_exibição_nav = document.getElementById('imagem_exibição_nav')
+    var nav_aberta = document.getElementById('nav_aberta')
     Navbar.addEventListener('click', () => { 
-        Header.style.height = "30%"
-        Navbar.style.height = "70%"
-        main.style.top = "36.5%"
+        nav_aberta.style.visibility = "visible"
         imagem_exibição_nav.style.visibility = "visible"
     })   
-    Navbar.addEventListener('mouseleave', () => { 
-        Header.style.height = "11%"
-        Navbar.style.height = "20%"
-        main.style.top = "18%"
-        imagem_exibição_nav.style.visibility = "hidden"
+    nav_aberta.addEventListener('mouseleave', () => { 
+        nav_aberta.style.visibility = "hidden"
+        imagem_exibição_nav.style.visibility = "hidden" 
     })
     
     
