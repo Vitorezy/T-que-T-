@@ -1,0 +1,11 @@
+div.peca_home {   
+    top: 5%;
+    width:230px;
+    height: 40%;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+}
+div#pecas_home_container {
+    position: absolute;
+    top: 70%;
+    left: 52%; 
+}
