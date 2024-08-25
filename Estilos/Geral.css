@@ -1,16 +1,17 @@
 @charset "UTF-8";
 @font-face {
     font-family: 'CryshGraffiti';
-    src: url(fontes/CryshGraffiti-Regular.otf);
+    src: url(../fontes/CryshGraffiti-Regular.otf);
 }
 @font-face {
     font-family: 'fanky';
-    src: url(fontes/FankyBubbleGraffiti-Line.otf);
+    src: url(../fontes/FankyBubbleGraffiti-Line.otf);
 }
 body {
     margin: 0%; 
     background-color: rgb(5, 0, 77);
     overflow-x: hidden;
+    font-family: arial;
 }
 ::-webkit-scrollbar {
     width: 10px;
@@ -25,39 +26,28 @@ body {
     background: #686868;
   }
 header { 
-        color: white;
-        background-image: linear-gradient(to right, rgb(100, 0, 182), rgba(110, 0, 196, 0.98), rgb(100, 0, 182) );
-        width: 100%;
-        height: 11%;
-        position: fixed;
-        z-index: 1;
-        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+     color: white;
+     background-image: linear-gradient(to right, rgb(100, 0, 182), rgba(110, 0, 196, 0.98), rgb(100, 0, 182) );
+     width: 100%;
+     height: 11%;
+     position: fixed;
+     z-index: 1;
+     box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
         
 }
 header > img { 
     position: absolute;
-    height: 8.5vh;
-    width: 5vw;
+    height: 81px;
+    width: 95px;
     left: 50%;
     z-index: 1;
     transform: translate(-50%);
     filter: brightness(130%);
 }
-@media (max-width: 1440px) { 
-    header > img { 
-        position: absolute;
-        height: 70px;
-        width: 80px;
-        left: 50%;
-        z-index: 1;
-        transform: translate(-50%);
-        filter: brightness(130%);
-    }
-}
 #links_acesso { 
     position: absolute;
     top: 15px;
-    right: 2%;
+    right: 5%;
     width: 150px;
     height: 53%;
     gap: 10%;
@@ -108,12 +98,13 @@ nav {
     top: 11%;
     height: 35%;
     box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+    z-index: 1;
 }
 nav:hover { 
     filter: brightness(130%);
 }
 
-div.imagem_exibição_nav {
+.imagem_exibição_nav {
     position: relative; 
     top: 50%;
     left: 13%;
@@ -129,7 +120,7 @@ div.imagem_exibição_nav {
     font-family: arial;
     filter: opacity(150%) grayscale(30%);
 }
-div.imagem_exibição_nav:hover {
+.imagem_exibição_nav:hover {
     scale: 100.5%;
     transition-duration: 0.5s;
     box-shadow: 0px 0px 10px rgb(255, 255, 255);
@@ -177,27 +168,6 @@ main {
     border-radius: 25px;
     box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.5);
 }
-div#pecas_home_container {
-    position: absolute;
-    top: 70%;
-    left: 51%;
-    transform: translate(-50%, -50%);
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 1%;
-}
-div.peca_home {   
-    border-radius: 15px; 
-    position: relative;
-    border: 2px rgb(255, 255, 255) solid;
-    background-color: rgb(153, 143, 143);
-    width:245px;
-    height: 40%;
-    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
-}
 main > h1 {
     margin: 10px 0px 0px 0px;
     letter-spacing: 1.05rem;
@@ -214,19 +184,13 @@ main > h2 {
     font-variant: small-caps;
     text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.80);
 }
-div#foto_home { 
-    position: relative;
-    z-index: 1;
-    background-color: blue;
-    max-width: 800px;
-    height: 40%;
-    transform: translate(-50%, -50%);
-    top: 25%;
-    left: 50%;
-    box-shadow: 0px 0px 8px rgb(255, 255, 255);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
+#botão-voltar { 
+    border-radius: 50%;
+    background-color: white;
+    position: fixed;
+    right: 10px;
+    bottom: 35px;
+    width: 80px;
 }
 footer { 
     background-image: linear-gradient(to right, rgb(0, 0, 30), rgba(0, 0, 50, 0.925), rgb(0, 0, 30));
@@ -238,4 +202,56 @@ footer {
     color: white;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.486);
     text-align: center;
+}
+@media screen and (min-width: 320px) and (max-width: 667px) { 
+    .escrita_exibição_imagem_nav {
+        width: 100%;
+        top: 100px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    div.imagem_exibição_nav {
+        left: 7%;
+        width: 60px;
+        height: 80%;
+    }
+    #nav_aberta { 
+        gap: 1%;
+        height: 40%;
+    }
+    #links_acesso { 
+        top: 15px;
+        right:90px;
+        width: 110px;
+        height: 53%;
+        gap: 4%;
+    }
+    header > img { 
+        height: 60px;
+        width: 68px;
+        left: 10%;
+        transform: translate(-50%);
+    }
+}
+@media screen and (min-width: 667px) and (max-width: 1024px) { 
+    header > img { 
+        height: 60px;
+        width: 75px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    #links_acesso { 
+        right:10%;
+    }
+}
+@media screen and (min-width: 1024px) and (max-width: 1440px) { 
+    header > img { 
+        height: 68px;
+        width: 80px;
+        left: 50%;
+        transform: translate(-50%);
+    }
+    #links_acesso { 
+        right:110px;
+    }
 }
