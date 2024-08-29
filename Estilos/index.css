@@ -1,17 +1,17 @@
 @charset "UTF-8";
 div#pecas_home_container {
     position: absolute;
-    top: 70%;
-    left: 51%;
-    transform: translate(-50%, -50%);
+    top: 20%; 
     height: 100%;
     width: 100%;
     display: flex;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
     gap: 1%;
 }
 div.peca_home {   
+    flex-shrink: 0;
     border-radius: 15px; 
     position: relative;
     border: 2px rgb(255, 255, 255) solid;
@@ -19,41 +19,28 @@ div.peca_home {
     width:245px;
     height: 40%;
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+    transition-duration: .3s;
+    transition-timing-function: ease;
 }
-
-@media screen and (min-width: 1024px) and (max-width: 1440px) { 
-    div#pecas_home_container {
-        left: 3%;
-    }
-    div#pecas_home_container {
-        position: absolute;
-        top: 72%;
-        left: 53%; 
-    }
+div.peca_home:hover { 
+    scale: 110%;
+    
 }
 @media screen and (min-width: 667px) and (max-width: 1024px) { 
     div.peca_home {   
-        top: 5%;
-        width:230px;
-        height: 40%;
+        
         box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
-    }
-    div#pecas_home_container {
-        position: absolute;
-        top: 70%;
-        left: 52%; 
     }
 }
 @media screen and (min-width: 320px) and (max-width: 667px) { 
     div.peca_home {   
-        top: 8%;
         width:150px;
         height: 30%;
         box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
     }
     div#pecas_home_container {
         position: absolute;
-        top: 85%;
-        left: 56.5%; 
+        top: 26%;
+        
     }
 }
