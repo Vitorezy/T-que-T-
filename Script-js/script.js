@@ -6,16 +6,17 @@
     var conteudo = document.getElementById("conteudo")
     var nav_aberta = document.getElementById('nav_aberta')
     Navbar.addEventListener('click', () => { 
+        if(nav_aberta.style.height == "0%") { 
             nav_aberta.style.height = "35%"
+        }
+        else { 
+            nav_aberta.style.height = "0%"
+        }
     });  
-    Navbar.addEventListener('dblclick', () => { 
-        nav_aberta.style.height = "0%"
-});  
     main.addEventListener('click', ()=> { 
         nav_aberta.style.height = "0%"
     })
-    nav_aberta.addEventListener('mouseleave', () => { 
-        
+    Header.addEventListener('mouseleave', () => {  
         nav_aberta.style.height = "0%"
     });
     

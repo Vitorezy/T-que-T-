@@ -39,7 +39,7 @@ header {
      box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
         
 }
-header > img { 
+header > a > img { 
     position: absolute;
     height: 81px;
     width: 95px;
@@ -47,17 +47,24 @@ header > img {
     z-index: 1;
     transform: translate(-50%);
     filter: brightness(130%);
+    border-radius: 20%;
+}
+header > a > img:hover { 
+    scale: 102%;
+    filter: brightness(140%);
+    transition-duration: .3s;
 }
 #links_acesso { 
     position: absolute;
-    top: 50%;
-    right: 0%;
+    top: 40%;
+    right: .4%;
     transform: translate(-0%, -50%);
     gap: 1%;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    
 }
 #link_acesso > a { 
     position: relative;
@@ -67,9 +74,19 @@ header > img {
 }
 
 #links_acesso a:hover { 
-    scale: 105%;
-    transition-duration: .6s;
+    scale: 102%;
+    transition-duration: .3s;
+    filter: brightness(130%);
     transition-timing-function: ease;
+    border-radius: 20px;
+    border: 1px solid white;
+    box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.7);
+    transition-property: scale, filter;
+    background-image: linear-gradient(to right, rgb(115, 0, 206), rgb(121, 0, 196), rgb(115, 0, 206) );  
+}
+#links_acesso img { 
+    width: 70px;
+    height: 65px;
 }
 a { 
     color: rgb(190, 119, 119);
@@ -96,7 +113,7 @@ nav {
     flex-wrap: nowrap;
     overflow-x: auto;
     overflow-y: hidden;
-    background-image: linear-gradient(to right, rgb(0, 0, 220), rgb(0, 0, 255), rgb(0, 0, 220));
+    background-image: linear-gradient(to right, rgb(0, 0, 200), rgb(0, 0, 230), rgb(0, 0, 200));
     visibility: visible;
     position: fixed;
     width: 100%;
@@ -163,11 +180,32 @@ nav:hover {
 }
 .escrita_exibição_imagem_nav  h1 {
     background-color: rgba(0, 0, 0, 0.2);
-    font-size: 2.2rem;
+    font-size: clamp(1.5em, 1em + 1vw, 2em);
 }
 .escrita_exibição_imagem_nav  p {
     background-color: rgba(0, 0, 0, 0.5);
-    font-size: 1.3rem;
+    font-size: clamp(1em, 0.5em + 0.5vw, 1.2em);
+}
+.escrita_exibição_imagem_pecas {
+    text-shadow: 0px 0px 10px black; 
+    text-align: center;
+    position: relative;
+    width: 100%;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.escrita_exibição_imagem_pecas h1, p {
+    margin: 2px 0px 0px 0px;
+}
+.escrita_exibição_imagem_pecas  h1 {
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: clamp(1.5em, 1em + 1vw, 2em);
+}
+.escrita_exibição_imagem_pecas  p {
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: clamp(1em, 0.5em + 0.5vw, 1.2em);
 }
 main {
     top: 10%;
@@ -191,7 +229,7 @@ main > h1 {
 main > h2 {
     margin: 10px 0px 0px 0px;
     font-size: clamp(2.5rem, 2vw, 2rem); 
-    letter-spacing: 1.1rem;
+    letter-spacing: 1.02rem;
     font-family: arial ;
     font-variant: small-caps;
     font-weight: 700;
@@ -199,14 +237,22 @@ main > h2 {
 }
 #img-botão-voltar { 
     border-radius: 50%;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.76);
     position: fixed;
     right: 10px;
     bottom: 35px;
-    width: 80px;
-    
+    width: 70px;
+    box-shadow: 0px 0px 2px black;
 }
-
+#img-botão-voltar:hover { 
+    scale: 103%;
+    background-color: rgba(255, 255, 255);
+    border: 2px solid rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8);
+    transition-duration: .7s;
+    transition-timing-function: ease;
+    transition-property: scale, box-shadow;
+}
 footer { 
     background-image: linear-gradient(to right, rgb(0, 0, 30), rgba(0, 0, 50, 0.925), rgb(0, 0, 30));
     font-size: 1.5rem;
@@ -220,21 +266,37 @@ footer {
 }
 /*Celular*/
 @media screen and (min-width: 320px) and (max-width: 667px) { 
+    .escrita_exibição_imagem_nav  h1 {
+        background-color: rgba(0, 0, 0, 0.2);
+        font-size: 1.2rem;
+    }
+    .escrita_exibição_imagem_nav  p {
+        background-color: rgba(0, 0, 0, 0.5);
+        font-size: 1rem;
+    }
     .escrita_exibição_imagem_nav {
         width: 100%;
-        top: 100px;
+        top: 130px;
         left: 50%;
         transform: translate(-50%);
     }
-    header > img { 
-        height: 60px;
+    #links_acesso img { 
+        width: 55px;
+        height: 50px;
+    }
+    header > a > img { 
+        height: 55px;
         width: 68px;
         left: 10%;
         transform: translate(-50%);
     }
 }
 @media screen and (min-width: 667px) and (max-width: 1024px) { 
-    header > img { 
+    #links_acesso img { 
+        width: 65px;
+        height: 65px;
+    }
+    header > a > img { 
         height: 60px;
         width: 75px;
         left: 50%;
@@ -242,7 +304,11 @@ footer {
     }
 }
 @media screen and (min-width: 1024px) and (max-width: 1440px) { 
-    header > img { 
+    #links_acesso img { 
+        width: 65px;
+        height: 60px;
+    }
+    header > a > img { 
         height: 68px;
         width: 80px;
         left: 50%;

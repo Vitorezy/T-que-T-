@@ -20,7 +20,7 @@
     position: relative;
     left: 50%;
     transform: translate(-50%);
-    width: 90%;
+    width: 95%;
     height: 660px;
     overflow-y: auto;
     
@@ -55,6 +55,6 @@
     transform: translate(-50%, -50%);
     border: 2px solid white;
     background-color: black;
-    height: 55%;
-    width: 50%;
+    height: 58%;
+    width: 60%;
 }
