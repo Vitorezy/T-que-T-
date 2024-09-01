@@ -265,7 +265,7 @@ footer {
     text-align: center;
 }
 /*Celular*/
-@media screen and (min-width: 320px) and (max-width: 667px) { 
+@media screen and (min-width: 320px) and (max-width: 768px) { 
     .escrita_exibição_imagem_nav  h1 {
         background-color: rgba(0, 0, 0, 0.2);
         font-size: 1.2rem;
@@ -291,7 +291,7 @@ footer {
         transform: translate(-50%);
     }
 }
-@media screen and (min-width: 667px) and (max-width: 1024px) { 
+@media screen and (min-width: 768px) and (max-width: 1024px) { 
     #links_acesso img { 
         width: 65px;
         height: 65px;
