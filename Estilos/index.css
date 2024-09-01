@@ -31,7 +31,7 @@ div.peca_home:hover {
         top: 26%;
     }
 }
-@media screen and (min-width: 667px) and (max-width: 1024px) { 
+@media screen and (min-width: 768px) and (max-width: 1024px) { 
     div.peca_home {   
         box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
     }
@@ -39,7 +39,7 @@ div.peca_home:hover {
         top: 25%;
     }
 }
-@media screen and (min-width: 320px) and (max-width: 667px) { 
+@media screen and (min-width: 320px) and (max-width: 768px) { 
     div.peca_home {   
         width:150px;
         height: 30%;
@@ -47,7 +47,7 @@ div.peca_home:hover {
     }
     div#pecas_home_container {
         position: absolute;
-        top: 26%;
+        top: 20%;
     }
     .escrita_exibição_imagem_pecas  h1 {
         background-color: rgba(0, 0, 0, 0.2);
