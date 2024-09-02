@@ -56,7 +56,7 @@ header > a > img:hover {
 }
 #links_acesso { 
     position: absolute;
-    top: 40%;
+    top: 50%;
     right: .4%;
     transform: translate(-0%, -50%);
     gap: 1%;
@@ -72,7 +72,6 @@ header > a > img:hover {
     flex-grow: 0;
     text-align: justify;
 }
-
 #links_acesso a:hover { 
     scale: 102%;
     transition-duration: .3s;
