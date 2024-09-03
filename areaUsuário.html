@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="Estilos/Geral.css">
     <link rel="stylesheet" href="Estilos/areaUsuario.css" media="all">
     <link rel="shortcut icon" href="Imagens/favicon.ico">
-    <script defer src="Script-js/script.js"></script>
+    <script defer src="Script-js/areaUsuario.js"></script>
 </head>
 <body  id="inicio">
     <header> 
@@ -25,10 +25,23 @@
         </div>
     </header>
     <main> 
-        <section id="opções_usuário">
-            <div id="opções_usuário_abrir_fechar">
-                <img src="Imagens/seta_esquerda.png" alt="">
+        <section id="opções_usuário" style="width: 35%;">
+            <div id="opções_usuário_abrir_fechar" style="width: 10%;">
+                <img id="seta_menu_opcoes_usuario" src="Imagens/seta_esquerda.png" alt="">
             </div>
+            <section id="conteudo_opcoes_usuario"> 
+                <div id="container_Foto_usuario"> 
+                    <div id="foto_usuario"></div>
+                    <label for="arquivo_foto_usuario">
+                        <div id="caixa_arquivo_input">
+                            Selecione um arquivo de imagem.
+                        </div>
+                    </label>
+                    <input type="file" name="arquivo_foto_usuario" id="arquivo_foto_usuario" style="visibility: hidden;"/>
+                </div>
+                
+    
+            </section>
         </section>
     </main>
     <a id="botão-voltar" href="#inicio" title="Voltar para o início">
