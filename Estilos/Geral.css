@@ -74,7 +74,19 @@ header > a > img:hover {
     flex-grow: 0;
     text-align: justify;
 }
-#links_acesso a:hover { 
+#links_acesso a:hover  { 
+    scale: 102%;
+    transition-duration: .3s;
+    filter: brightness(130%);
+    transition-timing-function: ease;
+    border-radius: 20px;
+    border: 1px solid white;
+    box-shadow: 0px 0px 2px rgba(255, 255, 255, 0.7);
+    transition-property: scale, filter;
+    background-image: linear-gradient(to right, rgb(115, 0, 206), rgb(121, 0, 196), rgb(115, 0, 206) );  
+}
+#links_acesso div:hover  { 
+    cursor: pointer;
     scale: 102%;
     transition-duration: .3s;
     filter: brightness(130%);
@@ -264,6 +276,43 @@ footer {
     color: white;
     box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.486);
     text-align: center;
+}
+#caixa_login { 
+    position: fixed;
+    z-index: 1;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    height: 90%;
+    background-color: rgb(74, 1, 170);
+    border: 2px solid white;
+    border-radius: 20px;
+}
+#caixa_login > form { 
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    flex-direction: column;
+}
+#caixa_login > label { 
+    position: absolute;
+    right:0%;
+}
+#caixa_login > label > img { 
+    cursor: pointer;
+    width: 64px;
+    height: 64px;
+}
+#caixa_login > label > img:hover { 
+    filter: brightness(110%);
+    scale: 102%;
+    transition-duration: .3s;
 }
 /*Celular*/
 @media screen and (min-width: 320px) and (max-width: 768px) { 

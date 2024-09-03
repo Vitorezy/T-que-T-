@@ -14,14 +14,14 @@
     <link rel="shortcut icon" href="Imagens/favicon.ico">
     <script defer src="Script-js/script.js"></script>
 </head>
-<body  id="inicio">
+<body id="inicio">
     <header> 
         <a href="Quem somos.html"> <img src="Imagens/logo sem fundo.png" alt="Logo Tá que Tá"> </a>
         <div id="links_acesso">
             <a href="index.html"> <img src="Imagens/homeIcon.png" alt="Botão de ir pro Usúario" title="Página inicial"></a>
             <a href="Artistas.html"> <img src="Imagens/artistaIcon.png" alt="Botão de ir pro Usúario" tabindex="1" title="Nossos artistas"></a>
             <a href="Quem somos.html"> <img src="Imagens/Empresa.png" alt="Botão de ir pro Usúario" tabindex="1" title="Quem somos"></a>
-            <a href="areaUsuário.html"> <img src="Imagens/userIcon.png" alt="Botão de ir pro Usúario" tabindex="1" title="Usuário"></a>
+            <div href="areaUsuário.html" id="botão_abrir_login"> <img src="Imagens/userIcon.png" alt="Botão de ir pro Usúario" tabindex="1" title="Usuário"></div>
         </div>
         <nav tabindex="1" title="Clique para abrir/fechar"> 
             Filtrar coleções!
@@ -70,12 +70,18 @@
                         <p>Coleção criada por Beatriz </p>
                     </div>      
                 </div> 
-                
-                
-           
         </div>
     </header>
     <main> 
+        <div id="caixa_login" style="display: none;">
+            <label for="fechar_login"> <img src="Imagens/fecharIcon.png" alt=""></label>
+            <button id="fechar_login" style="display: none;"></button>
+            <form method="get" action="areaUsuário.html">
+                <input type="text" name="nome_login" id="nome_login" autocomplete="name">
+                <input type="password" name="senha_login" id="senha_login" autocomplete="current-password">
+                <input type="submit" value="Enviar">
+            </form>
+        </div>
         <h1>Tá Que Tá</h1>
         <h2>Peças</h2>
         <div id="pecas_home_container"> 
