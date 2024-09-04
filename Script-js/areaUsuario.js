@@ -1,6 +1,7 @@
 
 var toggle_opcoes_usuario = document.getElementById('opções_usuário_abrir_fechar')
 var arquivo_foto_usuario = document.getElementById('arquivo_foto_usuario')
+
 //créditos linha 6 á linha 17 para: https://www.youtube.com/watch?v=Gc5dhlbmdLI
 arquivo_foto_usuario.addEventListener('change', event => { 
     if(arquivo_foto_usuario.files.length > 0) { 
@@ -31,3 +32,13 @@ toggle_opcoes_usuario.addEventListener('click', () => {
         seta_menu_opcoes_usuario.src = 'Imagens/seta_esquerda.png'
     }
 })
+//linha 36 a 44 = chatgpt
+window.onload = function() {
+    // Função para obter parâmetros da URL
+    function getQueryParam(param) {
+        const urlParams = new URLSearchParams(window.location.search);
+        return urlParams.get(param);
+    }
+    const texto = getQueryParam('nome_login');
+    document.getElementById('nome_usuario').innerText = texto;
+}

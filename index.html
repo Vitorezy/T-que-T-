@@ -74,13 +74,21 @@
     </header>
     <main> 
         <div id="caixa_login" style="display: none;">
+            <h1 style="display: inline;">Login</h1>
             <label for="fechar_login"> <img src="Imagens/fecharIcon.png" alt=""></label>
             <button id="fechar_login" style="display: none;"></button>
-            <form method="get" action="areaUsuário.html">
-                <input type="text" name="nome_login" id="nome_login" autocomplete="name">
-                <input type="password" name="senha_login" id="senha_login" autocomplete="current-password">
-                <input type="submit" value="Enviar">
-            </form>
+                <form id="formulario" method="get" action="areaUsuário.html">
+                    <label for="nome_login"><img src="Imagens/inputNameIcon.png" alt="Nome"></label>
+                    <input type="text" name="nome_login" id="nome_login" autocomplete="name" required placeholder="Digite seu nome">
+                    <label for="senha_login"> <img src="Imagens/senhaIcon.png" alt="Senha"></label>
+                    <input type="password" name="senha_login" id="senha_login" autocomplete="current-password" required minlength="8" maxlength="15" placeholder="Digite sua senha">
+                    <div id="container_botoes">
+                        <input type="submit" id="botão_entrar_conta" value="Entrar" style="background-color: rgb(19, 55, 219);">
+                        <input type="submit" id="botão_criar_conta" value="Criar conta" style="background-color: rgb(161, 0, 175);">
+                        <input type="reset" value="Resetar" style="background-color: rgb(126, 0, 0);">
+                    </div>
+
+                </form>
         </div>
         <h1>Tá Que Tá</h1>
         <h2>Peças</h2>

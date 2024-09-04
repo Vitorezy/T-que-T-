@@ -21,7 +21,7 @@
             <a href="index.html"> <img src="Imagens/homeIcon.png" alt="Botão de ir pro Usúario" title="Página inicial"></a>
             <a href="Artistas.html"> <img src="Imagens/artistaIcon.png" alt="Botão de ir pro Usúario" tabindex="1" title="Nossos artistas"></a>
             <a href="Quem somos.html"> <img src="Imagens/Empresa.png" alt="Botão de ir pro Usúario" tabindex="1" title="Quem somos"></a>
-            <a href="areaUsuário.html"> <img src="Imagens/userIcon.png" alt="Botão de ir pro Usúario" tabindex="1" title="Usuário"></a>
+            <div href="areaUsuário.html" id="botão_abrir_login"> <img src="Imagens/userIcon.png" alt="Botão de ir pro Usúario" tabindex="1" title="Usuário"></div>
         </div>
         <nav tabindex="1" title="Clique para abrir/fechar"> 
             Filtrar por artista!
@@ -53,7 +53,24 @@
                     </a>
         </div>
     </header>
-    <main > 
+    <main> 
+        <div id="caixa_login" style="display: none;">
+            <h1 style="display: inline;">Login</h1>
+            <label for="fechar_login"> <img src="Imagens/fecharIcon.png" alt=""></label>
+            <button id="fechar_login" style="display: none;"></button>
+                <form id="formulario" method="get" action="areaUsuário.html">
+                    <label for="nome_login"><img src="Imagens/inputNameIcon.png" alt="Nome"></label>
+                    <input type="text" name="nome_login" id="nome_login" autocomplete="name" required placeholder="Digite seu nome">
+                    <label for="senha_login"> <img src="Imagens/senhaIcon.png" alt="Senha"></label>
+                    <input type="password" name="senha_login" id="senha_login" autocomplete="current-password" required minlength="8" maxlength="15" placeholder="Digite sua senha">
+                    <div id="container_botoes">
+                        <input type="submit" id="botão_entrar_conta" value="Entrar" style="background-color: rgb(19, 55, 219);">
+                        <input type="submit" id="botão_criar_conta" value="Criar conta" style="background-color: rgb(161, 0, 175);">
+                        <input type="reset" value="Resetar" style="background-color: rgb(126, 0, 0);">
+                    </div>
+
+                </form>
+        </div>
         <h1>Tá Que Tá</h1>
         <h2>Nossos Artistas</h2>
         <div id="flex-container"> 
