@@ -1,66 +1,92 @@
 @charset "UTF-8";
 div#pecas_home_container {
-    position: absolute;
-    top: 20%; 
-    height: 100%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1%;
+  position: absolute;
+  top: 20%;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1%;
 }
-div.peca_home {   
-    flex-shrink: 0;
-    border-radius: 15px; 
-    position: relative;
-    border: 2px rgb(255, 255, 255) solid;
-    background-color: rgb(153, 143, 143);
-    width:245px;
-    height: 40%;
+div.peca_home {
+  flex-shrink: 0;
+  border-radius: 15px;
+  position: relative;
+  border: 2px rgb(255, 255, 255) solid;
+  background-color: rgb(153, 143, 143);
+  width: 245px;
+  height: 40%;
+  box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+  transition-duration: 0.3s;
+  transition-timing-function: ease;
+  display: none;
+}
+div.peca_home:hover {
+  scale: 110%;
+}
+input[type="checkbox"] { 
+  
+}
+#btnNavTodas:checked { 
+      
+}
+#btnNavInverno:checked { 
+  
+}
+#btnNavVerao:checked { 
+  
+}
+#btnNavOutono:checked { 
+  
+}
+#btnNavPrimavera:checked { 
+  
+}
+#btnNavFestas:checked { 
+  
+}
+#btnNavAfro:checked { 
+  
+}
+
+
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  div#pecas_home_container {
+    top: 26%;
+  }
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  div.peca_home {
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
-    transition-duration: .3s;
-    transition-timing-function: ease;
+  }
+  div#pecas_home_container {
+    top: 25%;
+  }
 }
-div.peca_home:hover { 
-    scale: 110%;
-    
-}
-@media screen and (min-width: 1024px) and (max-width: 1440px) { 
-    div#pecas_home_container {
-        top: 26%;
-    }
-}
-@media screen and (min-width: 768px) and (max-width: 1024px) { 
-    div.peca_home {   
-        box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
-    }
-    div#pecas_home_container {
-        top: 25%;
-    }
-}
-@media screen and (min-width: 320px) and (max-width: 768px) { 
-    div.peca_home {   
-        width:150px;
-        height: 30%;
-        box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
-    }
-    div#pecas_home_container {
-        position: absolute;
-        top: 26%;
-    }
-    .escrita_exibição_imagem_pecas  h1 {
-        background-color: rgba(0, 0, 0, 0.2);
-        font-size: 1.2rem;
-    }
-    .escrita_exibição_imagem_pecas  p {
-        background-color: rgba(0, 0, 0, 0.5);
-        font-size: 1rem;
-    }
-    .escrita_exibição_imagem_pecas {
-        width: 100%;
-        top: 110px;
-        left: 50%;
-        transform: translate(-50%);
-    }
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  div.peca_home {
+    width: 150px;
+    height: 30%;
+    box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+  }
+  div#pecas_home_container {
+    position: absolute;
+    top: 26%;
+  }
+  .escrita_exibição_imagem_pecas h1 {
+    background-color: rgba(0, 0, 0, 0.2);
+    font-size: 1.2rem;
+  }
+  .escrita_exibição_imagem_pecas p {
+    background-color: rgba(0, 0, 0, 0.5);
+    font-size: 1rem;
+  }
+  .escrita_exibição_imagem_pecas {
+    width: 100%;
+    top: 110px;
+    left: 50%;
+    transform: translate(-50%);
+  }
 }

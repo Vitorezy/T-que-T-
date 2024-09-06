@@ -1,53 +1,85 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Permissions-Policy" content="interest-cohort=()">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
     <title>Pagina Inicial</title>
     <!--320 - 480 celular
     481 - 768 tablet
     769 - 1024 telas laptop
     1025 - 1200 pc-->
-    <link rel="stylesheet" href="Estilos/Geral.css">
-    <link rel="stylesheet" href="Estilos/areaUsuario.css" media="all">
-    <link rel="shortcut icon" href="Imagens/favicon.ico">
+    <link rel="stylesheet" href="Estilos/Geral.css" />
+    <link rel="stylesheet" href="Estilos/areaUsuario.css" media="all" />
+    <link rel="shortcut icon" href="Imagens/favicon.ico" />
     <script defer src="Script-js/areaUsuario.js"></script>
-</head>
-<body  id="inicio">
-    <header> 
-        <a href="Quem somos.html"> <img src="Imagens/logo sem fundo.png" alt="Logo Tá que Tá"> </a>
-        <div id="links_acesso">
-            <a href="index.html"> <img src="Imagens/homeIcon.png" alt="Botão de ir pro Usúario" title="Página inicial"></a>
-            <a href="Artistas.html"> <img src="Imagens/artistaIcon.png" alt="Botão de ir pro Usúario" tabindex="1" title="Nossos artistas"></a>
-            <a href="Quem somos.html"> <img src="Imagens/Empresa.png" alt="Botão de ir pro Usúario" tabindex="1" title="Quem somos"></a>
-            <div href="areaUsuário.html" id="botão_abrir_login"> <img src="Imagens/userIcon.png" alt="Botão de ir pro Usúario" tabindex="1" title="Usuário"></div>
+  </head>
+  <body id="inicio">
+    <header>
+      <a href="Quem somos.html">
+        <img src="Imagens/logo sem fundo.png" alt="Logo Tá que Tá" />
+      </a>
+      <div id="links_acesso">
+        <a href="index.html">
+          <img
+            src="Imagens/homeIcon.png"
+            alt="Botão de ir pro Usúario"
+            title="Página inicial"
+        /></a>
+        <a href="Artistas.html">
+          <img
+            src="Imagens/artistaIcon.png"
+            alt="Botão de ir pro Usúario"
+            tabindex="1"
+            title="Nossos artistas"
+        /></a>
+        <a href="Quem somos.html">
+          <img
+            src="Imagens/Empresa.png"
+            alt="Botão de ir pro Usúario"
+            tabindex="1"
+            title="Quem somos"
+        /></a>
+        <div href="areaUsuário.html" id="botão_abrir_login">
+          <img
+            src="Imagens/userIcon.png"
+            alt="Botão de ir pro Usúario"
+            tabindex="1"
+            title="Usuário"
+          />
         </div>
+      </div>
     </header>
-    <main> 
-           
+    <main>
+      <section id="opções_usuário" style="width: 35%">
+        <div id="opções_usuário_abrir_fechar" style="width: 10%">
+          <img
+            id="seta_menu_opcoes_usuario"
+            src="Imagens/seta_esquerda.png"
+            alt=""
+          />
         </div>
-        <section id="opções_usuário" style="width: 35%;">
-            <div id="opções_usuário_abrir_fechar" style="width: 10%;">
-                <img id="seta_menu_opcoes_usuario" src="Imagens/seta_esquerda.png" alt="">
-            </div>
-            <section id="conteudo_opcoes_usuario"> 
-                    <h1 id="nome_usuario"> </h1>
-                    <div id="foto_usuario"></div>
-                    <label for="arquivo_foto_usuario">
-                        <div id="caixa_arquivo_input">
-                            Selecione um arquivo de imagem.
-                        </div>
-                    </label>
-                    <input type="file" name="arquivo_foto_usuario" id="arquivo_foto_usuario" style="visibility: hidden;"/>
-            </section>
+        <section id="conteudo_opcoes_usuario">
+          <h1 id="nome_usuario"></h1>
+          <div id="foto_usuario"></div>
+          <label for="arquivo_foto_usuario">
+            <div id="caixa_arquivo_input">Selecione um arquivo de imagem.</div>
+          </label>
+          <input
+            type="file"
+            name="arquivo_foto_usuario"
+            id="arquivo_foto_usuario"
+            style="visibility: hidden"
+          />
         </section>
+      </section>
     </main>
     <a id="botão-voltar" href="#inicio" title="Voltar para o início">
-        <img id="img-botão-voltar" src="Imagens/setaCima.png" alt="">
+      <img id="img-botão-voltar" src="Imagens/setaCima.png" alt="" />
     </a>
-    <footer> 
-        Criado por: <a href="https://github.com/Vitorezy" target="_blank"> Vitorezy </a>
+    <footer>
+      Criado por:
+      <a href="https://github.com/Vitorezy" target="_blank"> Vitorezy </a>
     </footer>
-</body>
+  </body>
 </html>
