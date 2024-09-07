@@ -1,4 +1,27 @@
 @charset "UTF-8";
+.escrita_exibição_imagem_pecas {
+  text-shadow: 0px 0px 10px black;
+  text-align: center;
+  position: relative;
+  width: 100%;
+  top: 85%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.escrita_exibição_imagem_pecas h1,
+p {
+  margin: 2px 0px 0px 0px;
+}
+.escrita_exibição_imagem_pecas h1 {
+  background-color: rgba(0, 0, 0, 0.2);
+  font-size: clamp(1.5em, 1em + 1vw, 2em);
+}
+.escrita_exibição_imagem_pecas p {
+  background-color: rgba(0, 0, 0, 0.5);
+  font-size: clamp(1em, 0.5em + 0.5vw, 1.2em);
+}
+
 div#pecas_home_container {
   position: absolute;
   top: 20%;
@@ -21,36 +44,20 @@ div.peca_home {
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
   transition-duration: 0.3s;
   transition-timing-function: ease;
-  display: none;
+  display: block;
 }
 div.peca_home:hover {
   scale: 110%;
 }
-input[type="checkbox"] { 
-  
+#nav_aberta input[type="checkbox"] {
+  display: none;
 }
-#btnNavTodas:checked { 
-      
+#nav_aberta input[type="checkbox"]:checked + label {
+  filter: grayscale(20%);
+  scale: 92%;
+  box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.5);
+  border: 4px solid black;
 }
-#btnNavInverno:checked { 
-  
-}
-#btnNavVerao:checked { 
-  
-}
-#btnNavOutono:checked { 
-  
-}
-#btnNavPrimavera:checked { 
-  
-}
-#btnNavFestas:checked { 
-  
-}
-#btnNavAfro:checked { 
-  
-}
-
 
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
   div#pecas_home_container {

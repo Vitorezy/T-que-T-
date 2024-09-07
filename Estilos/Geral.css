@@ -185,7 +185,7 @@ nav:hover {
 .imagem_exibição_nav:hover {
   scale: 105%;
 
-  box-shadow: 0px 0px 10px rgb(255, 255, 255);
+  box-shadow: 0px 0px 5px rgb(255, 255, 255);
   filter: opacity(100%) grayscale(0%);
   .escrita_exibição_imagem_nav h1 {
     filter: brightness(150%);
@@ -220,28 +220,7 @@ p {
   background-color: rgba(0, 0, 0, 0.5);
   font-size: clamp(1em, 0.5em + 0.5vw, 1.2em);
 }
-.escrita_exibição_imagem_pecas {
-  text-shadow: 0px 0px 10px black;
-  text-align: center;
-  position: relative;
-  width: 100%;
-  top: 85%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
 
-.escrita_exibição_imagem_pecas h1,
-p {
-  margin: 2px 0px 0px 0px;
-}
-.escrita_exibição_imagem_pecas h1 {
-  background-color: rgba(0, 0, 0, 0.2);
-  font-size: clamp(1.5em, 1em + 1vw, 2em);
-}
-.escrita_exibição_imagem_pecas p {
-  background-color: rgba(0, 0, 0, 0.5);
-  font-size: clamp(1em, 0.5em + 0.5vw, 1.2em);
-}
 main {
   top: 10%;
   text-align: center;
