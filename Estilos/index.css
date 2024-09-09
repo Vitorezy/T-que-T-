@@ -47,7 +47,7 @@ div.peca_home {
   display: block;
 }
 div.peca_home:hover {
-  scale: 110%;
+  scale: 105%;
 }
 #nav_aberta input[type="checkbox"] {
   display: none;

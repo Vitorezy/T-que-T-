@@ -1,0 +1,64 @@
+#flex-container {
+  position: relative;
+  top: 1%;
+  display: flex;
+  flex-direction: column;
+  gap: 5%;
+  height: 2800px;
+}
+.autor-identificação > img {
+  border-radius: 50%;
+}
+#flex-container > div {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  filter: grayscale(50%) brightness(90%);
+  border-radius: 10px;
+  border: 2px solid rgb(0, 0, 0);
+  box-shadow: 0px 6px 13px rgba(0, 0, 0, 0.5);
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  width: 95%;
+  height: 660px;
+  overflow-y: auto;
+
+  text-overflow: ellipsis;
+}
+#flex-container > div:hover {
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
+  filter: grayscale(40%) brightness(80%);
+}
+.autor-identificação {
+  box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
+  background-image: linear-gradient(
+    to right,
+    rgba(100, 0, 218, 0.98),
+    rgba(103, 0, 248, 0.95),
+    rgba(100, 0, 218, 0.98)
+  );
+}
+
+#flex-container > div > .texto-artista > p {
+  font-size: clamp(1rem, 2.1rem, 5rem);
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-shadow: 1px 1px 2px black;
+  background-color: rgba(0, 0, 0, 0.938);
+}
+.texto-artista {
+  position: absolute;
+  height: 20%;
+  bottom: 0.4px;
+}
+.imagem_do_artista {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border: 2px solid white;
+  background-color: black;
+  height: 58%;
+  width: 60%;
+}
