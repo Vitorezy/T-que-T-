@@ -31,8 +31,10 @@ header > a > img {
   height: 100%;
   transition-duration: 0.7s;
   transition-timing-function: ease;
+  z-index: 1;
 }
 #opções_usuário_abrir_fechar {
+  z-index: 1;
   position: absolute;
   cursor: pointer;
   right: 0%;
@@ -108,4 +110,30 @@ header > a > img {
   transition-timing-function: scale;
   transition-duration: 0.2s;
   transition-timing-function: ease;
+}
+#container_orçamento { 
+  position: relative;
+  z-index: 0;
+  top: 44%;
+  left: 52.5%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.829);
+  width: 90%;
+  height: 80%;
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+#header_conteudo_usuario { 
+  background-color: rgba(56, 0, 187, 0.836);
+  width: 100%;
+  height: 10%;
+  box-shadow: 2px 2px 5px rgba(47, 11, 114, 0.5);
+
+}
+#header_conteudo_usuario > p{ 
+  font-size: 3rem;
+  color: rgb(119, 0, 255);
+  font-family: "fanky", Arial, Helvetica, sans-serif;
+  background-color: rgb(255, 255, 255);
+  text-shadow: -1px 0px 5px purple;
+  letter-spacing: 2px;
 }

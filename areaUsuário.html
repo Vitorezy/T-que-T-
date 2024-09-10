@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="Estilos/Geral.css" />
     <link rel="stylesheet" href="Estilos/areaUsuario.css" media="all" />
     <link rel="shortcut icon" href="Imagens/favicon.ico" />
-    <script defer src="Script-js/areaUsuario.js"></script>
+    <script defer src="Script-js/areaUsuario.js"></script>  
   </head>
   <body id="inicio">
     <header>
@@ -51,15 +51,15 @@
       </div>
     </header>
     <main>
-      <section id="opções_usuário" style="width: 35%">
-        <div id="opções_usuário_abrir_fechar" style="width: 10%">
+      <section id="opções_usuário" style="width: 5%">
+        <div id="opções_usuário_abrir_fechar" style="width: 100%">
           <img
             id="seta_menu_opcoes_usuario"
-            src="Imagens/seta_esquerda.png"
+            src="Imagens/seta_direita.png"
             alt=""
           />
         </div>
-        <section id="conteudo_opcoes_usuario">
+        <section id="conteudo_opcoes_usuario" style="display: none;">
           <h1 id="nome_usuario"></h1>
           <div id="foto_usuario"></div>
           <label for="arquivo_foto_usuario">
@@ -72,7 +72,13 @@
             style="visibility: hidden"
           />
         </section>
+        <section id="nav_opcoes_usuario">
+          
+        </section>
       </section>
+      <div id="container_orçamento">
+        <div id="header_conteudo_usuario"> <p>Faça seu orçamento conosco!</p></div>
+      </div>
     </main>
     <div id="avaliar_atendimento">
       <h1>Avalie o atendimento!</h1>
