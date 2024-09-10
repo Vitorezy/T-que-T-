@@ -94,3 +94,5 @@ botao_mensagem_4.addEventListener("click", () => {
 apagar_historico.addEventListener("click", () => {
   container_mensagens.innerHTML = "";
 });
+
+
