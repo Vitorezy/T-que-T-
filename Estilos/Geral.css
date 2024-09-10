@@ -8,7 +8,6 @@
   src: url(../fontes/LuckiestGuy-Regular.ttf);
   font-variant: small-caps;
   font-weight: bolder;
-  
 }
 * {
   scroll-behavior: smooth;
@@ -280,25 +279,31 @@ main > h2 {
 }
 #Caixa_suporte {
   position: fixed;
+  display: none;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.993);
+  background-image: linear-gradient(
+    to bottom,
+    rgba(98, 41, 190, 0.993),
+    rgba(101, 40, 199, 0.993),
+    rgba(66, 26, 131, 0.993)
+  );
   bottom: 14%;
-  width: 20%;
-  height: 60%;
+  width: 30%;
+  height: 70%;
   border-radius: 30px;
   letter-spacing: 1px;
-  font-family: "luckiest", Arial, Helvetica, sans-serif; 
-  
+  font-family: "luckiest", Arial, Helvetica, sans-serif;
+  color: white;
+  text-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
 }
 #caixa_suporte > h1 {
   display: inline;
   top: 1%;
-  position: absolute;
+  position: relative;
   transform: translate(-50%, -50%);
-  
 }
 
-#container_botoes_suporte { 
+#container_botoes_suporte {
   position: absolute;
   display: flex;
   flex-wrap: wrap;
@@ -308,14 +313,13 @@ main > h2 {
   left: 50%;
   transform: translate(-50%, -50%);
   height: 15%;
-
 }
-#container_botoes_suporte > button { 
+#container_botoes_suporte > button {
   width: 50%;
   border-radius: 20px;
-  box-shadow: 0px 2px 2px black;
+  box-shadow: -3px 3px 2px rgba(0, 0, 0, 0.5);
 }
-#container_mensagens { 
+#container_mensagens {
   position: absolute;
   top: 45%;
   left: 50%;
@@ -325,6 +329,121 @@ main > h2 {
   box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.3);
   width: 80%;
   height: 60%;
+  background-color: rgba(59, 0, 114, 0.589);
+  display: flex;
+  flex-direction: column;
+  gap: 3%;
+  overflow-y: auto;
+}
+#apagar_historico {
+  position: absolute;
+  width: 60px;
+  bottom: 100%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.658);
+  border-radius: 20px;
+}
+#apagar_historico:hover {
+  cursor: pointer;
+  scale: 102%;
+  transition-duration: 0.7s;
+}
+#avaliar_atendimento {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+  width: 50%;
+  height: 50%;
+  display: none;
+  background-color: rgb(70, 0, 110);
+  border-radius: 20px;
+  text-align: center;
+  color: white;
+  letter-spacing: 2px;
+  font-size: 2rem;
+  text-shadow: -2px 1px 10px rgba(0, 0, 0, 0.555);
+}
+#avaliar_emojis {
+  position: absolute;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+#avaliar_emojis img {
+  cursor: pointer;
+  flex-grow: 1;
+  flex-shrink: 1;
+  transition-timing-function: ease;
+  transition-duration: 0.3s;
+  transition-property: scale;
+}
+#avaliar_emojis img:hover {
+  scale: 104%;
+
+  border-radius: 50%;
+}
+#avaliar_emojis #emojis_avaliacao_1:hover {
+  box-shadow: 0px 0px 15px white;
+
+  background-color: green;
+}
+#avaliar_emojis #emojis_avaliacao_2:hover {
+  box-shadow: 0px 0px 14px white;
+  background-color: rgba(56, 160, 56, 0.7);
+}
+#avaliar_emojis #emojis_avaliacao_3:hover {
+  box-shadow: 0px 0px 13px rgb(145, 145, 145);
+  background-color: rgb(124, 124, 124);
+}
+#avaliar_emojis #emojis_avaliacao_4:hover {
+  background-color: rgb(151, 44, 44);
+  box-shadow: 0px 0px 12px rgba(255, 0, 0, 0.7);
+}
+#avaliar_emojis #emojis_avaliacao_5:hover {
+  box-shadow: 0px 0px 10px rgb(255, 0, 0);
+  background-color: rgb(255, 0, 0);
+}
+#avaliar_atendimento > h1 {
+  font-family: "luckiest", Arial, Helvetica, sans-serif;
+}
+#container_mensagens ul {
+  list-style-type: disc;
+  text-align: start;
+}
+#container_mensagens li > ul {
+  list-style-type: square;
+  text-align: start;
+}
+.mensagem_suporte {
+  position: relative;
+  width: 50%;
+  overflow-x: hidden;
+  background-color: white;
+  border: 2px solid black;
+  font-family: arial;
+  font-weight: bold;
+  text-align: center;
+  flex-shrink: 0;
+  color: black;
+  letter-spacing: 1px;
+  text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.65);
+}
+.mensagem_usuario {
+  border-radius: 10px 0px 10px 10px;
+  left: 72%;
+  transform: translate(-50%, 0%);
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.mensagem_sistema {
+  border-radius: 0px 10px 10px 10px;
+  left: 1%;
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5);
 }
 footer {
   background-image: linear-gradient(
@@ -423,8 +542,8 @@ input[type="button"]:hover {
 }
 .botaofechar {
   top: 0%;
-  right: 0%; 
-  position: absolute; 
+  right: 0%;
+  position: absolute;
   width: 64px;
   cursor: pointer;
   height: 64px;

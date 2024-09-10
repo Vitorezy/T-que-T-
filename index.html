@@ -191,7 +191,9 @@
           </div>
         </form>
       </div>
+
       <h1>Tá Que Tá</h1>
+
       <h2 id="mensagem_selecao">Peças</h2>
       <div id="pecas_home_container">
         <div class="peca_home colecao_inverno">
@@ -280,6 +282,46 @@
         </div>
       </div>
     </main>
+    <div id="avaliar_atendimento">
+      <h1>Avalie o atendimento!</h1>
+      <div id="avaliar_emojis">
+        <img
+          id="emojis_avaliacao_1"
+          class="emojis_avaliacao"
+          src="Imagens/nota5Icon.png"
+          alt=""
+          title="Ótimo"
+        />
+        <img
+          id="emojis_avaliacao_2"
+          class="emojis_avaliacao"
+          src="Imagens/nota4Icon.png"
+          alt=""
+          title="Bom"
+        />
+        <img
+          id="emojis_avaliacao_3"
+          class="emojis_avaliacao"
+          src="Imagens/nota3Icon.png"
+          alt=""
+          title="Mediano"
+        />
+        <img
+          id="emojis_avaliacao_4"
+          class="emojis_avaliacao"
+          src="Imagens/nota2Icon.png"
+          alt=""
+          title="Ruim"
+        />
+        <img
+          id="emojis_avaliacao_5"
+          class="emojis_avaliacao"
+          src="Imagens/nota1Icon.png"
+          alt=""
+          title="Péssimo"
+        />
+      </div>
+    </div>
     <a id="botão-voltar" href="#inicio" title="Voltar para o início">
       <img
         class="botaofechar"
@@ -288,22 +330,34 @@
         alt=""
       />
     </a>
-    <div id="Caixa_suporte">
+
+    <div id="Caixa_suporte" style="display: none">
       <h1>Suporte</h1>
       <img
         class="botaofechar"
+        id="botao_fechar_suporte"
         src="Imagens/fecharIcon.png"
         alt=""
         style="right: 0%; position: absolute; width: 70px"
       />
-      <div id="container_mensagens"> 
-        
-      </div>
+      <div id="container_mensagens"></div>
       <div id="container_botoes_suporte">
-        <button></button>
-        <button></button>
-        <button></button>
-        <button></button>
+        <button id="botao_mensagem_1">
+          Problemas com a navegação do site.
+        </button>
+        <button id="botao_mensagem_2">
+          Preciso de mais informações da empresa.
+        </button>
+        <button id="botao_mensagem_3">
+          Quero me tornar parceiro da Tá que Tá
+        </button>
+        <button id="botao_mensagem_4">Quero Denunciar uma situação.</button>
+        <img
+          id="apagar_historico"
+          src="Imagens/lixeiraIcon.png"
+          alt=""
+          title="Apagar conversa com o suporte."
+        />
       </div>
     </div>
 
