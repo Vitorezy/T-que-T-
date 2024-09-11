@@ -114,26 +114,31 @@ header > a > img {
 #container_orçamento { 
   position: relative;
   z-index: 0;
-  top: 44%;
-  left: 52.5%;
+  top: 53.5%;
+  left: 52.8%;
   transform: translate(-50%, -50%);
-  background-color: rgba(255, 255, 255, 0.829);
+  background-color: rgba(216, 188, 247, 0.918);
   width: 90%;
   height: 80%;
-  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: inset 0px 0px 8px rgba(119, 0, 255, 0.9);
+ 
 }
-#header_conteudo_usuario { 
-  background-color: rgba(56, 0, 187, 0.836);
+#header_conteudo_usuario {  
+  background-color: rgb(154, 0, 243);;
   width: 100%;
   height: 10%;
-  box-shadow: 2px 2px 5px rgba(47, 11, 114, 0.5);
+  
 
 }
 #header_conteudo_usuario > p{ 
-  font-size: 3rem;
-  color: rgb(119, 0, 255);
+  font-size: 3.1rem;
+  color: rgb(113, 0, 243);
   font-family: "fanky", Arial, Helvetica, sans-serif;
-  background-color: rgb(255, 255, 255);
-  text-shadow: -1px 0px 5px purple;
+  background-color: rgb(216, 188, 247);
+  text-shadow: -1px 0px 5px rgb(255, 20, 255);
   letter-spacing: 2px;
+}
+main {
+  top: 50%;
+  left: 50%;
 }
