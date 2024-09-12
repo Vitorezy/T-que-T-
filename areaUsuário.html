@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="Estilos/Geral.css" />
     <link rel="stylesheet" href="Estilos/areaUsuario.css" media="all" />
     <link rel="shortcut icon" href="Imagens/favicon.ico" />
-    <script defer src="Script-js/areaUsuario.js"></script>  
+    <script defer src="Script-js/areaUsuario.js"></script>
   </head>
   <body id="inicio">
     <header>
@@ -59,7 +59,7 @@
             alt=""
           />
         </div>
-        <section id="conteudo_opcoes_usuario" style="display: none;">
+        <section id="conteudo_opcoes_usuario" style="display: none">
           <h1 id="nome_usuario"></h1>
           <div id="foto_usuario"></div>
           <label for="arquivo_foto_usuario">
@@ -72,12 +72,39 @@
             style="visibility: hidden"
           />
         </section>
-        <section id="nav_opcoes_usuario">
-          
-        </section>
+        <section id="nav_opcoes_usuario"></section>
       </section>
       <div id="container_orçamento">
-        <div id="header_conteudo_usuario"> <p>Faça seu orçamento conosco!</p></div>
+        <div id="header_conteudo_usuario">
+          <p>Faça seu orçamento conosco!</p>
+        </div>
+        <form action="#" method="get">
+          <label for="Tipo_roupa">Tipo de Vestimenta:</label>
+          <select name="Tipo_roupa" id="Tipo_roupa">
+            <option value="select">Selecione um tipo de vestimenta</option>
+            <option value="Conjunto">Conjunto</option>
+            <optgroup label="Superiores">
+              <option value="Blusa">Blusa</option>
+              <option value="Camisa">Camisa</option>
+              <option value="Camiseta">Camiseta</option>
+              <option value="Corta_Vento">Corta Vento</option>
+            </optgroup>
+            <optgroup label="Inferiores">
+              <option value="Calca">Calça</option>
+              <option value="Bermuda">Bermuda</option>
+              <option value="Shorts">Shorts</option>
+              <option value="saia">Saia</option>
+            </optgroup>
+            <optgroup label="Acessórios">
+              <option value="Bone">Boné</option>
+              <option value="chapeu">Chapéu</option>
+              <option value="Pulseira">Pulseira</option>
+              <option value="Brinco">Brinco</option>
+              <option value="Colar">Colar</option>
+            </optgroup>
+          </select>
+          inputgroup
+        </form>
       </div>
     </main>
     <div id="avaliar_atendimento">

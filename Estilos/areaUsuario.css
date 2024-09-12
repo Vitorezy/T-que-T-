@@ -123,6 +123,7 @@ header > a > img {
   box-shadow: inset 0px 0px 8px rgba(119, 0, 255, 0.9);
  
 }
+
 #header_conteudo_usuario {  
   background-color: rgb(154, 0, 243);;
   width: 100%;
@@ -131,12 +132,17 @@ header > a > img {
 
 }
 #header_conteudo_usuario > p{ 
+  font-weight: 600;
   font-size: 3.1rem;
-  color: rgb(113, 0, 243);
+  color: rgb(157, 72, 255);
   font-family: "fanky", Arial, Helvetica, sans-serif;
-  background-color: rgb(216, 188, 247);
-  text-shadow: -1px 0px 5px rgb(255, 20, 255);
-  letter-spacing: 2px;
+  background-color: rgb(221, 191, 255);
+  text-shadow: -1px 0px 5px rgba(255, 98, 255, 0.842);
+  letter-spacing: 2.5px;
+}
+#container_orçamento > form > label { 
+  color: rgb(0, 0, 0);
+  font-size: 1.1rem;
 }
 main {
   top: 50%;

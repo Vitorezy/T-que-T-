@@ -3,7 +3,6 @@ var botaoinverno = document.getElementById("btnNavInverno");
 var botaoverao = document.getElementById("btnNavVerao");
 var botaooutono = document.getElementById("btnNavOutono");
 var botaoprimavera = document.getElementById("btnNavPrimavera");
-var botaofestas = document.getElementById("btnNavFestas");
 var botaoafro = document.getElementById("btnNavAfro");
 var mensagem_selecao = document.getElementById("mensagem_selecao");
 botaoTodos.addEventListener("click", () => {
@@ -13,7 +12,6 @@ botaoTodos.addEventListener("click", () => {
       item.style.display = "block";
     }
     botaoafro.checked = true;
-    botaofestas.checked = true;
     botaoinverno.checked = true;
     botaooutono.checked = true;
     botaoprimavera.checked = true;
@@ -24,7 +22,6 @@ botaoTodos.addEventListener("click", () => {
       item.style.display = "none";
     }
     botaoafro.checked = false;
-    botaofestas.checked = false;
     botaoinverno.checked = false;
     botaooutono.checked = false;
     botaoprimavera.checked = false;
@@ -47,7 +44,6 @@ botaoinverno.addEventListener("click", () => {
   }
   if (
     botaoafro.checked &&
-    botaofestas.checked &&
     botaoinverno.checked &&
     botaooutono.checked &&
     botaoprimavera.checked &&
@@ -56,7 +52,6 @@ botaoinverno.addEventListener("click", () => {
     botaoTodos.checked = true;
   } else if (
     botaoafro.checked == false &&
-    botaofestas.checked == false &&
     botaoinverno.checked == false &&
     botaooutono.checked == false &&
     botaoprimavera.checked == false &&
@@ -80,7 +75,6 @@ botaoverao.addEventListener("click", () => {
   }
   if (
     botaoafro.checked &&
-    botaofestas.checked &&
     botaoinverno.checked &&
     botaooutono.checked &&
     botaoprimavera.checked &&
@@ -89,7 +83,6 @@ botaoverao.addEventListener("click", () => {
     botaoTodos.checked = true;
   } else if (
     botaoafro.checked == false &&
-    botaofestas.checked == false &&
     botaoinverno.checked == false &&
     botaooutono.checked == false &&
     botaoprimavera.checked == false &&
@@ -113,7 +106,6 @@ botaooutono.addEventListener("click", () => {
   }
   if (
     botaoafro.checked &&
-    botaofestas.checked &&
     botaoinverno.checked &&
     botaooutono.checked &&
     botaoprimavera.checked &&
@@ -122,7 +114,6 @@ botaooutono.addEventListener("click", () => {
     botaoTodos.checked = true;
   } else if (
     botaoafro.checked == false &&
-    botaofestas.checked == false &&
     botaoinverno.checked == false &&
     botaooutono.checked == false &&
     botaoprimavera.checked == false &&
@@ -146,7 +137,6 @@ botaoprimavera.addEventListener("click", () => {
   }
   if (
     botaoafro.checked &&
-    botaofestas.checked &&
     botaoinverno.checked &&
     botaooutono.checked &&
     botaoprimavera.checked &&
@@ -155,40 +145,6 @@ botaoprimavera.addEventListener("click", () => {
     botaoTodos.checked = true;
   } else if (
     botaoafro.checked == false &&
-    botaofestas.checked == false &&
-    botaoinverno.checked == false &&
-    botaooutono.checked == false &&
-    botaoprimavera.checked == false &&
-    botaoverao.checked == false
-  ) {
-    mensagem_selecao.innerHTML = "Selecione alguma coleção!";
-  }
-});
-botaofestas.addEventListener("click", () => {
-  var colecao_festas = document.getElementsByClassName("colecao_festas");
-  if (botaofestas.checked) {
-    for (let item of colecao_festas) {
-      item.style.display = "block";
-      mensagem_selecao.innerHTML = "Peças";
-    }
-  } else {
-    for (let item of colecao_festas) {
-      item.style.display = "none";
-    }
-    botaoTodos.checked = false;
-  }
-  if (
-    botaoafro.checked &&
-    botaofestas.checked &&
-    botaoinverno.checked &&
-    botaooutono.checked &&
-    botaoprimavera.checked &&
-    botaoverao.checked
-  ) {
-    botaoTodos.checked = true;
-  } else if (
-    botaoafro.checked == false &&
-    botaofestas.checked == false &&
     botaoinverno.checked == false &&
     botaooutono.checked == false &&
     botaoprimavera.checked == false &&
@@ -212,7 +168,6 @@ botaoafro.addEventListener("click", () => {
   }
   if (
     botaoafro.checked &&
-    botaofestas.checked &&
     botaoinverno.checked &&
     botaooutono.checked &&
     botaoprimavera.checked &&
@@ -221,7 +176,6 @@ botaoafro.addEventListener("click", () => {
     botaoTodos.checked = true;
   } else if (
     botaoafro.checked == false &&
-    botaofestas.checked == false &&
     botaoinverno.checked == false &&
     botaooutono.checked == false &&
     botaoprimavera.checked == false &&

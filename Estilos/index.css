@@ -31,7 +31,7 @@ div#pecas_home_container {
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 1%;
+  gap: 1.8%;
 }
 div.peca_home {
   flex-shrink: 0;
@@ -61,7 +61,7 @@ div.peca_home:hover {
 
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
   div#pecas_home_container {
-    top: 26%;
+    top: 22%;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
