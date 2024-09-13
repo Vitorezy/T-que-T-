@@ -61,7 +61,7 @@ div.peca_home:hover {
 
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
   div#pecas_home_container {
-    top: 22%;
+    top: 30%;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {

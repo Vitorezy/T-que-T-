@@ -79,31 +79,37 @@
           <p>Faça seu orçamento conosco!</p>
         </div>
         <form action="#" method="get">
-          <label for="Tipo_roupa">Tipo de Vestimenta:</label>
-          <select name="Tipo_roupa" id="Tipo_roupa">
-            <option value="select">Selecione um tipo de vestimenta</option>
-            <option value="Conjunto">Conjunto</option>
-            <optgroup label="Superiores">
-              <option value="Blusa">Blusa</option>
-              <option value="Camisa">Camisa</option>
-              <option value="Camiseta">Camiseta</option>
-              <option value="Corta_Vento">Corta Vento</option>
-            </optgroup>
-            <optgroup label="Inferiores">
-              <option value="Calca">Calça</option>
-              <option value="Bermuda">Bermuda</option>
-              <option value="Shorts">Shorts</option>
-              <option value="saia">Saia</option>
-            </optgroup>
-            <optgroup label="Acessórios">
-              <option value="Bone">Boné</option>
-              <option value="chapeu">Chapéu</option>
-              <option value="Pulseira">Pulseira</option>
-              <option value="Brinco">Brinco</option>
-              <option value="Colar">Colar</option>
-            </optgroup>
-          </select>
-          inputgroup
+          <div id="container_conjunto">
+            <label id="label_conjuntos_n" for="conjuntos_n"
+              >Comprar em conjunto: Desativo
+            </label>
+            <input type="checkbox" name="conjuntos_n" id="conjuntos_n" />
+          </div>
+          <div id="container_selecionar_tipo_vestimenta">
+            <label for="Tipo_roupa">Tipo de Vestimenta:</label>
+            <select name="Tipo_roupa" id="Tipo_roupa">
+              <option value="select">Selecione um tipo de vestimenta</option>
+              <optgroup label="Superiores">
+                <option value="Blusa">Blusa</option>
+                <option value="Camisa">Camisa</option>
+                <option value="Camiseta">Camiseta</option>
+                <option value="Corta_Vento">Corta Vento</option>
+              </optgroup>
+              <optgroup label="Inferiores">
+                <option value="Calca">Calça</option>
+                <option value="Bermuda">Bermuda</option>
+                <option value="Shorts">Shorts</option>
+                <option value="saia">Saia</option>
+              </optgroup>
+              <optgroup label="Acessórios">
+                <option value="Bone">Boné</option>
+                <option value="chapeu">Chapéu</option>
+                <option value="Pulseira">Pulseira</option>
+                <option value="Brinco">Brinco</option>
+                <option value="Colar">Colar</option>
+              </optgroup>
+            </select>
+          </div>
         </form>
       </div>
     </main>

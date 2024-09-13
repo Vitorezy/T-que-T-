@@ -628,6 +628,7 @@ input[type="button"]:hover {
     transition-duration: 0.3s;
     transition-property: scale;
   }
+
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   #links_acesso img {
