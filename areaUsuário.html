@@ -81,7 +81,7 @@
         <form action="#" method="get">
           <div id="container_conjunto">
             <label id="label_conjuntos_n" for="conjuntos_n"
-              >Comprar em conjunto: Desativo
+              >Orçar em conjunto: Desativo
             </label>
             <input type="checkbox" name="conjuntos_n" id="conjuntos_n" />
           </div>
@@ -109,6 +109,29 @@
                 <option value="Colar">Colar</option>
               </optgroup>
             </select>
+          </div>
+          <div id="container_tamanho_orcamento">
+            <label for="#" style="color: rgb(157, 72, 255)">Tamanho: </label>
+            <input type="radio" name="radio_tamanho_orcamento" id="RT1" />
+            <label class="label_tamanho_orcamento" for="RT1"> PP </label>
+            <input type="radio" name="radio_tamanho_orcamento" id="RT2" />
+            <label class="label_tamanho_orcamento" for="RT2"> P </label>
+            <input type="radio" name="radio_tamanho_orcamento" id="RT3" />
+            <label class="label_tamanho_orcamento" for="RT3"> M </label>
+            <input type="radio" name="radio_tamanho_orcamento" id="RT4" />
+            <label class="label_tamanho_orcamento" for="RT4"> G </label>
+            <input type="radio" name="radio_tamanho_orcamento" id="RT5" />
+            <label class="label_tamanho_orcamento" for="RT5"> GG </label>
+          </div>
+          <div id="container_descricao">
+            <textarea
+              name="descricao"
+              id="descricao"
+              cols="78"
+              rows="5"
+              style="resize: none"
+            >
+            </textarea>
           </div>
         </form>
       </div>

@@ -122,8 +122,8 @@ var label_conjuntos_n = document.getElementById("label_conjuntos_n");
 var conjuntos_n = document.getElementById("conjuntos_n");
 label_conjuntos_n.addEventListener("click", () => {
   if (conjuntos_n.checked == false) {
-    label_conjuntos_n.innerHTML = "Comprar em conjunto: ativo";
+    label_conjuntos_n.innerHTML = "Orçar em conjunto: ativo";
   } else {
-    label_conjuntos_n.innerHTML = "Comprar em conjunto: desativo";
+    label_conjuntos_n.innerHTML = "Orçar em conjunto: desativo";
   }
 });

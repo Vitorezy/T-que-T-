@@ -137,29 +137,46 @@ header > a > img {
   text-shadow: -1px 0px 5px rgba(255, 98, 255, 0.842);
   letter-spacing: 2.5px;
 }
-#container_orçamento > form label {
-  color: rgb(157, 72, 255);
-  font-weight: bolder;
-  font-size: 1.1rem;
+#container_orçamento > form  label {
   text-shadow: -1px 0px 2px rgba(255, 98, 255, 0.842);
 }
 #container_orçamento > form {
   position: relative;
-  top: 4%;
+  top: 7%;
   display: flex;
-  gap: 2%;
+  gap: 1.2%;
   flex-direction: column;
   height: 100%;
   width: 100%;
 }
-#container_conjunto > label {
+#container_conjunto { 
+  color: rgb(157, 72, 255);
+  font-weight: 700;
   border: 2px solid rgb(152, 0, 190);
-  border-radius: 10px;
+  border-radius: 8px;
   background-color: rgba(252, 235, 255, 0.582);
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  width: 35%;
+  left: 50%;
+  transform: translate(-50%);
 }
-
+#container_selecionar_tipo_vestimenta { 
+  color: rgb(157, 72, 255);
+  font-weight: 600;
+  border: 2px solid rgb(152, 0, 190);
+  border-radius: 2px;
+  width: 60%;
+  position: relative;
+  border-radius: 5px;
+  left: 50%;
+  transform: translate(-50%);
+  background-color: rgba(252, 235, 255, 0.582);
+  font-family: Arial, Helvetica, sans-serif;
+}
 #container_conjunto > input[type="checkbox"] {
   display: none;
+  font-family: Arial, Helvetica, sans-serif;
 }
 select {
   border-radius: 10px;
@@ -171,6 +188,51 @@ select {
 }
 select optgroup {
   background-color: rgb(90, 14, 141);
+}
+#container_tamanho_orcamento { 
+  font-weight: 600;
+  border: 2px solid rgb(152, 0, 190);
+  border-radius: 5px;
+  background-color: rgba(252, 235, 255, 0.582);
+  font-family: Arial, Helvetica, sans-serif;
+  position: relative;
+  width: 60%;
+  height: 8%;
+  left: 50%;
+  transform: translate(-50%);
+  
+}
+#container_tamanho_orcamento > input[type="radio"] { 
+  display: none;
+}
+#container_tamanho_orcamento > label { 
+  height: 10px;
+  top: 20%;
+  position: relative;
+  text-align: center;
+}
+.label_tamanho_orcamento {
+  display: inline;
+  border: 2px solid rgba(255, 255, 255, 0.671);
+  background-color: rgb(177, 77, 243);
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+  margin-right: 9px;
+  font-size: 1rem;
+  border-radius: 3px;
+  transition-timing-function: ease;
+
+  font-weight: 300;
+}
+#container_tamanho_orcamento > input[type="radio"]:checked +label { 
+  font-size: 0.99rem;
+  box-shadow: 0px 0px 5px rgb(115, 0, 138);
+  font-weight: 600;
+}
+.label_tamanho_orcamento:hover { 
+  font-weight: 600;
+  box-shadow: 0px 0px 2px rgba(31, 0, 46, 0.637);
+  transition-property: box-shadow;
 }
 main {
   top: 50%;
