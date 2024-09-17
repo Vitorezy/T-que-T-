@@ -111,28 +111,51 @@
             </select>
           </div>
           <div id="container_tamanho_orcamento">
-            <label for="#" style="color: rgb(157, 72, 255)">Tamanho: </label>
-            <input type="radio" name="radio_tamanho_orcamento" id="RT1" />
+            <label for="#" style="color: rgb(115, 44, 196);">Tamanho: </label>
+            <input type="radio" name="radio_tamanho_orcamento" id="RT1" required/>
             <label class="label_tamanho_orcamento" for="RT1"> PP </label>
-            <input type="radio" name="radio_tamanho_orcamento" id="RT2" />
+            <input type="radio" name="radio_tamanho_orcamento" id="RT2" required/>
             <label class="label_tamanho_orcamento" for="RT2"> P </label>
-            <input type="radio" name="radio_tamanho_orcamento" id="RT3" />
+            <input type="radio" name="radio_tamanho_orcamento" id="RT3" required/>
             <label class="label_tamanho_orcamento" for="RT3"> M </label>
-            <input type="radio" name="radio_tamanho_orcamento" id="RT4" />
+            <input type="radio" name="radio_tamanho_orcamento" id="RT4" required/>
             <label class="label_tamanho_orcamento" for="RT4"> G </label>
-            <input type="radio" name="radio_tamanho_orcamento" id="RT5" />
+            <input type="radio" name="radio_tamanho_orcamento" id="RT5" required/>
             <label class="label_tamanho_orcamento" for="RT5"> GG </label>
           </div>
+          <label for="#" style="color: rgb(115, 44, 196);; font-weight: 600;">Seleção de cores:</label>
+          <div id="container_cores_orçamento">
+            <label for="c1">
+              Primeira cor:
+            </label>
+            <input type="color" name="c1" id="c1">
+            <label for="c2">
+              Segunda cor:
+            </label>
+            <input type="color" name="c2" id="c2">
+            <label for="c3">
+              Terceira cor:
+            </label>
+            <input type="color" name="c3" id="c3">
+          </div>
           <div id="container_descricao">
+            <label for="descricao" style="color: rgb(115, 44, 196);; font-weight: 600;">
+              Descrição dos itens: 
+            </label>
             <textarea
+              required
+              minlength="20"
+              style="display: block;"
+              autocapitalize="on"
+              placeholder="Descreva o Item aqui."
               name="descricao"
               id="descricao"
-              cols="78"
+              cols="75"
               rows="5"
               style="resize: none"
-            >
-            </textarea>
+            ></textarea>
           </div>
+          <input type="submit" value="Enviar">
         </form>
       </div>
     </main>
