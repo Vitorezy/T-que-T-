@@ -53,9 +53,6 @@ var Header = document.querySelector("header");
 var main = document.querySelector("main");
 var conteudo = document.getElementById("conteudo");
 var nav_aberta = document.getElementById("nav_aberta");
-var caixa_login = document.getElementById("caixa_login");
-var botão_abrir_login = document.getElementById("botão_abrir_login");
-var fechar_login = document.getElementById("fechar_login");
 var Caixa_suporte = document.getElementById("Caixa_suporte");
 var botão_suporte = document.getElementById("img-botão-suporte");
 var botao_fechar_suporte = document.getElementById("botao_fechar_suporte");
@@ -119,11 +116,17 @@ apagar_historico.addEventListener("click", () => {
 });
 
 var label_conjuntos_n = document.getElementById("label_conjuntos_n");
+var container_conjunto = document.getElementById('container_conjunto')
 var conjuntos_n = document.getElementById("conjuntos_n");
-label_conjuntos_n.addEventListener("click", () => {
+container_conjunto.addEventListener("click", () => {
   if (conjuntos_n.checked == false) {
-    label_conjuntos_n.innerHTML = "Orçar em conjunto: ativo";
+    label_conjuntos_n.innerHTML = "Orçar em conjunto: Desativo";
+    
   } else {
-    label_conjuntos_n.innerHTML = "Orçar em conjunto: desativo";
+    label_conjuntos_n.innerHTML = "Orçar em conjunto: Ativado";
+    var formulario_orcamento = document.getElementById('formulario_orcamento')
+    formulario_orcamento.onsubmit = ()=> { 
+      alert('Agora crie a segunda peça.')
+    }
   }
 });

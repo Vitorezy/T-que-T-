@@ -137,19 +137,19 @@ header > a > img {
   text-shadow: -2px 2px 2px rgba(255, 98, 255, 0.842);
   letter-spacing: 2.5px;
 }
-#container_orçamento > form  label {
+#container_orçamento > form label {
   text-shadow: -1px 0px 2px rgba(255, 98, 255, 0.842);
 }
 #container_orçamento > form {
   position: relative;
-  top: 7%;
+  top: 3%;
   display: flex;
-  gap: 1.2%;
+  gap: 1.8%;
   flex-direction: column;
   height: 100%;
   width: 100%;
 }
-#container_conjunto { 
+#container_conjunto {
   cursor: pointer;
   color: rgb(115, 44, 196);
   font-weight: 700;
@@ -158,27 +158,36 @@ header > a > img {
   background-color: rgba(252, 235, 255, 0.582);
   font-family: Arial, Helvetica, sans-serif;
   position: relative;
-  width: 35%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 20%;
+  height: 4%;
   left: 50%;
   transform: translate(-50%);
 }
-#container_conjunto label { 
+#container_conjunto label {
+  font-size: 1.15rem;
   cursor: pointer;
-} 
-#container_selecionar_tipo_vestimenta { 
+}
+#container_selecionar_tipo_vestimenta {
   color: rgb(115, 44, 196);
   font-weight: 600;
   border: 2px solid rgb(152, 0, 190);
   border-radius: 2px;
   width: 60%;
+  height: 6%;
   position: relative;
   border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   left: 50%;
   transform: translate(-50%);
   background-color: rgba(252, 235, 255, 0.582);
   font-family: Arial, Helvetica, sans-serif;
 }
-#container_conjunto > input[type="checkbox"] {
+#container_conjunto >  input[type="checkbox"] {
   display: none;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -189,9 +198,8 @@ select {
   text-shadow: 0px 0px 2px rgb(0, 0, 0);
   font-weight: 600;
   cursor: pointer;
-
 }
-select:focus { 
+select:focus {
   background-color: rgb(93, 26, 170);
   scale: 98%;
   border: 1px solid rgb(65, 0, 243);
@@ -199,7 +207,7 @@ select:focus {
 select optgroup {
   background-color: rgb(90, 14, 141);
 }
-#container_tamanho_orcamento { 
+#container_tamanho_orcamento {
   font-weight: 800;
   border: 2px solid rgb(152, 0, 190);
   border-radius: 5px;
@@ -207,24 +215,32 @@ select optgroup {
   font-family: Arial, Helvetica, sans-serif;
   position: relative;
   width: 60%;
-  height: 8%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 6%;
   left: 50%;
   transform: translate(-50%);
-
 }
-#container_tamanho_orcamento > input[type="radio"] { 
+fieldset { 
+  border: 0px;
+}
+form > p {
+  color: rgb(70, 0, 150);
+  font-weight: 600;
+  font-size: 1.7rem;
+}
+#container_tamanho_orcamento > fieldset > input[type="radio"] {
   display: none;
 }
-#container_tamanho_orcamento > label { 
-  height: 10px;
-  top: 20%;
-  position: relative;
+#container_tamanho_orcamento > label {
+  font-weight: 600;
   text-align: center;
 }
 .label_tamanho_orcamento {
   display: inline;
   border: 2px solid rgba(255, 195, 247, 0.671);
-  background-color: rgb(115, 44, 196);;
+  background-color: rgb(115, 44, 196);
   color: rgb(239, 230, 240);
   cursor: pointer;
   margin-right: 9px;
@@ -233,17 +249,17 @@ select optgroup {
   transition-timing-function: ease;
   font-weight: 400;
 }
-#container_tamanho_orcamento > input[type="radio"]:checked +label { 
+#container_tamanho_orcamento  input[type="radio"]:checked + label {
   font-size: 0.95rem;
   box-shadow: 0px 0px 5px rgb(115, 0, 138);
   font-weight: 600;
 }
-.label_tamanho_orcamento:hover { 
+.label_tamanho_orcamento:hover {
   font-weight: 600;
   box-shadow: 0px 0px 2px rgba(31, 0, 46, 0.637);
   transition-property: box-shadow;
 }
-#container_cores_orçamento { 
+#container_cores_orçamento {
   font-weight: 600;
   border: 2px solid rgb(152, 0, 190);
   border-radius: 5px;
@@ -251,17 +267,19 @@ select optgroup {
   font-family: Arial, Helvetica, sans-serif;
   position: relative;
   width: 60%;
-  height: 8%;
+  height: 6%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   left: 50%;
   transform: translate(-50%);
   color: rgb(115, 44, 196);
 }
-#container_cores_orçamento input  { 
+#container_cores_orçamento input {
+  margin: 0px 10px 0px 10px;
   position: relative;
-  top: 50%;
-  transform: translate(0%, -50%);
 }
-textarea { 
+textarea {
   color: rgb(115, 44, 196);
   font-weight: 700;
   font-size: 1.1rem;
@@ -274,7 +292,10 @@ textarea {
   transform: translate(-50%);
   resize: none;
 }
-#container_orçamento  input[type="submit"] { 
+#container_orçamento input[type="submit"] {
+  background-color: rgb(90, 7, 185);
+}
+.botaofimorcamento { 
   left: 50%;
   position: relative;
   transform: translate(-50%);
@@ -282,15 +303,22 @@ textarea {
   font-weight: 600;
   font-size: 1.05rem;
   border-radius: 10px;
-  background-color: rgb(115, 44, 196);
   color: white;
   border: 2px solid rgb(79, 3, 88);
 }
-textarea:focus{ 
+#container_orçamento input[type="reset"] {
+  background-color: rgb(112, 2, 75);
+}
+textarea:focus {
   cursor: text;
   outline: 0.1px solid rgb(112, 2, 139);
 }
 main {
   top: 50%;
   left: 50%;
+}
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  #conteudo_opcoes_usuario {
+    top: 35%;
+  }
 }

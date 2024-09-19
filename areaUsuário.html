@@ -78,13 +78,16 @@
         <div id="header_conteudo_usuario">
           <p>Faça seu orçamento conosco!</p>
         </div>
-        <form action="#" method="get">
+        <form action="#" method="get" id="formulario_orcamento">
           <div id="container_conjunto">
             <label id="label_conjuntos_n" for="conjuntos_n"
               >Orçar em conjunto: Desativo
             </label>
             <input type="checkbox" name="conjuntos_n" id="conjuntos_n" />
           </div>
+          <p >
+            Dados básicos: 
+          </p>
           <div id="container_selecionar_tipo_vestimenta">
             <label for="Tipo_roupa">Tipo de Vestimenta:</label>
             <select name="Tipo_roupa" id="Tipo_roupa">
@@ -111,19 +114,21 @@
             </select>
           </div>
           <div id="container_tamanho_orcamento">
-            <label for="#" style="color: rgb(115, 44, 196);">Tamanho: </label>
-            <input type="radio" name="radio_tamanho_orcamento" id="RT1" required/>
-            <label class="label_tamanho_orcamento" for="RT1"> PP </label>
-            <input type="radio" name="radio_tamanho_orcamento" id="RT2" required/>
-            <label class="label_tamanho_orcamento" for="RT2"> P </label>
-            <input type="radio" name="radio_tamanho_orcamento" id="RT3" required/>
-            <label class="label_tamanho_orcamento" for="RT3"> M </label>
-            <input type="radio" name="radio_tamanho_orcamento" id="RT4" required/>
-            <label class="label_tamanho_orcamento" for="RT4"> G </label>
-            <input type="radio" name="radio_tamanho_orcamento" id="RT5" required/>
-            <label class="label_tamanho_orcamento" for="RT5"> GG </label>
+            <p for="#" style="color: rgb(115, 44, 196);">Tamanho: </p>
+            <fieldset>  
+              <input type="radio" name="radio_tamanho_orcamento" id="RT1" required/>
+              <label class="label_tamanho_orcamento" for="RT1" style="margin-left: 0px;"> PP </label>
+              <input type="radio" name="radio_tamanho_orcamento" id="RT2"/>
+              <label class="label_tamanho_orcamento" for="RT2"> P </label>
+              <input type="radio" name="radio_tamanho_orcamento" id="RT3"/>
+              <label class="label_tamanho_orcamento" for="RT3"> M </label>
+              <input type="radio" name="radio_tamanho_orcamento" id="RT4"/>
+              <label class="label_tamanho_orcamento" for="RT4"> G </label>
+              <input type="radio" name="radio_tamanho_orcamento" id="RT5"/>
+              <label class="label_tamanho_orcamento" for="RT5"> GG </label>
+            </fieldset>
           </div>
-          <label for="#" style="color: rgb(115, 44, 196);; font-weight: 600;">Seleção de cores:</label>
+          <p for="#">Seleção de cores:</p>
           <div id="container_cores_orçamento">
             <label for="c1">
               Primeira cor:
@@ -138,16 +143,16 @@
             </label>
             <input type="color" name="c3" id="c3">
           </div>
+          <p >
+            Descrição dos itens: 
+          </p>
           <div id="container_descricao">
-            <label for="descricao" style="color: rgb(115, 44, 196);; font-weight: 600;">
-              Descrição dos itens: 
-            </label>
             <textarea
               required
               minlength="20"
               style="display: block;"
               autocapitalize="on"
-              placeholder="Descreva o Item aqui."
+              placeholder="Especifique no texto o tecido desejado, estampas, caimento, inspirações (Caso tenha), estilos, Etc..."
               name="descricao"
               id="descricao"
               cols="75"
@@ -155,7 +160,8 @@
               style="resize: none"
             ></textarea>
           </div>
-          <input type="submit" value="Enviar">
+          <input type="submit" value="Enviar" id="botao_enviar_orcarmento" class="botaofimorcamento">
+          <input type="reset" value="Resetar" id="botao_resetar_orcarmento" class="botaofimorcamento">
         </form>
       </div>
     </main>

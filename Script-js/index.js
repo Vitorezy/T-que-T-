@@ -5,6 +5,25 @@ var botaooutono = document.getElementById("btnNavOutono");
 var botaoprimavera = document.getElementById("btnNavPrimavera");
 var botaoafro = document.getElementById("btnNavAfro");
 var mensagem_selecao = document.getElementById("mensagem_selecao");
+function verificarselecionado() { 
+  if (
+    botaoafro.checked &&
+    botaoinverno.checked &&
+    botaooutono.checked &&
+    botaoprimavera.checked &&
+    botaoverao.checked
+  ) {
+    botaoTodos.checked = true;
+  } else if (
+    botaoafro.checked == false &&
+    botaoinverno.checked == false &&
+    botaooutono.checked == false &&
+    botaoprimavera.checked == false &&
+    botaoverao.checked == false
+  ) {
+    mensagem_selecao.innerHTML = "Selecione alguma coleção!";
+  }
+}
 botaoTodos.addEventListener("click", () => {
   var peca_home = document.getElementsByClassName("peca_home");
   if (botaoTodos.checked) {
@@ -42,23 +61,7 @@ botaoinverno.addEventListener("click", () => {
     }
     botaoTodos.checked = false;
   }
-  if (
-    botaoafro.checked &&
-    botaoinverno.checked &&
-    botaooutono.checked &&
-    botaoprimavera.checked &&
-    botaoverao.checked
-  ) {
-    botaoTodos.checked = true;
-  } else if (
-    botaoafro.checked == false &&
-    botaoinverno.checked == false &&
-    botaooutono.checked == false &&
-    botaoprimavera.checked == false &&
-    botaoverao.checked == false
-  ) {
-    mensagem_selecao.innerHTML = "Selecione alguma coleção!";
-  }
+  verificarselecionado()
 });
 botaoverao.addEventListener("click", () => {
   var colecao_verao = document.getElementsByClassName("colecao_verao");
@@ -73,23 +76,7 @@ botaoverao.addEventListener("click", () => {
     }
     botaoTodos.checked = false;
   }
-  if (
-    botaoafro.checked &&
-    botaoinverno.checked &&
-    botaooutono.checked &&
-    botaoprimavera.checked &&
-    botaoverao.checked
-  ) {
-    botaoTodos.checked = true;
-  } else if (
-    botaoafro.checked == false &&
-    botaoinverno.checked == false &&
-    botaooutono.checked == false &&
-    botaoprimavera.checked == false &&
-    botaoverao.checked == false
-  ) {
-    mensagem_selecao.innerHTML = "Selecione alguma coleção!";
-  }
+  verificarselecionado()
 });
 botaooutono.addEventListener("click", () => {
   var colecao_outono = document.getElementsByClassName("colecao_outono");
@@ -104,23 +91,7 @@ botaooutono.addEventListener("click", () => {
     }
     botaoTodos.checked = false;
   }
-  if (
-    botaoafro.checked &&
-    botaoinverno.checked &&
-    botaooutono.checked &&
-    botaoprimavera.checked &&
-    botaoverao.checked
-  ) {
-    botaoTodos.checked = true;
-  } else if (
-    botaoafro.checked == false &&
-    botaoinverno.checked == false &&
-    botaooutono.checked == false &&
-    botaoprimavera.checked == false &&
-    botaoverao.checked == false
-  ) {
-    mensagem_selecao.innerHTML = "Selecione alguma coleção!";
-  }
+  verificarselecionado()
 });
 botaoprimavera.addEventListener("click", () => {
   var colecao_primavera = document.getElementsByClassName("colecao_primavera");
@@ -135,23 +106,7 @@ botaoprimavera.addEventListener("click", () => {
     }
     botaoTodos.checked = false;
   }
-  if (
-    botaoafro.checked &&
-    botaoinverno.checked &&
-    botaooutono.checked &&
-    botaoprimavera.checked &&
-    botaoverao.checked
-  ) {
-    botaoTodos.checked = true;
-  } else if (
-    botaoafro.checked == false &&
-    botaoinverno.checked == false &&
-    botaooutono.checked == false &&
-    botaoprimavera.checked == false &&
-    botaoverao.checked == false
-  ) {
-    mensagem_selecao.innerHTML = "Selecione alguma coleção!";
-  }
+  verificarselecionado()
 });
 botaoafro.addEventListener("click", () => {
   var colecao_afro = document.getElementsByClassName("colecao_afro");
@@ -166,21 +121,5 @@ botaoafro.addEventListener("click", () => {
     }
     botaoTodos.checked = false;
   }
-  if (
-    botaoafro.checked &&
-    botaoinverno.checked &&
-    botaooutono.checked &&
-    botaoprimavera.checked &&
-    botaoverao.checked
-  ) {
-    botaoTodos.checked = true;
-  } else if (
-    botaoafro.checked == false &&
-    botaoinverno.checked == false &&
-    botaooutono.checked == false &&
-    botaoprimavera.checked == false &&
-    botaoverao.checked == false
-  ) {
-    mensagem_selecao.innerHTML = "Selecione alguma coleção!";
-  }
+  verificarselecionado()
 });
