@@ -1,3 +1,7 @@
+@font-face {
+  font-family: 'bebas';
+  src: url(../fontes/BebasNeue-Regular.ttf);
+}
 header {
   background-image: linear-gradient(
     to right,
@@ -24,7 +28,7 @@ header > a > img {
   background-image: linear-gradient(
     to right,
     rgb(0, 0, 220),
-    rgba(0, 0, 255, 0.925),
+    rgb(0, 0, 235),
     rgb(0, 0, 220)
   );
   width: 35%;
@@ -39,11 +43,10 @@ header > a > img {
   cursor: pointer;
   right: 0%;
   height: 100%;
-  width: 10%;
   background-image: linear-gradient(
     to right,
     rgb(150, 57, 226),
-    rgba(161, 64, 226, 0.9),
+    rgb(161, 64, 226),
     rgb(150, 57, 226)
   );
   box-shadow: -1px 0px 10px rgba(0, 0, 0, 0.5);
@@ -54,7 +57,7 @@ header > a > img {
   background-image: linear-gradient(
     to right,
     rgb(160, 72, 235),
-    rgba(187, 85, 255, 0.9),
+    rgb(187, 85, 255),
     rgb(160, 72, 235)
   );
 }
@@ -69,12 +72,59 @@ header > a > img {
   display: flex;
   flex-direction: column;
   width: 90%;
-  top: 20%;
+  top: 30%;
   transform: translate(0%, -50%);
   justify-items: center;
   align-items: center;
 }
-
+#nav_opcoes_usuario { 
+  display: none;
+  position: relative;
+  top: 32%;
+  width: 90%;
+  height: 30%;
+  transform: translate(0%, -50%);
+  left: 0%;
+}
+#nav_opcoes_usuario > ul {
+  left: 0px;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  color: rgb(255, 255, 255);
+  list-style-type: none;
+  margin:0;
+  padding: 0;
+  text-indent: 0;
+  gap: 1%;
+}
+#nav_opcoes_usuario > ul > li { 
+  font-size: 1.8rem;
+  border-radius: 8px;
+  font-family: 'bebas', Arial, Helvetica, sans-serif;
+  letter-spacing: 2px;
+  font-weight:  400;
+  text-shadow: -1px 1px 5px black;
+  border: 3px solid rgb(15, 0, 58);
+  width: 50%;
+  background-image: linear-gradient(
+    to right,
+    rgb(100, 0, 182),
+    rgba(110, 0, 196, 0.98),
+    rgb(100, 0, 182)
+  );
+  box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.575);
+  transition-duration: .2s;
+  transition-timing-function: ease;
+}
+#nav_opcoes_usuario > ul > li:hover { 
+  cursor: pointer;
+  scale: 105%;
+  border: 3px solid rgb(25, 7, 73);
+}
 #foto_usuario {
   flex-grow: 1;
   flex-shrink: 0;

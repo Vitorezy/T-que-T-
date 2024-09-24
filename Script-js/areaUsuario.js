@@ -22,16 +22,19 @@ toggle_opcoes_usuario.addEventListener("click", () => {
   var seta_menu_opcoes_usuario = document.getElementById(
     "seta_menu_opcoes_usuario"
   );
+  var nav_opcoes_usuario = document.getElementById("nav_opcoes_usuario");
   var conteudo_opcoes_usuario = document.getElementById(
     "conteudo_opcoes_usuario"
   );
   if (container_opcoes_usuario.style.width == "35%") {
     conteudo_opcoes_usuario.style.display = "none";
+    nav_opcoes_usuario.style.display = "none";
     container_opcoes_usuario.style.width = "5%";
     toggle_opcoes_usuario.style.width = "100%";
     seta_menu_opcoes_usuario.src = "Imagens/seta_direita.png";
   } else {
     conteudo_opcoes_usuario.style.display = "flex";
+    nav_opcoes_usuario.style.display = "block";
     container_opcoes_usuario.style.width = "35%";
     toggle_opcoes_usuario.style.width = "10%";
     seta_menu_opcoes_usuario.src = "Imagens/seta_esquerda.png";
@@ -116,17 +119,17 @@ apagar_historico.addEventListener("click", () => {
 });
 
 var label_conjuntos_n = document.getElementById("label_conjuntos_n");
-var container_conjunto = document.getElementById('container_conjunto')
+var container_conjunto = document.getElementById("container_conjunto");
 var conjuntos_n = document.getElementById("conjuntos_n");
+
 container_conjunto.addEventListener("click", () => {
   if (conjuntos_n.checked == false) {
     label_conjuntos_n.innerHTML = "Orçar em conjunto: Desativo";
-    
   } else {
     label_conjuntos_n.innerHTML = "Orçar em conjunto: Ativado";
-    var formulario_orcamento = document.getElementById('formulario_orcamento')
-    formulario_orcamento.onsubmit = ()=> { 
-      alert('Agora crie a segunda peça.')
-    }
+    var formulario_orcamento = document.getElementById("formulario_orcamento");
+    formulario_orcamento.onsubmit = () => {
+      alert("Agora crie a segunda peça.");
+    };
   }
 });
