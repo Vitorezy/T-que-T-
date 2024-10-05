@@ -72,7 +72,7 @@ header > a > img {
   display: flex;
   flex-direction: column;
   width: 90%;
-  top: 30%;
+  top: 40%;
   transform: translate(0%, -50%);
   justify-items: center;
   align-items: center;
