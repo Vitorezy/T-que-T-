@@ -1,4 +1,4 @@
-body { 
+body {
   overflow: auto;
 }
 div.card_home {
@@ -6,50 +6,73 @@ div.card_home {
   width: 280px;
   height: 280px;
   margin-left: 50px;
-  box-shadow: 0px 0px 3px rgba(255, 255, 255, 0.63);
+  margin-top: 20px;
+  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.63);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   flex-shrink: 0;
-  scale: 130%;
+  scale: 112%;
 }
-#container_cards { 
+.container_home {
+  display: flex;
+  background-color: rgb(10, 6, 97);
+  align-items: center;
+  justify-content: center;
+  box-shadow: 1px 1px 30px black;
+  width: 99%;
+  border-radius: 30px;
   position: relative;
-  top: 5%;
-  gap: 2%;
+  height: 49%;
+}
+#container_cards {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 25%;
   left: 50%;
   transform: translate(-50%);
   flex-wrap: wrap;
-  display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 37%;
+  box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.578);
 }
-#container_card_logo { 
+#container_card_logo {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
   align-items: center;
 }
-#container_ODS { 
-  margin-top: 100px;
+#container_ODS {
+  margin-top: 20px;
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: nowrap;
-  align-items: center;
-  margin-right: 50px;
+  margin-right: 0px;
 }
-#container_ODS > div.card_home { 
+#container_ODS > div.card_home {
+  margin-right: 30px;
   scale: 112%;
+  border-radius: 10px;
 }
-p { 
+p {
   text-indent: 10px;
   text-align: center;
   letter-spacing: 1px;
   font-weight: 500;
   text-shadow: -1px 0px 2px black;
-  font-size: 1.9rem;
+  font-size: 1.7rem;
   margin-left: 50px;
+}
+#final_pagina {
+  position: relative;
+  width: 100%;
+  font-size: 1.5rem;
+  top: 107%;
+  height: 10%;
+}
+#final_pagina > a {
+  color: rgb(153, 8, 112);
+}
+#final_pagina > a:hover {
+  text-decoration: underline;
 }
