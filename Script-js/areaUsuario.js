@@ -140,11 +140,11 @@ container_conjunto.addEventListener("click", () => {
 var creditos_toggle = document.getElementById("creditos_toggle");
 creditos_toggle.addEventListener("click", () => {
   var footer = document.querySelector("footer");
-  if (footer.style.height == '3%') {
+  if (footer.style.height == '26px') {
     footer.style.height = '0%'
     creditos_toggle.src = "Imagens/expandirCreditoIcon.png";
   } else {
-    footer.style.height = '3%'
+    footer.style.height = '26px'
     creditos_toggle.src = "Imagens/fecharCreditoIcon.png";
     
   }

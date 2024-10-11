@@ -21,15 +21,6 @@ body {
     background-image: url(../Imagens/colagemlogos.jpg)
   }
 }
-@keyframes girar_card2 {
-  0% { 
-    transform:rotatey(0deg);
-  }
-  100% { 
-    transform:rotatey(360deg);
-    background-image: url(../Imagens/ODS8.jpg)
-  }
-}
 /* Seletor geral dos cards da pagina */
 div.card_home {
   position: relative;
@@ -118,4 +109,16 @@ p {
 }
 #final_pagina > a:hover {
   text-decoration: underline;
+}
+@media screen and (min-width: 1024px) and (max-width: 1440px) { 
+  p {
+    font-size: 1.4rem;
+  }
+  #container_cards {
+    top: 30%;
+  }
+  div.card_home {
+    scale: 105%;
+    
+  }
 }

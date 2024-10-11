@@ -34,6 +34,25 @@ div#pecas_home_container {
   flex-wrap: wrap;
   gap: 1.8%;
 }
+@keyframes abrir_info {
+  0% { 
+    width: 17%;
+  }
+  100% { 
+    width: 50%;
+  }
+}
+.expanded_peca_home { 
+  border-radius: 15px 20px 20px 15px;
+  position: fixed;
+  width: 17%;
+  height: 50%;
+  background-color: aquamarine;
+  
+}
+.expanded_peca_home::selection { 
+  animation: abrir_info 1s ease 0.3 normal both;
+}
 /* Seletor das peças em conjunto */
 div.peca_home {
   flex-shrink: 0;
@@ -42,7 +61,7 @@ div.peca_home {
   border: 2px rgb(255, 255, 255) solid;
   background-color: rgb(153, 143, 143);
   width: 245px;
-  height: 40%;
+  height: 100%;
   box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
   transition-duration: 0.3s;
   transition-timing-function: ease;
@@ -66,6 +85,18 @@ div.peca_home:hover {
   div#pecas_home_container {
     top: 30%;
   }
+  div.peca_home {
+    flex-shrink: 0;
+    border-radius: 15px;
+    position: relative;
+    border: 2px rgb(255, 255, 255) solid;
+    background-color: rgb(153, 143, 143);
+    width: 245px;
+  }
+  .expanded_peca_home { 
+    position: relative;
+    height: 45%;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   div.peca_home {
@@ -78,8 +109,11 @@ div.peca_home:hover {
 @media screen and (min-width: 320px) and (max-width: 768px) {
   div.peca_home {
     width: 150px;
-    height: 30%;
     box-shadow: 1px 1px 8px rgba(0, 0, 0, 0.5);
+  }
+  .expanded_peca_home { 
+    position: relative;
+    height: 30%;
   }
   div#pecas_home_container {
     position: absolute;

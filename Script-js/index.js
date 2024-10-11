@@ -126,3 +126,5 @@ botaoafro.addEventListener("click", () => {
   }
   verificarselecionado()
 });
+var expanded_peca_home = document.getElementsByClassName('expanded_peca_home')
+var peca_home = document.getElementsByClassName("peca_home");
