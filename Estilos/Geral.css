@@ -9,6 +9,7 @@
   font-variant: small-caps;
   font-weight: bolder;
 }
+/* Deixar o scroll mais leve e bonito*/
 * {
   scroll-behavior: smooth;
 }
@@ -16,9 +17,9 @@ body {
   padding: 0px;
   margin: 0%;
   background-color: rgb(5, 0, 77);
-
   font-family: arial;
 }
+/* Personalização da ScrollBar */
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -30,6 +31,7 @@ body {
 ::-webkit-scrollbar-thumb {
   background: #686868;
 }
+/* Parte de cima da página, onde temos a logo, menu de navegação entre as páginas e o menu suspenso para filtros */
 header {
   color: white;
   background-image: linear-gradient(
@@ -44,7 +46,7 @@ header {
   z-index: 1;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
 }
-
+/* Logo da empresa*/
 header > a > img {
   position: absolute;
   height: 66px;
@@ -61,6 +63,7 @@ header > a > img:hover {
   filter: brightness(140%);
   transition-duration: 0.3s;
 }
+/* Menu de acesso a outras páginas*/
 #links_acesso {
   position: absolute;
   top: 40%;
@@ -119,6 +122,7 @@ a {
   color: rgb(190, 119, 119);
   text-decoration: none;
 }
+/* Linha azul que serve para ser clicada e abrir/fechar o menu suspenso de filtros */
 nav {
   text-align: center;
   color: white;
@@ -138,6 +142,7 @@ nav {
   border: 1px solid rgb(32, 0, 146);
   cursor: pointer;
 }
+/* menu suspenso de filtros*/
 #nav_aberta {
   display: flex;
   flex-direction: row;
@@ -165,7 +170,7 @@ nav {
 nav:hover {
   filter: brightness(130%);
 }
-
+/* imagens e textos presentes no menu suspenso */
 .imagem_exibição_nav {
   margin: 0px 10px 0px 10px;
   flex-shrink: 0;
@@ -211,7 +216,7 @@ p {
   background-color: rgba(0, 0, 0, 0.5);
   font-size: clamp(1em, 0.5em + 0.5vw, 1.2em);
 }
-
+/* Inicio do conteúdo principal */
 main {
   top: 60%;
   left: 50%;
@@ -223,7 +228,7 @@ main {
   color: white;
 }
 main > h1 {
-  margin: 10px 0px 0px 0px;
+  margin: 25px 0px 0px 0px;
   letter-spacing: 1.05rem;
   font-family: "fanky", arial;
   font-variant: small-caps;
@@ -240,6 +245,7 @@ main > h2 {
   font-weight: 700;
   text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.8);
 }
+/* botão de voltar para o topo da página*/
 #img-botão-voltar {
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.76);
@@ -258,6 +264,7 @@ main > h2 {
   transition-timing-function: ease;
   transition-property: scale, box-shadow;
 }
+/* Botão de acionar o suporte*/
 #img-botão-suporte {
   border-radius: 50%;
   background-color: rgb(160, 162, 243);
@@ -349,6 +356,7 @@ main > h2 {
   scale: 102%;
   transition-duration: 0.7s;
 }
+/* Página de avaliação de atendimento pós conversa com suporte */
 #avaliar_atendimento {
   position: fixed;
   top: 50%;
@@ -445,6 +453,7 @@ main > h2 {
   left: 1%;
   box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.5);
 }
+/* Parte final da página onde ficam os créditos */
 footer {
   background-image: linear-gradient(
     to right,
@@ -456,11 +465,23 @@ footer {
   position: fixed;
   bottom: 0px;
   width: 100%;
-  height: 3.8%;
+  height: 0%;
   color: white;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.486);
   text-align: center;
+  transition-timing-function: ease;
+  transition-duration: .5s;
 }
+/* Botão de abrir/fechar os créditos */
+#creditos_toggle {
+  z-index: 1;
+  background-color: rgb(255, 0, 60);
+  position: fixed;
+  bottom: 0%;
+  width: 26px;
+  height: 26px;
+}
+/* Caixa de login de usuário */
 #caixa_login {
   position: fixed;
   z-index: 1;
@@ -594,7 +615,7 @@ input[type="button"]:hover {
   #caixa_suporte > h1 {
     top: 1%;
   }
-  
+
   #container_botoes_suporte {
     height: 15%;
   }
@@ -628,7 +649,6 @@ input[type="button"]:hover {
     transition-duration: 0.3s;
     transition-property: scale;
   }
-
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   #links_acesso img {
@@ -656,7 +676,7 @@ input[type="button"]:hover {
   #caixa_suporte > h1 {
     top: 1%;
   }
-  
+
   #container_botoes_suporte {
     height: 15%;
   }
@@ -718,7 +738,7 @@ input[type="button"]:hover {
   #caixa_suporte > h1 {
     top: 1%;
   }
-  
+
   #container_botoes_suporte {
     height: 15%;
   }

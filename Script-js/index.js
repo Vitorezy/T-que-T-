@@ -5,6 +5,7 @@ var botaooutono = document.getElementById("btnNavOutono");
 var botaoprimavera = document.getElementById("btnNavPrimavera");
 var botaoafro = document.getElementById("btnNavAfro");
 var mensagem_selecao = document.getElementById("mensagem_selecao");
+// verifica se todos ou nenhum estão selecionados
 function verificarselecionado() { 
   if (
     botaoafro.checked &&
@@ -24,6 +25,7 @@ function verificarselecionado() {
     mensagem_selecao.innerHTML = "Selecione alguma coleção!";
   }
 }
+//botão de selecionar todos
 botaoTodos.addEventListener("click", () => {
   var peca_home = document.getElementsByClassName("peca_home");
   if (botaoTodos.checked) {
@@ -48,6 +50,7 @@ botaoTodos.addEventListener("click", () => {
     mensagem_selecao.innerHTML = "Selecione alguma coleção!";
   }
 });
+// outros botões
 botaoinverno.addEventListener("click", () => {
   var colecao_inverno = document.getElementsByClassName("colecao_inverno");
   if (botaoinverno.checked) {

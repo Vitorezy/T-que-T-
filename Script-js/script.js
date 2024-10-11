@@ -18,12 +18,14 @@ var container_mensagens = document.getElementById("container_mensagens");
 var apagar_historico = document.getElementById("apagar_historico");
 var avaliar_atendimento = document.getElementById("avaliar_atendimento");
 var emojis_avaliacao = document.getElementsByClassName("emojis_avaliacao");
+//para cada emoji, você recebera a resposta padrão
 for (let item of emojis_avaliacao) {
   item.addEventListener("click", () => {
     avaliar_atendimento.style.display = "none";
     alert("Obrigado pela resposta! :)");
   });
 }
+// abrir e fechar login
 fechar_login.addEventListener("click", () => {
   caixa_login.style.display = "none";
 });
@@ -36,6 +38,7 @@ botão_abrir_login.addEventListener("click", () => {
     }
   }
 });
+// abrir e fechar menu suspenso
 Navbar.addEventListener("click", () => {
   if (nav_aberta.style.height == "0%") {
     nav_aberta.style.height = "35%";
@@ -49,7 +52,7 @@ main.addEventListener("click", () => {
 Header.addEventListener("mouseleave", () => {
   nav_aberta.style.height = "0%";
 });
-
+// abrir e fechar suporte
 botão_suporte.addEventListener("click", () => {
   if (avaliar_atendimento.style.display != "block") {
     if (Caixa_suporte.style.display == "block") {
@@ -59,6 +62,7 @@ botão_suporte.addEventListener("click", () => {
     }
   }
 });
+// mensagens padrão do suporte
 botao_fechar_suporte.addEventListener("click", () => {
   avaliar_atendimento.style.display = "block";
   Caixa_suporte.style.display = "none";
@@ -91,8 +95,20 @@ botao_mensagem_4.addEventListener("click", () => {
     "<div class='mensagem_suporte mensagem_sistema'> <p> Sentimos muito em ouvir isso. você pode entrar em contato conosco por nosso <a href='mailto:taqueta@gmail.com'> Email </a> e prontamente será respondido.</p></div>";
   container_mensagens.scrollTo(0, 7000);
 });
+// evento de apagar o historico do suporte
 apagar_historico.addEventListener("click", () => {
   container_mensagens.innerHTML = "";
 });
-
-
+// Evento que abre e fecha os créditos no footer
+var creditos_toggle = document.getElementById("creditos_toggle");
+creditos_toggle.addEventListener("click", () => {
+  var footer = document.querySelector("footer");
+  if (footer.style.height == '3%') {
+    footer.style.height = '0%'
+    creditos_toggle.src = "Imagens/expandirCreditoIcon.png";
+  } else {
+    footer.style.height = '3%'
+    creditos_toggle.src = "Imagens/fecharCreditoIcon.png";
+    
+  }
+});

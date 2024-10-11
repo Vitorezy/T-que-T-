@@ -2,6 +2,7 @@
   font-family: 'bebas';
   src: url(../fontes/BebasNeue-Regular.ttf);
 }
+/* parte de cima e logo */
 header {
   background-image: linear-gradient(
     to right,
@@ -20,9 +21,11 @@ header > a > img {
   height: 81px;
   width: 95px;
 }
+/* Menu de navegação entre as paginas */
 #links_acesso {
   top: 50%;
 }
+/* menu lateral com as opções do usuario */
 #opções_usuário {
   position: fixed;
   background-image: linear-gradient(
@@ -37,6 +40,7 @@ header > a > img {
   transition-timing-function: ease;
   z-index: 1;
 }
+/* lateral de abrir e fechar opções*/
 #opções_usuário_abrir_fechar {
   z-index: 1;
   position: absolute;
@@ -56,17 +60,19 @@ header > a > img {
 #opções_usuário_abrir_fechar:hover {
   background-image: linear-gradient(
     to right,
-    rgb(160, 72, 235),
-    rgb(187, 85, 255),
-    rgb(160, 72, 235)
+    rgb(164, 69, 247)
+    rgb(144, 42, 211),
+    rgb(164, 69, 247)
   );
 }
+/* imagem da seta */
 #seta_menu_opcoes_usuario {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
 }
+/* container opções de pagina do usuario*/
 #conteudo_opcoes_usuario {
   position: relative;
   display: flex;
@@ -77,6 +83,7 @@ header > a > img {
   justify-items: center;
   align-items: center;
 }
+/* opções de pagina do usuário*/
 #nav_opcoes_usuario { 
   display: none;
   position: relative;
@@ -125,6 +132,7 @@ header > a > img {
   scale: 105%;
   border: 3px solid rgb(25, 7, 73);
 }
+/* Foto do usuário */
 #foto_usuario {
   flex-grow: 1;
   flex-shrink: 0;
@@ -139,7 +147,7 @@ header > a > img {
   width: 212px;
   height: 212px;
 }
-
+/* Caixa para enviar imagem do usuario*/
 #caixa_arquivo_input {
   position: relative;
   border: 2px solid black;
@@ -161,6 +169,7 @@ header > a > img {
   transition-duration: 0.2s;
   transition-timing-function: ease;
 }
+/* Container de orçamento de opções */
 #container_orçamento {
   position: relative;
   z-index: 0;

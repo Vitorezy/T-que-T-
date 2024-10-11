@@ -1,3 +1,4 @@
+/* Container que abrange o conteudo */
 #flex-container {
   position: relative;
   top: 1%;
@@ -6,9 +7,11 @@
   gap: 5%;
   height: 2800px;
 }
+/* Imagem do autor */
 .autor-identificação > img {
   border-radius: 50%;
 }
+/* Seletor das caixas dentro do container*/
 #flex-container > div {
   background-repeat: no-repeat;
   background-size: cover;
@@ -30,6 +33,7 @@
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
   filter: grayscale(40%) brightness(80%);
 }
+/* Nome do autor */
 .autor-identificação {
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
   background-image: linear-gradient(
@@ -39,7 +43,7 @@
     rgba(100, 0, 218, 0.98)
   );
 }
-
+/* Texto do artista*/
 #flex-container > div > .texto-artista > p {
   font-size: clamp(1rem, 2.1rem, 5rem);
   letter-spacing: 1px;
@@ -52,6 +56,7 @@
   height: 20%;
   bottom: 0.4px;
 }
+/* Imagem do artista */
 .imagem_do_artista {
   position: absolute;
   top: 50%;

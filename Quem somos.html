@@ -9,12 +9,15 @@
     <link rel="stylesheet" href="Estilos/quemsomos.css" />
     <link rel="shortcut icon" href="Imagens/favicon.ico" />
     <script defer src="Script-js/script.js"></script>
+    <script defer src="Script-js/quemsomos.js"></script>
   </head>
   <body id="inicio">
     <header>
+      <!--Imagem logo-->
       <a href="#inicio">
         <img src="Imagens/logo sem fundo.png" alt="Logo Tá que Tá" />
       </a>
+      <!--Menu de acesso a outras páginas-->
       <div id="links_acesso">
         <a href="index.html">
           <img
@@ -45,74 +48,12 @@
           />
         </div>
       </div>
+      <!--Navegação por filtros-->
       <nav tabindex="1" title="Clique para abrir/fechar">Filtrar coleções!</nav>
-      <div id="nav_aberta" style="height: 0%">
-        <div
-          class="imagem_exibição_nav"
-          style="background-image: url(Imagens/imagemcolecao1.jpg)"
-        >
-          <div class="escrita_exibição_imagem_nav">
-            <h1>todas</h1>
-            <p>Coleções criadas por Beatriz</p>
-          </div>
-        </div>
-        <div
-          class="imagem_exibição_nav"
-          style="background-image: url(Imagens/imagemcolecao1.jpg)"
-        >
-          <div class="escrita_exibição_imagem_nav">
-            <h1>Inverno</h1>
-            <p>Coleção criada por Beatriz</p>
-          </div>
-        </div>
-        <div
-          class="imagem_exibição_nav"
-          style="background-image: url(Imagens/imagemcolecao2.jpg)"
-        >
-          <div class="escrita_exibição_imagem_nav">
-            <h1>Verão</h1>
-            <p>Coleção criada por Beatriz</p>
-          </div>
-        </div>
-        <div
-          class="imagem_exibição_nav"
-          style="background-image: url(Imagens/imagemcolecao3.jpg)"
-        >
-          <div class="escrita_exibição_imagem_nav">
-            <h1>Outono</h1>
-            <p>Coleção criada por Beatriz</p>
-          </div>
-        </div>
-        <div
-          class="imagem_exibição_nav"
-          style="background-image: url(Imagens/imagemcolecao4.jpg)"
-        >
-          <div class="escrita_exibição_imagem_nav">
-            <h1>Primavera</h1>
-            <p>Coleção criada por Beatriz</p>
-          </div>
-        </div>
-        <div
-          class="imagem_exibição_nav"
-          style="background-image: url(Imagens/imagemcolecao5.jpg)"
-        >
-          <div class="escrita_exibição_imagem_nav">
-            <h1>Festas</h1>
-            <p>Coleção criada por Beatriz</p>
-          </div>
-        </div>
-        <div
-          class="imagem_exibição_nav"
-          style="background-image: url(Imagens/imagemcolecao7.jpg)"
-        >
-          <div class="escrita_exibição_imagem_nav">
-            <h1>Afro</h1>
-            <p>Coleção criada por Beatriz</p>
-          </div>
-        </div>
-      </div>
+      <div id="nav_aberta" style="height: 0%"></div>
     </header>
     <main>
+      <!--Login-->
       <div id="caixa_login" style="display: none">
         <h1 style="display: inline">Login</h1>
         <label for="fechar_login">
@@ -167,15 +108,18 @@
       </div>
       <h1>Tá Que Tá</h1>
       <h2>Sobre Nós!</h2>
-
-      <div id="container_cards" >
-        <div id="container_card_logo"class="container_home">
+      <!--caixa que abrange toda a tela-->
+      <div id="container_cards">
+        <!--Container da primeira caixa-->
+        <div id="container_card_logo" class="container_home">
           <div
             class="card_home"
             id="card_home1"
             style="
               background-image: url(Imagens/colagemlogos.jpg);
               border-radius: 10px;
+              animation: girar_card1 1.3s 0.2s both normal;
+              animation-play-state: paused;
             "
           ></div>
           <p>
@@ -191,6 +135,7 @@
             globais estabelecidos.
           </p>
         </div>
+        <!--Container da segunda caixa-->
         <div id="container_ODS" class="container_home">
           <div
             class="card_home"
@@ -213,14 +158,16 @@
             sustentável existentes.
           </p>
         </div>
-      </div>
-      <div id="final_pagina">
-        Saiba mais em:
-        <a href="Documentos - Empresa/Etapas- Tá que tá.zip"
-          >Documentação da empresa</a
-        >
+        <!--Final da página-->
+        <div id="final_pagina">
+          Saiba mais em:
+          <a href="Documentos - Empresa/Etapas- Tá que tá.zip"
+            >Documentação da empresa</a
+          >
+        </div>
       </div>
     </main>
+    <!--Avaliação do atendimento pós suporte-->
     <div id="avaliar_atendimento">
       <h1>Avalie o atendimento!</h1>
       <div id="avaliar_emojis">
@@ -261,9 +208,11 @@
         />
       </div>
     </div>
+    <!--Botão de voltar ao topo-->
     <a id="botão-voltar" href="#inicio" title="Voltar para o início">
       <img id="img-botão-voltar" src="Imagens/setaCima.png" alt="" />
     </a>
+    <!--Caixa de suporte-->
     <div id="Caixa_suporte" style="display: none">
       <h1>Suporte</h1>
       <img
@@ -297,6 +246,13 @@
     <div id="botão-suporte" title="Suporte">
       <img id="img-botão-suporte" src="Imagens/suporteIcon.png" alt="" />
     </div>
+    <!--créditos e botão de alterar sua visibilidade-->
+    <img
+      id="creditos_toggle"
+      src="Imagens/expandirCreditoIcon.png"
+      alt=""
+      title="Alterar visibilidade dos créditos"
+    />
     <footer>
       Criado por:
       <a href="https://github.com/Vitorezy" target="_blank"> Vitorezy </a>

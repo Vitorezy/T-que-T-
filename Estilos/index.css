@@ -1,4 +1,5 @@
 @charset "UTF-8";
+/* Estilização dos textos das caixas com peças de exemplo */
 .escrita_exibição_imagem_pecas {
   text-shadow: 0px 0px 10px black;
   text-align: center;
@@ -21,7 +22,7 @@ p {
   background-color: rgba(0, 0, 0, 0.5);
   font-size: clamp(1em, 0.5em + 0.5vw, 1.2em);
 }
-
+/* Container que abrange todas peças da página inicial*/
 div#pecas_home_container {
   position: absolute;
   top: 25%;
@@ -33,6 +34,7 @@ div#pecas_home_container {
   flex-wrap: wrap;
   gap: 1.8%;
 }
+/* Seletor das peças em conjunto */
 div.peca_home {
   flex-shrink: 0;
   border-radius: 15px;
@@ -49,6 +51,7 @@ div.peca_home {
 div.peca_home:hover {
   scale: 105%;
 }
+/* Estilização do menu suspenso*/
 #nav_aberta input[type="checkbox"] {
   display: none;
 }

@@ -67,12 +67,14 @@ var container_mensagens = document.getElementById("container_mensagens");
 var apagar_historico = document.getElementById("apagar_historico");
 var avaliar_atendimento = document.getElementById("avaliar_atendimento");
 var emojis_avaliacao = document.getElementsByClassName("emojis_avaliacao");
+//emoji de avaliação te dá resposta padrão
 for (let item of emojis_avaliacao) {
   item.addEventListener("click", () => {
     avaliar_atendimento.style.display = "none";
     alert("Obrigado pela resposta! :)");
   });
 }
+// abrir e fechar suporte
 botão_suporte.addEventListener("click", () => {
   if (avaliar_atendimento.style.display != "block") {
     if (Caixa_suporte.style.display == "block") {
@@ -86,6 +88,7 @@ botao_fechar_suporte.addEventListener("click", () => {
   avaliar_atendimento.style.display = "block";
   Caixa_suporte.style.display = "none";
 });
+// mensagens suporte
 botao_mensagem_1.addEventListener("click", () => {
   container_mensagens.innerHTML +=
     "<div class='mensagem_suporte mensagem_usuario'> <p> O site aparenta problemas de carregamento </p></div>";
@@ -121,7 +124,7 @@ apagar_historico.addEventListener("click", () => {
 var label_conjuntos_n = document.getElementById("label_conjuntos_n");
 var container_conjunto = document.getElementById("container_conjunto");
 var conjuntos_n = document.getElementById("conjuntos_n");
-
+//orçar em conjunto ativo ou desativo
 container_conjunto.addEventListener("click", () => {
   if (conjuntos_n.checked == false) {
     label_conjuntos_n.innerHTML = "Orçar em conjunto: Desativo";
@@ -131,5 +134,18 @@ container_conjunto.addEventListener("click", () => {
     formulario_orcamento.onsubmit = () => {
       alert("Agora crie a segunda peça.");
     };
+  }
+});
+// abrir e fechar crédito
+var creditos_toggle = document.getElementById("creditos_toggle");
+creditos_toggle.addEventListener("click", () => {
+  var footer = document.querySelector("footer");
+  if (footer.style.height == '3%') {
+    footer.style.height = '0%'
+    creditos_toggle.src = "Imagens/expandirCreditoIcon.png";
+  } else {
+    footer.style.height = '3%'
+    creditos_toggle.src = "Imagens/fecharCreditoIcon.png";
+    
   }
 });

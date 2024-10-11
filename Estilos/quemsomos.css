@@ -1,30 +1,62 @@
 body {
   overflow: auto;
 }
+/* Animação de giro dos cards quando passa o mouse por cima (hover) */
+@keyframes girar_card1 {
+  0%{ 
+    transform:rotatey(0deg);
+  }
+  100% { 
+    transform:rotatey(360deg);
+    background-image: url(../Imagens/logo-semfundo.png)
+  }
+}
+@keyframes girar_card1_inverso {
+  0%{ 
+    transform:rotatey(360deg);
+    background-image: url(../Imagens/logo-semfundo.png)
+  }
+  100% { 
+    transform:rotatey(0deg);
+    background-image: url(../Imagens/colagemlogos.jpg)
+  }
+}
+@keyframes girar_card2 {
+  0% { 
+    transform:rotatey(0deg);
+  }
+  100% { 
+    transform:rotatey(360deg);
+    background-image: url(../Imagens/ODS8.jpg)
+  }
+}
+/* Seletor geral dos cards da pagina */
 div.card_home {
   position: relative;
   width: 280px;
   height: 280px;
   margin-left: 50px;
-  margin-top: 20px;
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.63);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   flex-shrink: 0;
-  scale: 112%;
+  scale: 115%;
+  
 }
+/* classe que abrange cada caixa*/
 .container_home {
   display: flex;
   background-color: rgb(10, 6, 97);
   align-items: center;
   justify-content: center;
   box-shadow: 1px 1px 30px black;
-  width: 99%;
+  width: 100%;
   border-radius: 30px;
   position: relative;
-  height: 49%;
+  height: 50%;
 }
+/* Container que abrange em volta das caixas*/
 #container_cards {
   position: absolute;
   width: 100%;
@@ -36,22 +68,28 @@ div.card_home {
   flex-direction: row;
   box-shadow: 1px 1px 30px rgba(0, 0, 0, 0.578);
 }
+/* Caixa 1*/
 #container_card_logo {
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
-  align-items: center;
+  left: 50%;
+  transform: translate(-50%);
+  margin-bottom: 10px;
 }
+/* caixa 2 */
 #container_ODS {
-  margin-top: 20px;
+  margin-bottom: 10px;
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: nowrap;
   margin-right: 0px;
+  left: 50%;
+  transform: translate(-50%);
 }
 #container_ODS > div.card_home {
-  margin-right: 30px;
-  scale: 112%;
+  position: relative;
+  margin-right: 35px;
   border-radius: 10px;
 }
 p {
@@ -59,16 +97,21 @@ p {
   text-align: center;
   letter-spacing: 1px;
   font-weight: 500;
-  text-shadow: -1px 0px 2px black;
-  font-size: 1.7rem;
+  font-size: 1.8rem;
   margin-left: 50px;
 }
+/* parte final das páginas com o download dos documentos */
 #final_pagina {
   position: relative;
   width: 100%;
   font-size: 1.5rem;
-  top: 107%;
-  height: 10%;
+  text-align: center;
+  left: 50%;
+  border-radius: 10px;
+  transform: translate(-50%);
+  background-color: rgb(10, 6, 97);
+  box-shadow: 1px 1px 30px black;
+  height: 5%;
 }
 #final_pagina > a {
   color: rgb(153, 8, 112);
