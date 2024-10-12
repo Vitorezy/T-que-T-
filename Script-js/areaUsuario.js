@@ -125,27 +125,30 @@ var label_conjuntos_n = document.getElementById("label_conjuntos_n");
 var container_conjunto = document.getElementById("container_conjunto");
 var conjuntos_n = document.getElementById("conjuntos_n");
 //orçar em conjunto ativo ou desativo
+var formulario_orcamento = document.getElementById("formulario_orcamento");
 container_conjunto.addEventListener("click", () => {
   if (conjuntos_n.checked == false) {
     label_conjuntos_n.innerHTML = "Orçar em conjunto: Desativo";
   } else {
     label_conjuntos_n.innerHTML = "Orçar em conjunto: Ativado";
-    var formulario_orcamento = document.getElementById("formulario_orcamento");
-    formulario_orcamento.onsubmit = () => {
-      alert("Agora crie a segunda peça.");
-    };
+  }
+});
+formulario_orcamento.addEventListener("submit", () => {
+  if (conjuntos_n.checked == false) {
+    alert("Seu pedido foi efetuado, Muito Obrigado. :)");
+  } else {
+    alert("Agora crie a próxima peça.");
   }
 });
 // abrir e fechar crédito
 var creditos_toggle = document.getElementById("creditos_toggle");
 creditos_toggle.addEventListener("click", () => {
   var footer = document.querySelector("footer");
-  if (footer.style.height == '26px') {
-    footer.style.height = '0%'
+  if (footer.style.height == "26px") {
+    footer.style.height = "0%";
     creditos_toggle.src = "Imagens/expandirCreditoIcon.png";
   } else {
-    footer.style.height = '26px'
+    footer.style.height = "26px";
     creditos_toggle.src = "Imagens/fecharCreditoIcon.png";
-    
   }
 });

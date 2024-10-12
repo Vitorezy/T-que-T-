@@ -36,9 +36,9 @@ header {
   color: white;
   background-image: linear-gradient(
     to right,
-    rgb(100, 0, 182),
-    rgba(110, 0, 196, 0.98),
-    rgb(100, 0, 182)
+    rgb(131, 18, 224),
+    rgba(127, 22, 207, 0.98),
+    rgb(131, 18, 224)
   );
   width: 100%;
   height: 13%;
@@ -49,8 +49,8 @@ header {
 /* Logo da empresa*/
 header > a > img {
   position: absolute;
-  height: 66px;
-  width: 80px;
+  height: 76px;
+  width: 90px;
   left: 50%;
   top: 40%;
   z-index: 1;
@@ -64,7 +64,7 @@ header > a > img:hover {
   transition-duration: 0.3s;
 }
 /* Menu de acesso a outras páginas*/
-#links_acesso {
+.links_acesso {
   position: absolute;
   top: 40%;
   right: 0.4%;
@@ -81,7 +81,7 @@ header > a > img:hover {
   flex-grow: 0;
   text-align: justify;
 }
-#links_acesso a:hover {
+.links_acesso a:hover {
   scale: 102%;
   transition-duration: 0.3s;
   filter: brightness(130%);
@@ -97,7 +97,7 @@ header > a > img:hover {
     rgb(115, 0, 206)
   );
 }
-#links_acesso div:hover {
+.links_acesso div:hover, label:hover{
   cursor: pointer;
   scale: 102%;
   transition-duration: 0.3s;
@@ -114,7 +114,7 @@ header > a > img:hover {
     rgb(115, 0, 206)
   );
 }
-#links_acesso img {
+.links_acesso img {
   width: 70px;
   height: 65px;
 }
@@ -590,7 +590,7 @@ input[type="button"]:hover {
     left: 50%;
     transform: translate(-50%);
   }
-  #links_acesso img {
+  .links_acesso img {
     width: 55px;
     height: 50px;
   }
@@ -651,7 +651,7 @@ input[type="button"]:hover {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  #links_acesso img {
+  .links_acesso img {
     width: 65px;
     height: 65px;
   }
@@ -712,7 +712,7 @@ input[type="button"]:hover {
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
-  #links_acesso img {
+  .links_acesso img {
     width: 65px;
     height: 60px;
   }
