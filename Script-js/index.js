@@ -126,5 +126,19 @@ botaoafro.addEventListener("click", () => {
   }
   verificarselecionado()
 });
-var expanded_peca_home = document.getElementsByClassName('expanded_peca_home')
-var peca_home = document.getElementsByClassName("peca_home");
+
+var checkbox_pecas = document.getElementsByClassName('checkbox_pecas')
+var numeroitenscarrinho = document.getElementById('numeroitenscarrinho')
+let valornumeroitenscarrinho = 0
+var inputnumberpeca = document.getElementById('teste')
+for (let checkbox of checkbox_pecas) { 
+  checkbox.addEventListener('click', ()=> { 
+    if (checkbox.checked) { 
+      valornumeroitenscarrinho = valornumeroitenscarrinho + 1
+    } else { 
+      valornumeroitenscarrinho = valornumeroitenscarrinho - 1
+    }
+    numeroitenscarrinho.innerHTML = valornumeroitenscarrinho
+  })
+}
+

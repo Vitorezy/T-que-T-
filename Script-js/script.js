@@ -18,6 +18,11 @@ var container_mensagens = document.getElementById("container_mensagens");
 var apagar_historico = document.getElementById("apagar_historico");
 var avaliar_atendimento = document.getElementById("avaliar_atendimento");
 var emojis_avaliacao = document.getElementsByClassName("emojis_avaliacao");
+var botão_entrar_conta = document.getElementById('botão_entrar_conta')
+botão_entrar_conta.addEventListener('click', ()=> { 
+var input_nome_user = document.getElementById('nome_login').value
+localStorage.setItem('nome_usuário_data', input_nome_user)
+})
 //para cada emoji, você recebera a resposta padrão
 for (let item of emojis_avaliacao) {
   item.addEventListener("click", () => {

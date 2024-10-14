@@ -40,15 +40,10 @@ toggle_opcoes_usuario.addEventListener("click", () => {
     seta_menu_opcoes_usuario.src = "Imagens/seta_esquerda.png";
   }
 });
-//linha 36 a 44 = chatgpt
 window.onload = function () {
-  // Função para obter parâmetros da URL
-  function getQueryParam(param) {
-    const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get(param);
-  }
-  const texto = getQueryParam("nome_login");
-  document.getElementById("nome_usuario").innerText = texto;
+  const nome_user_data = localStorage.getItem("nome_usuário_data");
+  var campo_nome_usuario = document.getElementById("nome_usuario");
+  campo_nome_usuario.textContent = nome_user_data;
 };
 var body = document.getElementById("inicio");
 var Navbar = document.querySelector("nav");
@@ -67,6 +62,7 @@ var container_mensagens = document.getElementById("container_mensagens");
 var apagar_historico = document.getElementById("apagar_historico");
 var avaliar_atendimento = document.getElementById("avaliar_atendimento");
 var emojis_avaliacao = document.getElementsByClassName("emojis_avaliacao");
+var container_conteudo = document.getElementById("container_conteudo");
 //emoji de avaliação te dá resposta padrão
 for (let item of emojis_avaliacao) {
   item.addEventListener("click", () => {
@@ -152,3 +148,122 @@ creditos_toggle.addEventListener("click", () => {
     creditos_toggle.src = "Imagens/fecharCreditoIcon.png";
   }
 });
+var optexcluirconta = document.getElementById("optexcluirconta");
+optexcluirconta.addEventListener("click", () => {
+  if (confirm("Você tem certeza que deseja excluir sua conta?") == true) {
+    window.location.href = "index.html";
+  }
+});
+var optorcamento = document.getElementById("optorcamento");
+optorcamento.addEventListener("click", () => {
+  container_conteudo.innerHTML = `<div id="header_conteudo_usuario">
+          <p>Faça seu orçamento conosco!</p>
+        </div>
+        <form action="#" method="get" id="formulario_orcamento">
+          <div id="container_conjunto">
+            <label id="label_conjuntos_n" for="conjuntos_n"
+              >Orçar em conjunto: Desativo
+            </label>
+            <input type="checkbox" name="conjuntos_n" id="conjuntos_n" />
+          </div>
+          <p >
+            Dados básicos: 
+          </p>
+          <div id="container_selecionar_tipo_vestimenta">
+            <label for="Tipo_roupa">Tipo de Vestimenta:</label>
+            <select name="Tipo_roupa" id="Tipo_roupa">
+              <option value="select">Selecione um tipo de vestimenta</option>
+              <optgroup label="Superiores">
+                <option value="Blusa">Blusa</option>
+                <option value="Camisa">Camisa</option>
+                <option value="Camiseta">Camiseta</option>
+                <option value="Corta_Vento">Corta Vento</option>
+              </optgroup>
+              <optgroup label="Inferiores">
+                <option value="Calca">Calça</option>
+                <option value="Bermuda">Bermuda</option>
+                <option value="Shorts">Shorts</option>
+                <option value="saia">Saia</option>
+              </optgroup>
+              <optgroup label="Acessórios">
+                <option value="Bone">Boné</option>
+                <option value="chapeu">Chapéu</option>
+                <option value="Pulseira">Pulseira</option>
+                <option value="Brinco">Brinco</option>
+                <option value="Colar">Colar</option>
+              </optgroup>
+            </select>
+          </div>
+          <div id="container_tamanho_orcamento">
+            <p for="#" style="color: rgb(115, 44, 196);">Tamanho: </p>
+            <fieldset>  
+              <input type="radio" name="radio_tamanho_orcamento" id="RT1"/>
+              <label class="label_tamanho_orcamento" for="RT1" style="margin-left: 0px;"> 
+                <div>
+                  PP
+                </div>  </label>
+              <input type="radio" name="radio_tamanho_orcamento" id="RT2"/>
+              <label class="label_tamanho_orcamento" for="RT2">
+                <div>
+                  P
+                </div>  </label>
+              <input type="radio" name="radio_tamanho_orcamento" id="RT3"/>
+              <label class="label_tamanho_orcamento" for="RT3"> 
+                <div>
+                  M
+                </div> </label>
+              <input type="radio" name="radio_tamanho_orcamento" id="RT4"/>
+              <label class="label_tamanho_orcamento" for="RT4">
+                <div>
+                  G 
+                </div> </label>
+              <input type="radio" name="radio_tamanho_orcamento" id="RT5"/>
+              <label class="label_tamanho_orcamento" for="RT5">
+                <div>
+                  GG
+                </div>  </label>
+            </fieldset>
+          </div>
+          <p for="#">Seleção de cores:</p>
+          <div id="container_cores_orçamento">
+            <label for="c1">
+              Primeira cor:
+            </label>
+            <input type="color" name="c1" id="c1">
+            <label for="c2">
+              Segunda cor:
+            </label>
+            <input type="color" name="c2" id="c2">
+            <label for="c3">
+              Terceira cor:
+            </label>
+            <input type="color" name="c3" id="c3">
+          </div>
+          <p >
+            Descrição dos itens: 
+          </p>
+          <div id="container_descricao">
+            <textarea
+              required
+              minlength="20"
+              style="display: block;"
+              autocapitalize="on"
+              placeholder="Especifique no texto o tecido desejado, estampas, caimento, inspirações (Caso tenha), estilos, Etc..."
+              name="descricao"
+              id="descricao"
+              cols="75"
+              rows="5"
+              style="resize: none"
+            ></textarea>
+          </div>
+          <input type="submit" value="Enviar" id="botao_enviar_orcarmento" class="botaofimorcamento">
+          <input type="reset" value="Resetar" id="botao_resetar_orcarmento" class="botaofimorcamento">
+        </form>
+      </div>`;
+});
+var optvirarparceiro = document.getElementById('optvirarparceiro')
+optvirarparceiro.addEventListener('click', ()=> { 
+  container_conteudo.innerHTML = `<div id="header_conteudo_usuario">
+          <p>Faça seu orçamento conosco!</p>
+        </div> `
+})

@@ -18,7 +18,7 @@
         <img src="Imagens/logo sem fundo.png" alt="Logo Tá que Tá" />
       </a>
       <!--Menu de acesso a outras páginas-->
-      <div class="links_acesso" style="right: 91%;">
+      <div class="links_acesso" style="right: 90%;">
         <a href="artistas.html">
           <img
             src="Imagens/artistaIcon.png"
@@ -56,58 +56,6 @@
     </header>
     <main>
       <!--Login-->
-      <div id="caixa_login" style="display: none">
-        <h1 style="display: inline">Login</h1>
-        <label for="fechar_login">
-          <img class="botaofechar" src="Imagens/fecharIcon.png" alt=""
-        /></label>
-        <button id="fechar_login" style="display: none"></button>
-        <form id="formulario" method="get" action="areaUsuário.html">
-          <label for="nome_login"
-            ><img src="Imagens/inputNameIcon.png" alt="Nome"
-          /></label>
-          <input
-            type="text"
-            name="nome_login"
-            id="nome_login"
-            autocomplete="name"
-            required
-            placeholder="Digite seu nome"
-          />
-          <label for="senha_login">
-            <img src="Imagens/senhaIcon.png" alt="Senha"
-          /></label>
-          <input
-            type="password"
-            name="senha_login"
-            id="senha_login"
-            autocomplete="current-password"
-            required
-            minlength="8"
-            maxlength="15"
-            placeholder="Digite sua senha"
-          />
-          <div id="container_botoes">
-            <input
-              type="submit"
-              id="botão_entrar_conta"
-              value="Entrar"
-              style="background-color: rgb(19, 55, 219)"
-            />
-            <input
-              type="submit"
-              id="botão_criar_conta"
-              value="Criar conta"
-              style="background-color: rgb(161, 0, 175)"
-            />
-            <input
-              type="reset"
-              value="Resetar"
-              style="background-color: rgb(126, 0, 0)"
-            />
-          </div>
-        </form>
-      </div>
       <h1>Tá Que Tá</h1>
       <h2>Sobre Nós!</h2>
       <!--caixa que abrange toda a tela-->
@@ -169,6 +117,58 @@
         </div>
       </div>
     </main>
+    <div id="caixa_login" style="display: none">
+      <h1 style="display: inline">Login</h1>
+      <label for="fechar_login">
+        <img class="botaofechar" src="Imagens/fecharIcon.png" alt=""
+      /></label>
+      <button id="fechar_login" style="display: none"></button>
+      <form id="formulario" method="get" action="areaUsuário.html">
+        <label for="nome_login"
+          ><img src="Imagens/inputNameIcon.png" alt="Nome"
+        /></label>
+        <input
+          type="text"
+          name="nome_login"
+          id="nome_login"
+          autocomplete="name"
+          required
+          placeholder="Digite seu nome"
+        />
+        <label for="senha_login">
+          <img src="Imagens/senhaIcon.png" alt="Senha"
+        /></label>
+        <input
+          type="password"
+          name="senha_login"
+          id="senha_login"
+          autocomplete="current-password"
+          required
+          minlength="8"
+          maxlength="15"
+          placeholder="Digite sua senha"
+        />
+        <div id="container_botoes">
+          <input
+            type="submit"
+            id="botão_entrar_conta"
+            value="Entrar"
+            style="background-color: rgb(19, 55, 219)"
+          />
+          <input
+            type="submit"
+            id="botão_criar_conta"
+            value="Criar conta"
+            style="background-color: rgb(161, 0, 175)"
+          />
+          <input
+            type="reset"
+            value="Resetar"
+            style="background-color: rgb(126, 0, 0)"
+          />
+        </div>
+      </form>
+    </div>
     <!--Avaliação do atendimento pós suporte-->
     <div id="avaliar_atendimento">
       <h1>Avalie o atendimento!</h1>

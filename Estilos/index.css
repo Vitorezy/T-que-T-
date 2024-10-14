@@ -42,6 +42,19 @@ p {
   text-shadow: 0px 0px 10px black;
   font-size: 1.5rem; 
 }
+
+#label_submitpecas > p { 
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  font-size: 1.1rem;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(57, 122, 3);
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
 div.preco_peca { 
   color: rgb(41, 202, 41);
   font-size: 1.8rem; 
@@ -51,7 +64,7 @@ div.preco_peca {
   border: 1px solid white;
   top: 100%;
   width: 100.6%;
-  background-color: rgba(0, 0, 0, 0.659);
+  background-color: rgb(0, 0, 0);
   text-shadow: -1px 0px 1px rgb(15, 67, 20);
   border-radius: 0px 0px 20px 20px;
 }
@@ -86,7 +99,7 @@ div.peca_home {
   display: block;
 }
 div.peca_home:hover {
-  scale: 108%;
+  scale: 105%;
 }
 .exibicao_hover_pecas {
   display: none;
@@ -103,7 +116,7 @@ div.peca_home:hover {
   background-color: rgba(5, 5, 5, 0.316);
   text-shadow: -1px 0px 1px black;
 }
-.exibicao_hover_pecas  img {
+.exibicao_hover_pecas img {
   height: 50px;
   width: 50px;
   position: absolute;
@@ -111,13 +124,27 @@ div.peca_home:hover {
   top: 0%;
   cursor: pointer;
 }
+.exibicao_hover_pecas > input[type="number"] { 
+  position: absolute;
+  top: 50PX;
+  left: 3%;
+  width: 50px;
+  height: 10px;
+}
+#pecas_home_container input[type="checkbox"]:checked + .peca_home  { 
+  border: 2px solid rgb(1, 173, 1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.466);
+}
+#pecas_home_container input[type="checkbox"]:checked + .peca_home:hover { 
+  scale: 100%;
+}
+#pecas_home_container input[type="checkbox"]:checked + .peca_home > .exibicao_hover_pecas{ 
+  display: block;
+}
 #pecas_home_container input[type="checkbox"], #submit_pecas { 
   display: none;
 }
-.exibicao_hover_pecas > img:hover {
-  scale: 102%;
-  filter: brightness(110%);
-}
+
 div.peca_home:hover > .exibicao_hover_pecas {
   display: block;
 }
@@ -136,13 +163,12 @@ div.peca_home:hover > .exibicao_hover_pecas {
   form#pecas_home_container {
     top: 30%;
   }
-  div.peca_home {
-    flex-shrink: 0;
-    border-radius: 15px;
-    position: relative;
-    border: 2px rgb(255, 255, 255) solid;
-    background-color: rgb(153, 143, 143);
-    width: 245px;
+  .escrita_exibição_imagem_pecas {
+    top: 87%;
+  }
+  div.preco_peca { 
+    top: 110%;
+
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -152,6 +178,7 @@ div.peca_home:hover > .exibicao_hover_pecas {
   div#pecas_home_container {
     top: 25%;
   }
+  
 }
 @media screen and (min-width: 320px) and (max-width: 768px) {
   div.peca_home {

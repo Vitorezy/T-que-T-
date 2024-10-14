@@ -22,7 +22,7 @@
         <img src="Imagens/logo sem fundo.png" alt="Logo Tá que Tá" />
       </a>
       <!--Links de acesso para outras páginas-->
-      <div class="links_acesso" style="right: 91%;">
+      <div class="links_acesso" style="right: 90%;">
         <a href="artistas.html">
           <img
             src="Imagens/artistaIcon.png"
@@ -45,12 +45,13 @@
             alt="Botão de ir pro Usúario"
             title="Página inicial"
         /></a>
-        <label for="submit_pecas">
+        <label id="label_submitpecas" for="submit_pecas">
           <img
             src="Imagens/carrinhoIcon.png"
             alt=""
             title="carrinho de compras"
           />
+          <p id="numeroitenscarrinho"> 0 </p>
         </label>
 
         <div id="botão_abrir_login">
@@ -140,65 +141,11 @@
       </div>
     </header>
     <main>
-      <!--Página de login-->
-      <div id="caixa_login" style="display: none">
-        <h1 style="display: inline">Login</h1>
-        <label for="fechar_login">
-          <img class="botaofechar" src="Imagens/fecharIcon.png" alt=""
-        /></label>
-        <button id="fechar_login" style="display: none"></button>
-        <form id="formulario" method="get" action="areaUsuário.html">
-          <label for="nome_login"
-            ><img src="Imagens/inputNameIcon.png" alt="Nome"
-          /></label>
-          <input
-            type="text"
-            name="nome_login"
-            id="nome_login"
-            autocomplete="name"
-            required
-            placeholder="Digite seu nome"
-          />
-          <label for="senha_login">
-            <img src="Imagens/senhaIcon.png" alt="Senha"
-          /></label>
-          <input
-            type="password"
-            name="senha_login"
-            id="senha_login"
-            autocomplete="current-password"
-            required
-            minlength="8"
-            maxlength="15"
-            placeholder="Digite sua senha"
-          />
-          <div id="container_botoes">
-            <input
-              type="submit"
-              id="botão_entrar_conta"
-              value="Entrar"
-              style="background-color: rgb(19, 55, 219)"
-            />
-            <input
-              type="submit"
-              id="botão_criar_conta"
-              value="Criar conta"
-              style="background-color: rgb(161, 0, 175)"
-            />
-            <input
-              type="reset"
-              value="Resetar"
-              style="background-color: rgb(126, 0, 0)"
-            />
-          </div>
-        </form>
-      </div>
-
       <h1>Tá Que Tá</h1>
       <!--peças na página inicial-->
       <h2 id="mensagem_selecao">Peças</h2>
       <form method="get" action="carrinho.html" id="pecas_home_container">
-        <input type="checkbox" id="check1" />
+        <input class="checkbox_pecas" type="checkbox" id="check1" />
         <div class="peca_home colecao_inverno">
           <div class="exibicao_hover_pecas">
             <label for="check1">
@@ -212,7 +159,7 @@
             <p>Coleção de Inverno</p>
           </div>
         </div>
-        <input type="checkbox" id="check2" />
+        <input class="checkbox_pecas" type="checkbox" id="check2" />
         <div class="peca_home colecao_inverno">
           <div class="exibicao_hover_pecas">
             <label for="check2">
@@ -226,7 +173,7 @@
             <p>Coleção de Inverno</p>
           </div>
         </div>
-        <input type="checkbox" id="check3" />
+        <input class="checkbox_pecas" type="checkbox" id="check3" />
         <div class="peca_home colecao_verao">
           <div class="exibicao_hover_pecas">
             <label for="check3">
@@ -240,7 +187,7 @@
             <p>Coleção de Verão</p>
           </div>
         </div>
-        <input type="checkbox" id="check4" />
+        <input class="checkbox_pecas" type="checkbox" id="check4" />
         <div class="peca_home colecao_verao">
           <div class="exibicao_hover_pecas">
             <label for="check4">
@@ -254,7 +201,7 @@
             <p>Coleção de Verão</p>
           </div>
         </div>
-        <input type="checkbox" id="check5" />
+        <input class="checkbox_pecas" type="checkbox" id="check5" />
         <div class="peca_home colecao_outono">
           <div class="exibicao_hover_pecas">
             <label for="check5">
@@ -268,7 +215,7 @@
             <p>Coleção de outono</p>
           </div>
         </div>
-        <input type="checkbox" id="check6" />
+        <input class="checkbox_pecas" type="checkbox" id="check6" />
         <div class="peca_home colecao_outono">
           <div class="exibicao_hover_pecas">
             <label for="check6">
@@ -282,7 +229,7 @@
             <p>Coleção de outono</p>
           </div>
         </div>
-        <input type="checkbox" id="check7" />
+        <input class="checkbox_pecas" type="checkbox" id="check7" />
         <div class="peca_home colecao_primavera">
           <div class="exibicao_hover_pecas">
             <label for="check7">
@@ -296,7 +243,7 @@
             <p>Coleção de primavera</p>
           </div>
         </div>
-        <input type="checkbox" id="check8" />
+        <input class="checkbox_pecas" type="checkbox" id="check8" />
         <div class="peca_home colecao_primavera">
           <div class="exibicao_hover_pecas">
             <label for="check8">
@@ -310,7 +257,7 @@
             <p>Coleção de primavera</p>
           </div>
         </div>
-        <input type="checkbox" id="check9" />
+        <input class="checkbox_pecas" type="checkbox" id="check9" />
         <div class="peca_home colecao_afro">
           <div class="exibicao_hover_pecas">
             <label for="check9">
@@ -324,7 +271,7 @@
             <p>Coleção Afro</p>
           </div>
         </div>
-        <input type="checkbox" id="check10" />
+        <input class="checkbox_pecas" type="checkbox" id="check10" />
         <div class="peca_home colecao_afro">
           <div class="exibicao_hover_pecas">
             <label for="check10">
@@ -341,6 +288,59 @@
         <input id="submit_pecas" type="submit" value="enviar" />
       </form>
     </main>
+    <!--Página de login-->
+    <div id="caixa_login" style="display: none">
+      <h1 style="display: inline">Login</h1>
+      <label for="fechar_login">
+        <img class="botaofechar" src="Imagens/fecharIcon.png" alt=""
+      /></label>
+      <button id="fechar_login" style="display: none"></button>
+      <form id="formulario" method="get" action="areaUsuário.html">
+        <label for="nome_login"
+          ><img src="Imagens/inputNameIcon.png" alt="Nome"
+        /></label>
+        <input
+          type="text"
+          name="nome_login"
+          id="nome_login"
+          autocomplete="name"
+          required
+          placeholder="Digite seu nome"
+        />
+        <label for="senha_login">
+          <img src="Imagens/senhaIcon.png" alt="Senha"
+        /></label>
+        <input
+          type="password"
+          name="senha_login"
+          id="senha_login"
+          autocomplete="current-password"
+          required
+          minlength="8"
+          maxlength="15"
+          placeholder="Digite sua senha"
+        />
+        <div id="container_botoes">
+          <input
+            type="submit"
+            id="botão_entrar_conta"
+            value="Entrar"
+            style="background-color: rgb(19, 55, 219)"
+          />
+          <input
+            type="submit"
+            id="botão_criar_conta"
+            value="Criar conta"
+            style="background-color: rgb(161, 0, 175)"
+          />
+          <input
+            type="reset"
+            value="Resetar"
+            style="background-color: rgb(126, 0, 0)"
+          />
+        </div>
+      </form>
+    </div>
     <!--página de avaliação de atendimento-->
     <div id="avaliar_atendimento">
       <h1>Avalie o atendimento!</h1>
