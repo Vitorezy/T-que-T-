@@ -6,7 +6,7 @@ var botaoprimavera = document.getElementById("btnNavPrimavera");
 var botaoafro = document.getElementById("btnNavAfro");
 var mensagem_selecao = document.getElementById("mensagem_selecao");
 // verifica se todos ou nenhum estão selecionados
-function verificarselecionado() { 
+function verificarselecionado() {
   if (
     botaoafro.checked &&
     botaoinverno.checked &&
@@ -64,7 +64,7 @@ botaoinverno.addEventListener("click", () => {
     }
     botaoTodos.checked = false;
   }
-  verificarselecionado()
+  verificarselecionado();
 });
 botaoverao.addEventListener("click", () => {
   var colecao_verao = document.getElementsByClassName("colecao_verao");
@@ -79,7 +79,7 @@ botaoverao.addEventListener("click", () => {
     }
     botaoTodos.checked = false;
   }
-  verificarselecionado()
+  verificarselecionado();
 });
 botaooutono.addEventListener("click", () => {
   var colecao_outono = document.getElementsByClassName("colecao_outono");
@@ -94,7 +94,7 @@ botaooutono.addEventListener("click", () => {
     }
     botaoTodos.checked = false;
   }
-  verificarselecionado()
+  verificarselecionado();
 });
 botaoprimavera.addEventListener("click", () => {
   var colecao_primavera = document.getElementsByClassName("colecao_primavera");
@@ -109,7 +109,7 @@ botaoprimavera.addEventListener("click", () => {
     }
     botaoTodos.checked = false;
   }
-  verificarselecionado()
+  verificarselecionado();
 });
 botaoafro.addEventListener("click", () => {
   var colecao_afro = document.getElementsByClassName("colecao_afro");
@@ -124,21 +124,33 @@ botaoafro.addEventListener("click", () => {
     }
     botaoTodos.checked = false;
   }
-  verificarselecionado()
+  verificarselecionado();
 });
 
-var checkbox_pecas = document.getElementsByClassName('checkbox_pecas')
-var numeroitenscarrinho = document.getElementById('numeroitenscarrinho')
-let valornumeroitenscarrinho = 0
-var inputnumberpeca = document.getElementById('teste')
-for (let checkbox of checkbox_pecas) { 
-  checkbox.addEventListener('click', ()=> { 
-    if (checkbox.checked) { 
-      valornumeroitenscarrinho = valornumeroitenscarrinho + 1
-    } else { 
-      valornumeroitenscarrinho = valornumeroitenscarrinho - 1
+var checkbox_pecas = document.getElementsByClassName("checkbox_pecas");
+var numeroitenscarrinho = document.getElementById("numeroitenscarrinho");
+var preco_peca = document.getElementsByClassName("preco_individual_peca");
+let valornumeroitenscarrinho = 0;
+let valortotalitens = 0;
+for (let checkbox of checkbox_pecas) {
+  checkbox.addEventListener("click", () => {
+    if (checkbox.checked) {
+      for (let preco of preco_peca) {
+        valortotalitens = valortotalitens + parseInt(preco.value);
+      }
+      valornumeroitenscarrinho = valornumeroitenscarrinho + 1;
+    } else {
+      for (let preco of preco_peca) {
+        valortotalitens = valortotalitens - parseInt(preco.value);
+      }
+      valornumeroitenscarrinho = valornumeroitenscarrinho - 1;
     }
-    numeroitenscarrinho.innerHTML = valornumeroitenscarrinho
-  })
+    console.log(valortotalitens);
+    numeroitenscarrinho.innerHTML = valornumeroitenscarrinho;
+  });
 }
-
+var enviar_carrinho = document.getElementById("enviar_carrinho");
+enviar_carrinho.addEventListener("click", () => {
+  localStorage.setItem("valortotal", valortotalitens);
+  localStorage.setItem("numeroitens", valornumeroitenscarrinho);
+});

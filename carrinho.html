@@ -5,7 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carrinho de Compras</title>
     <link rel="stylesheet" href="Estilos/Geral.css" />
-    <script defer src="Script-js/script.js"></script>
+    <link rel="stylesheet" href="Estilos/carrinho.css" />
+    <script defer src="Script-js/carrinho.js"></script>
   </head>
   <body id="inicio">
     <header>
@@ -15,237 +16,125 @@
       </a>
       <!--Links de acesso para outras páginas-->
       <div class="links_acesso">
-      <div class="links_acesso">
-        <a href="index.html">
-          <img
-            src="Imagens/homeIcon.png"
-            alt="Botão de ir pro Usúario"
-            title="Página inicial"
-        /></a>
-      </div>
-      </div>
-      <!--Nav com filtros para as peças da página-->
-      <nav tabindex="1" title="Clique para abrir/fechar">Filtrar coleções!</nav>
-      <div id="nav_aberta" style="height: 0%">
-        <input type="checkbox" name="" id="btnNavTodas" checked />
-        <label
-          for="btnNavTodas"
-          tabindex="1"
-          class="imagem_exibição_nav"
-          style="background-image: url(Imagens/imagemcolecao1.jpg)"
-        >
-          <div class="escrita_exibição_imagem_nav">
-            <h1>todas</h1>
-            <p>Coleções criadas por Beatriz</p>
-          </div>
-        </label>
-        <input type="checkbox" name="" id="btnNavInverno" checked />
-        <label
-          for="btnNavInverno"
-          tabindex="1"
-          class="imagem_exibição_nav"
-          style="background-image: url(Imagens/imagemcolecao1.jpg)"
-        >
-          <div class="escrita_exibição_imagem_nav">
-            <h1>Inverno</h1>
-            <p>Coleção criada por Beatriz</p>
-          </div>
-        </label>
-        <input type="checkbox" name="" id="btnNavVerao" checked />
-        <label
-          for="btnNavVerao"
-          tabindex="1"
-          class="imagem_exibição_nav"
-          style="background-image: url(Imagens/imagemcolecao2.jpg)"
-        >
-          <div class="escrita_exibição_imagem_nav">
-            <h1>Verão</h1>
-            <p>Coleção criada por Beatriz</p>
-          </div>
-        </label>
-        <input type="checkbox" name="" id="btnNavOutono" checked />
-        <label
-          for="btnNavOutono"
-          tabindex="1"
-          class="imagem_exibição_nav"
-          style="background-image: url(Imagens/imagemcolecao3.jpg)"
-        >
-          <div class="escrita_exibição_imagem_nav">
-            <h1>Outono</h1>
-            <p>Coleção criada por Beatriz</p>
-          </div>
-        </label>
-        <input type="checkbox" name="" id="btnNavPrimavera" checked />
-        <label
-          for="btnNavPrimavera"
-          tabindex="1"
-          class="imagem_exibição_nav"
-          style="background-image: url(Imagens/imagemcolecao4.jpg)"
-        >
-          <div class="escrita_exibição_imagem_nav">
-            <h1>Primavera</h1>
-            <p>Coleção criada por Beatriz</p>
-          </div>
-        </label>
-        <input type="checkbox" name="" id="btnNavAfro" checked />
-        <label
-          for="btnNavAfro"
-          tabindex="1"
-          class="imagem_exibição_nav"
-          style="background-image: url(Imagens/imagemcolecao7.jpg)"
-        >
-          <div class="escrita_exibição_imagem_nav">
-            <h1>Afro</h1>
-            <p>Coleção criada por Beatriz</p>
-          </div>
-        </label>
+        <div class="links_acesso">
+          <a href="index.html">
+            <img
+              src="Imagens/homeIcon.png"
+              alt="Botão de ir pro Usúario"
+              title="Página inicial"
+          /></a>
+        </div>
       </div>
     </header>
     <main>
-      
-    </main>
-    <!--Página de login-->
-    <div id="caixa_login" style="display: none">
-      <h1 style="display: inline">Login</h1>
-      <label for="fechar_login">
-        <img class="botaofechar" src="Imagens/fecharIcon.png" alt=""
-      /></label>
-      <button id="fechar_login" style="display: none"></button>
-      <form id="formulario" method="get" action="areaUsuário.html">
-        <label for="nome_login"
-          ><img src="Imagens/inputNameIcon.png" alt="Nome"
-        /></label>
-        <input
-          type="text"
-          name="nome_login"
-          id="nome_login"
-          autocomplete="name"
-          required
-          placeholder="Digite seu nome"
-        />
-        <label for="senha_login">
-          <img src="Imagens/senhaIcon.png" alt="Senha"
-        /></label>
-        <input
-          type="password"
-          name="senha_login"
-          id="senha_login"
-          autocomplete="current-password"
-          required
-          minlength="8"
-          maxlength="15"
-          placeholder="Digite sua senha"
-        />
-        <div id="container_botoes">
-          <input
-            type="submit"
-            id="botão_entrar_conta"
-            value="Entrar"
-            style="background-color: rgb(19, 55, 219)"
-          />
-          <input
-            type="submit"
-            id="botão_criar_conta"
-            value="Criar conta"
-            style="background-color: rgb(161, 0, 175)"
-          />
-          <input
-            type="reset"
-            value="Resetar"
-            style="background-color: rgb(126, 0, 0)"
-          />
+      <form action="index.html" id="container_itens_carrinho">
+        <div id="header_itens">
+          <h1>Extrato</h1>
+        </div>
+        <div id="conteudo_itens_carrinho">
+          <h1>Obrigado por comprar conosco</h1>
+          <h3>Você adicionou <span id="numeroitensspan"> 0 </span> Itens no carrinho! isso lhe dá um total de <span id="valortotalfinalspan"> 0 </span>R$ </h3>
+          <div id="extrato_final">
+            <div id="extrato_final_valor">
+              <h1>Total a pagar:</h1>
+              <h1 id="totalpagar">10</h1>
+            </div>
+            <div id="extrato_final_finalizar">
+              <input type="submit" value="Finalizar Compra" />
+            </div>
+          </div>
         </div>
       </form>
-    </div>
+    </main>
     <!--página de avaliação de atendimento-->
     <div id="avaliar_atendimento">
-        <h1>Avalie o atendimento!</h1>
-        <div id="avaliar_emojis">
-          <img
-            id="emojis_avaliacao_1"
-            class="emojis_avaliacao"
-            src="Imagens/nota5Icon.png"
-            alt=""
-            title="Ótimo"
-          />
-          <img
-            id="emojis_avaliacao_2"
-            class="emojis_avaliacao"
-            src="Imagens/nota4Icon.png"
-            alt=""
-            title="Bom"
-          />
-          <img
-            id="emojis_avaliacao_3"
-            class="emojis_avaliacao"
-            src="Imagens/nota3Icon.png"
-            alt=""
-            title="Mediano"
-          />
-          <img
-            id="emojis_avaliacao_4"
-            class="emojis_avaliacao"
-            src="Imagens/nota2Icon.png"
-            alt=""
-            title="Ruim"
-          />
-          <img
-            id="emojis_avaliacao_5"
-            class="emojis_avaliacao"
-            src="Imagens/nota1Icon.png"
-            alt=""
-            title="Péssimo"
-          />
-        </div>
-      </div>
-      <!--Botão de voltar ao inicio da página-->
-      <a id="botão-voltar" href="#inicio" title="Voltar para o início">
-        <img id="img-botão-voltar" src="Imagens/setaCima.png" alt="" />
-      </a>
-      <!--Caixa de suporte-->
-      <div id="Caixa_suporte" style="display: none">
-        <h1>Suporte</h1>
+      <h1>Avalie o atendimento!</h1>
+      <div id="avaliar_emojis">
         <img
-          class="botaofechar"
-          id="botao_fechar_suporte"
-          src="Imagens/fecharIcon.png"
+          id="emojis_avaliacao_1"
+          class="emojis_avaliacao"
+          src="Imagens/nota5Icon.png"
           alt=""
-          style="right: 0%; position: absolute; width: 70px"
+          title="Ótimo"
         />
-        <div id="container_mensagens"></div>
-        <div id="container_botoes_suporte">
-          <button id="botao_mensagem_1">
-            Problemas com a navegação do site.
-          </button>
-          <button id="botao_mensagem_2">
-            Preciso de mais informações da empresa.
-          </button>
-          <button id="botao_mensagem_3">
-            Quero me tornar parceiro da Tá que Tá
-          </button>
-          <button id="botao_mensagem_4">Quero Denunciar uma situação.</button>
-          <img
-            id="apagar_historico"
-            src="Imagens/lixeiraIcon.png"
-            alt=""
-            title="Apagar conversa com o suporte."
-          />
-        </div>
+        <img
+          id="emojis_avaliacao_2"
+          class="emojis_avaliacao"
+          src="Imagens/nota4Icon.png"
+          alt=""
+          title="Bom"
+        />
+        <img
+          id="emojis_avaliacao_3"
+          class="emojis_avaliacao"
+          src="Imagens/nota3Icon.png"
+          alt=""
+          title="Mediano"
+        />
+        <img
+          id="emojis_avaliacao_4"
+          class="emojis_avaliacao"
+          src="Imagens/nota2Icon.png"
+          alt=""
+          title="Ruim"
+        />
+        <img
+          id="emojis_avaliacao_5"
+          class="emojis_avaliacao"
+          src="Imagens/nota1Icon.png"
+          alt=""
+          title="Péssimo"
+        />
       </div>
-  
-      <div id="botão-suporte" title="Suporte">
-        <img id="img-botão-suporte" src="Imagens/suporteIcon.png" alt="" />
-      </div>
-      <!--Créditos-->
+    </div>
+    <!--Botão de voltar ao inicio da página-->
+    <a id="botão-voltar" href="#inicio" title="Voltar para o início">
+      <img id="img-botão-voltar" src="Imagens/setaCima.png" alt="" />
+    </a>
+    <!--Caixa de suporte-->
+    <div id="Caixa_suporte" style="display: none">
+      <h1>Suporte</h1>
       <img
-        id="creditos_toggle"
-        src="Imagens/expandirCreditoIcon.png"
+        class="botaofechar"
+        id="botao_fechar_suporte"
+        src="Imagens/fecharIcon.png"
         alt=""
-        title="Alterar visibilidade dos créditos"
+        style="right: 0%; position: absolute; width: 70px"
       />
-      <footer>
-        Criado por:
-        <a href="https://github.com/Vitorezy" target="_blank"> Vitorezy </a>
-      </footer>
+      <div id="container_mensagens"></div>
+      <div id="container_botoes_suporte">
+        <button id="botao_mensagem_1">
+          Problemas com a navegação do site.
+        </button>
+        <button id="botao_mensagem_2">
+          Preciso de mais informações da empresa.
+        </button>
+        <button id="botao_mensagem_3">
+          Quero me tornar parceiro da Tá que Tá
+        </button>
+        <button id="botao_mensagem_4">Quero Denunciar uma situação.</button>
+        <img
+          id="apagar_historico"
+          src="Imagens/lixeiraIcon.png"
+          alt=""
+          title="Apagar conversa com o suporte."
+        />
+      </div>
+    </div>
+
+    <div id="botão-suporte" title="Suporte">
+      <img id="img-botão-suporte" src="Imagens/suporteIcon.png" alt="" />
+    </div>
+    <!--Créditos-->
+    <img
+      id="creditos_toggle"
+      src="Imagens/expandirCreditoIcon.png"
+      alt=""
+      title="Alterar visibilidade dos créditos"
+    />
+    <footer>
+      Criado por:
+      <a href="https://github.com/Vitorezy" target="_blank"> Vitorezy </a>
+    </footer>
   </body>
 </html>

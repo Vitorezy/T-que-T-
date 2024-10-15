@@ -90,7 +90,7 @@ botao_mensagem_3.addEventListener("click", () => {
   container_mensagens.innerHTML +=
     "<div class='mensagem_suporte mensagem_usuario'> <p> Como posso me tornar um artista e/ou parceiro da Tá que Tá?  </p></div>";
   container_mensagens.innerHTML +=
-    "<div class='mensagem_suporte mensagem_sistema'> <p> <p> Você pode se tornar um artista parceiro da Tá que Tá entrando em contato pelo nosso <a href='mailto:taqueta@gmail.com'> Email </a> ou se cadastrando por nossa <a href='quem somos.html'>página de artistas</a>";
+    "<div class='mensagem_suporte mensagem_sistema'> <p> Você pode se tornar um artista parceiro da Tá que Tá entrando em contato pelo nosso <a href='mailto:taqueta@gmail.com'> Email </a> ou se cadastrando pela página do usuário";
   container_mensagens.scrollTo(0, 7000);
 });
 botao_mensagem_4.addEventListener("click", () => {

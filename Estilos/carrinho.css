@@ -1,0 +1,99 @@
+body {
+  overflow-x: hidden;
+}
+header {
+  height: 10%;
+}
+.links_acesso {
+  top: 50%;
+}
+.links_acesso img {
+  height: 70px;
+  width: 70px;
+}
+header > a > img {
+  position: absolute;
+  top: 50%;
+  height: 76px;
+  width: 90px;
+}
+/*container que abrange a caixa onde estão posicionados os itens do carrinho */
+#container_itens_carrinho {
+  position: absolute;
+  top: 1%;
+  left: 50%;
+  transform: translate(-50%, 0%);
+  background-image: linear-gradient(
+    to right,
+    rgb(60, 0, 109),
+    rgba(60, 0, 109, 0.918),
+    rgb(60, 0, 109)
+  );
+  height: 86.5%;
+  width: 70%;
+  box-shadow: 0px 0px 10px black;
+  border: 1px solid black;
+}
+
+#header_itens {
+  position: relative;
+  height: 10%;
+  text-shadow: -1px 4px 3px black;
+  background-image: linear-gradient(
+    to right,
+    rgb(131, 18, 224),
+    rgba(127, 22, 207, 0.98),
+    rgb(131, 18, 224)
+  );
+  width: 100%;
+  box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.459);
+}
+#conteudo_itens_carrinho {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1%;
+  height: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+#extrato_final {
+  position: fixed;
+  bottom: 0%;
+  background-image: linear-gradient(
+    to right,
+    rgb(131, 18, 224),
+    rgba(127, 22, 207, 0.98),
+    rgb(131, 18, 224)
+  );
+  width: 100%;
+  height: 16%;
+}
+#extrato_final > div {
+  width: 100%;
+}
+#extrato_final_finalizar > input[type="submit"] {
+  border-radius: 20px;
+  font-size: 1.3rem;
+  width: 18%;
+  background-color: rgb(9, 172, 9);
+  color: white;
+  text-shadow: -1px 2px 5px rgba(0, 0, 0, 0.76);
+}
+.preco_item_carrinho { 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 15%;
+  height: 100%;
+  position: absolute;
+  right: 0%;
+}
+.preco_item_valor { 
+  color: rgb(17, 216, 17);
+  text-shadow: -1px 0px 3px black;
+}
+#totalpagar {
+  color: rgb(5, 197, 5);
+  text-shadow: -1px 0px 3px black;
+}

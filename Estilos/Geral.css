@@ -715,16 +715,8 @@ input[type="button"]:hover {
     transform: translate(-50%, -50%);
   }
   #Caixa_suporte {
-    background-image: linear-gradient(
-      to bottom,
-      rgba(98, 41, 190, 0.993),
-      rgba(101, 40, 199, 0.993),
-      rgba(66, 26, 131, 0.993)
-    );
-    bottom: 14%;
-    width: 30%;
-    height: 70%;
-    letter-spacing: 1px;
+    left: 1.5%;
+    bottom: 15%;
   }
   #caixa_suporte > h1 {
     top: 1%;
