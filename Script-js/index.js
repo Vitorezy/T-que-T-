@@ -135,14 +135,10 @@ let valortotalitens = 0;
 for (let checkbox of checkbox_pecas) {
   checkbox.addEventListener("click", () => {
     if (checkbox.checked) {
-      for (let preco of preco_peca) {
-        valortotalitens = valortotalitens + parseInt(preco.value);
-      }
+      valortotalitens = valortotalitens + parseInt(checkbox.value);
       valornumeroitenscarrinho = valornumeroitenscarrinho + 1;
     } else {
-      for (let preco of preco_peca) {
-        valortotalitens = valortotalitens - parseInt(preco.value);
-      }
+        valortotalitens = valortotalitens - parseInt(checkbox.value);
       valornumeroitenscarrinho = valornumeroitenscarrinho - 1;
     }
     console.log(valortotalitens);
@@ -151,6 +147,6 @@ for (let checkbox of checkbox_pecas) {
 }
 var enviar_carrinho = document.getElementById("enviar_carrinho");
 enviar_carrinho.addEventListener("click", () => {
-  localStorage.setItem("valortotal", valortotalitens);
-  localStorage.setItem("numeroitens", valornumeroitenscarrinho);
+  sessionStorage.setItem("valortotal", valortotalitens);
+  sessionStorage.setItem("numeroitens", valornumeroitenscarrinho);
 });

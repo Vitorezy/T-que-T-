@@ -30,9 +30,10 @@ header > a > img {
     rgb(60, 0, 109)
   );
   height: 86.5%;
-  width: 70%;
+  width: 65%;
   box-shadow: 0px 0px 10px black;
   border: 1px solid black;
+  border-radius: 15px 15px 15px 15px;
 }
 
 #header_itens {
@@ -47,6 +48,7 @@ header > a > img {
   );
   width: 100%;
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.459);
+  border-radius: 15px 15px 0px 0px;
 }
 #conteudo_itens_carrinho {
   width: 100%;
@@ -68,6 +70,7 @@ header > a > img {
   );
   width: 100%;
   height: 16%;
+  border-radius: 0px 0px 15px 15px;
 }
 #extrato_final > div {
   width: 100%;
@@ -75,20 +78,12 @@ header > a > img {
 #extrato_final_finalizar > input[type="submit"] {
   border-radius: 20px;
   font-size: 1.3rem;
-  width: 18%;
+  width: 20%;
   background-color: rgb(9, 172, 9);
   color: white;
   text-shadow: -1px 2px 5px rgba(0, 0, 0, 0.76);
 }
-.preco_item_carrinho { 
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 15%;
-  height: 100%;
-  position: absolute;
-  right: 0%;
-}
+
 .preco_item_valor { 
   color: rgb(17, 216, 17);
   text-shadow: -1px 0px 3px black;

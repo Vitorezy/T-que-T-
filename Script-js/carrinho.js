@@ -13,10 +13,10 @@ var totalpagar = document.getElementById('totalpagar')
   var numeroitensspan = document.getElementById('numeroitensspan')
   var valortotalfinalspan = document.getElementById('valortotalfinalspan')
 window.onload = function () {
-  const valortotalcompra = localStorage.getItem("valortotal");
-  const numeroitens = localStorage.getItem('numeroitens')
-  totalpagar.innerHTML = valortotalcompra
-  valortotalfinalspan.innerHTML = valortotalcompra
+  const valortotalcompra = sessionStorage.getItem("valortotal");
+  const numeroitens = sessionStorage.getItem('numeroitens')
+  totalpagar.innerHTML = valortotalcompra + 'R$'
+  valortotalfinalspan.innerHTML = valortotalcompra 
   numeroitensspan.innerHTML = numeroitens
 };
 for (let item of emojis_avaliacao) {

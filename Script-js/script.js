@@ -18,11 +18,11 @@ var container_mensagens = document.getElementById("container_mensagens");
 var apagar_historico = document.getElementById("apagar_historico");
 var avaliar_atendimento = document.getElementById("avaliar_atendimento");
 var emojis_avaliacao = document.getElementsByClassName("emojis_avaliacao");
-var botão_entrar_conta = document.getElementById('botão_entrar_conta')
-botão_entrar_conta.addEventListener('click', ()=> { 
-var input_nome_user = document.getElementById('nome_login').value
-localStorage.setItem('nome_usuário_data', input_nome_user)
-})
+var botão_entrar_conta = document.getElementById("botão_entrar_conta");
+botão_entrar_conta.addEventListener("click", () => {
+  var input_nome_user = document.getElementById("nome_login").value;
+  sessionStorage.setItem("nome_usuário_data", input_nome_user);
+});
 //para cada emoji, você recebera a resposta padrão
 for (let item of emojis_avaliacao) {
   item.addEventListener("click", () => {
@@ -108,12 +108,40 @@ apagar_historico.addEventListener("click", () => {
 var creditos_toggle = document.getElementById("creditos_toggle");
 creditos_toggle.addEventListener("click", () => {
   var footer = document.querySelector("footer");
-  if (footer.style.height == '26px') {
-    footer.style.height = '0%'
+  if (footer.style.height == "26px") {
+    footer.style.height = "0%";
     creditos_toggle.src = "Imagens/expandirCreditoIcon.png";
   } else {
-    footer.style.height = '26px'
+    footer.style.height = "26px";
     creditos_toggle.src = "Imagens/fecharCreditoIcon.png";
-    
+  }
+});
+var formulario = document.getElementById("formulario");
+var senha_login = document.getElementById("senha_login");
+var nome_login = document.getElementById("nome_login");
+var botão_criar_conta = document.getElementById("botão_criar_conta");
+var botão_entrar_conta = document.getElementById("botão_entrar_conta");
+var senhaatual = null;
+var nomeatual = null;
+botão_criar_conta.addEventListener("click", () => {
+  if(nome_login.value.length !== 0 && senha_login.value.length >=8) { 
+    senhaatual = senha_login.value;
+    nomeatual = nome_login.value;
+    sessionStorage.setItem("nomeatual", nomeatual);
+    sessionStorage.setItem("senhaatual", senhaatual);
+    alert("Sua conta foi criada com sucesso! :)");
+  } else if(nome_login.value.length == 0) { 
+    alert('o nome é inválido.')
+  } else if (senha_login.value.length <8) { 
+    alert('Você precisa de 8 ou mais caractéres para sua senha.')
+  }
+  
+});
+formulario.addEventListener("submit", (event) => {
+  if (sessionStorage.getItem("senhaatual") == senha_login.value && sessionStorage.getItem("nomeatual") == nome_login.value) {
+    alert(`Seja bem vindo novamente, ${sessionStorage.getItem("nomeatual")}!`);
+  } else {
+    event.preventDefault()
+    alert("Você colocou os dados errados ou não criou sua conta ainda. Tente novamente.");
   }
 });

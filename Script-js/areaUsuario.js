@@ -41,7 +41,7 @@ toggle_opcoes_usuario.addEventListener("click", () => {
   }
 });
 window.onload = function () {
-  const nome_user_data = localStorage.getItem("nome_usuário_data");
+  const nome_user_data = sessionStorage.getItem("nome_usuário_data");
   var campo_nome_usuario = document.getElementById("nome_usuario");
   campo_nome_usuario.textContent = nome_user_data;
 };
@@ -151,6 +151,8 @@ creditos_toggle.addEventListener("click", () => {
 var optexcluirconta = document.getElementById("optexcluirconta");
 optexcluirconta.addEventListener("click", () => {
   if (confirm("Você tem certeza que deseja excluir sua conta?") == true) {
+    sessionStorage.clear("senhaatual")
+    sessionStorage.clear("nomeatual")
     window.location.href = "index.html";
   }
 });
