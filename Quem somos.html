@@ -18,7 +18,7 @@
         <img src="Imagens/logo sem fundo.png" alt="Logo Tá que Tá" />
       </a>
       <!--Menu de acesso a outras páginas-->
-      <div class="links_acesso" style="right: 90%;">
+      <div class="links_acesso" style="right: 90%">
         <a href="artistas.html">
           <img
             src="Imagens/artistaIcon.png"
@@ -50,9 +50,6 @@
           />
         </div>
       </div>
-      <!--Navegação por filtros-->
-      <nav tabindex="1" title="Clique para abrir/fechar">Filtrar coleções!</nav>
-      <div id="nav_aberta" style="height: 0%"></div>
     </header>
     <main>
       <!--Login-->
@@ -117,13 +114,14 @@
         </div>
       </div>
     </main>
+    <!--Página de login-->
     <div id="caixa_login" style="display: none">
       <h1 style="display: inline">Login</h1>
       <label for="fechar_login">
         <img class="botaofechar" src="Imagens/fecharIcon.png" alt=""
       /></label>
       <button id="fechar_login" style="display: none"></button>
-      <form id="formulario" method="get" action="areaUsuário.html">
+      <form id="formulario" method="post" action="areaUsuário.html">
         <label for="nome_login"
           ><img src="Imagens/inputNameIcon.png" alt="Nome"
         /></label>
@@ -148,6 +146,13 @@
           maxlength="15"
           placeholder="Digite sua senha"
         />
+        <div id="container_revelarsenha">
+          <input type="checkbox" name="" id="botaorevelarsenha" />
+          <label id="labelrevelarsenha" for="botaorevelarsenha"
+            >Revelar senha</label
+          >
+        </div>
+
         <div id="container_botoes">
           <input
             type="submit"
@@ -156,10 +161,10 @@
             style="background-color: rgb(19, 55, 219)"
           />
           <input
-            type="submit"
+            type="button"
             id="botão_criar_conta"
             value="Criar conta"
-            style="background-color: rgb(161, 0, 175)"
+            style="background-color: rgb(153, 0, 255)"
           />
           <input
             type="reset"
@@ -169,7 +174,9 @@
         </div>
         <ul id="requerimentos_login">
           <li>O nome deve estar preenchido</li>
-          <li>A senha precisa de no minímo 8 caractéres</li>
+          <li>
+            A senha precisa de no minímo 8 caractéres e máximo de 15 caractéres
+          </li>
         </ul>
       </form>
     </div>

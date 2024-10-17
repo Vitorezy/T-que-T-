@@ -138,15 +138,20 @@ for (let checkbox of checkbox_pecas) {
       valortotalitens = valortotalitens + parseInt(checkbox.value);
       valornumeroitenscarrinho = valornumeroitenscarrinho + 1;
     } else {
-        valortotalitens = valortotalitens - parseInt(checkbox.value);
+      valortotalitens = valortotalitens - parseInt(checkbox.value);
       valornumeroitenscarrinho = valornumeroitenscarrinho - 1;
     }
     console.log(valortotalitens);
     numeroitenscarrinho.innerHTML = valornumeroitenscarrinho;
   });
 }
-var enviar_carrinho = document.getElementById("enviar_carrinho");
-enviar_carrinho.addEventListener("click", () => {
-  sessionStorage.setItem("valortotal", valortotalitens);
-  sessionStorage.setItem("numeroitens", valornumeroitenscarrinho);
+var pecas_home_container = document.getElementById("pecas_home_container");
+pecas_home_container.addEventListener("submit", (event) => {
+  if (valornumeroitenscarrinho > 0) {
+    sessionStorage.setItem("valortotal", valortotalitens);
+    sessionStorage.setItem("numeroitens", valornumeroitenscarrinho);
+  } else {
+    alert("Você ainda não adicionou nenhum item no carrinho.");
+    event.preventDefault();
+  }
 });

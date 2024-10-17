@@ -151,8 +151,8 @@ creditos_toggle.addEventListener("click", () => {
 var optexcluirconta = document.getElementById("optexcluirconta");
 optexcluirconta.addEventListener("click", () => {
   if (confirm("Você tem certeza que deseja excluir sua conta?") == true) {
-    sessionStorage.clear("senhaatual")
-    sessionStorage.clear("nomeatual")
+    sessionStorage.clear("senhaatual");
+    sessionStorage.clear("nomeatual");
     window.location.href = "index.html";
   }
 });
@@ -263,9 +263,9 @@ optorcamento.addEventListener("click", () => {
         </form>
       </div>`;
 });
-var optvirarparceiro = document.getElementById('optvirarparceiro')
-optvirarparceiro.addEventListener('click', ()=> { 
+var optvirarparceiro = document.getElementById("optvirarparceiro");
+optvirarparceiro.addEventListener("click", () => {
   container_conteudo.innerHTML = `<div id="header_conteudo_usuario">
           <p>Faça seu orçamento conosco!</p>
-        </div> `
-})
+        </div> `;
+});

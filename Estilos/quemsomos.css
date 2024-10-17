@@ -1,24 +1,40 @@
 body {
   overflow: auto;
 }
+header {
+  height: 10%;
+}
+.links_acesso {
+  top: 50%;
+}
+.links_acesso img {
+  height: 70px;
+  width: 70px;
+}
+header > a > img {
+  position: absolute;
+  top: 50%;
+  height: 76px;
+  width: 90px;
+}
 /* Animação de giro dos cards quando passa o mouse por cima (hover) */
 @keyframes girar_card1 {
-  0%{ 
-    transform:rotatey(0deg);
+  0% {
+    transform: rotatey(0deg);
   }
-  100% { 
-    transform:rotatey(360deg);
-    background-image: url(../Imagens/logo-semfundo.png)
+  100% {
+    transform: rotatey(360deg);
+    background-image: url(../Imagens/logo-semfundo.png);
   }
 }
 @keyframes girar_card1_inverso {
-  0%{ 
-    transform:rotatey(360deg);
-    background-image: url(../Imagens/logo-semfundo.png)
+  0% {
+    transform: rotatey(360deg);
+    background-image: url(../Imagens/logo-semfundo.png);
   }
-  100% { 
-    transform:rotatey(0deg);
-    background-image: url(../Imagens/colagemlogos.jpg)
+  100% {
+    transform: rotatey(0deg);
+    background-image: url(../Imagens/colagemlogos.jpg);
   }
 }
 /* Seletor geral dos cards da pagina */
@@ -33,7 +49,6 @@ div.card_home {
   background-size: cover;
   flex-shrink: 0;
   scale: 115%;
-  
 }
 /* classe que abrange cada caixa*/
 .container_home {
@@ -110,7 +125,7 @@ p {
 #final_pagina > a:hover {
   text-decoration: underline;
 }
-@media screen and (min-width: 1024px) and (max-width: 1440px) { 
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
   p {
     font-size: 1.4rem;
   }
@@ -119,6 +134,5 @@ p {
   }
   div.card_home {
     scale: 105%;
-    
   }
 }

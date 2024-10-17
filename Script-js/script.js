@@ -124,24 +124,40 @@ var botão_entrar_conta = document.getElementById("botão_entrar_conta");
 var senhaatual = null;
 var nomeatual = null;
 botão_criar_conta.addEventListener("click", () => {
-  if(nome_login.value.length !== 0 && senha_login.value.length >=8) { 
+  if (nome_login.value.length !== 0 && senha_login.value.length >= 8) {
     senhaatual = senha_login.value;
     nomeatual = nome_login.value;
     sessionStorage.setItem("nomeatual", nomeatual);
     sessionStorage.setItem("senhaatual", senhaatual);
     alert("Sua conta foi criada com sucesso! :)");
-  } else if(nome_login.value.length == 0) { 
-    alert('o nome é inválido.')
-  } else if (senha_login.value.length <8) { 
-    alert('Você precisa de 8 ou mais caractéres para sua senha.')
+    senha_login.value = null;
+    nome_login.value = null;
+  } else if (nome_login.value.length == 0) {
+    alert("o nome é inválido.");
+  } else if (senha_login.value.length < 8) {
+    alert(
+      `Você precisa de 8 ou mais caractéres para sua senha. atualmente você tem ${senha_login.value.length}`
+    );
   }
-  
 });
 formulario.addEventListener("submit", (event) => {
-  if (sessionStorage.getItem("senhaatual") == senha_login.value && sessionStorage.getItem("nomeatual") == nome_login.value) {
+  if (
+    sessionStorage.getItem("senhaatual") == senha_login.value &&
+    sessionStorage.getItem("nomeatual") == nome_login.value
+  ) {
     alert(`Seja bem vindo novamente, ${sessionStorage.getItem("nomeatual")}!`);
   } else {
-    event.preventDefault()
-    alert("Você colocou os dados errados ou não criou sua conta ainda. Tente novamente.");
+    event.preventDefault();
+    alert(
+      "Você colocou os dados errados ou não criou sua conta ainda. Tente novamente."
+    );
+  }
+});
+var botaorevelarsenha = document.getElementById("botaorevelarsenha");
+botaorevelarsenha.addEventListener("click", () => {
+  if (botaorevelarsenha.checked == true) {
+    senha_login.type = "text";
+  } else {
+    senha_login.type = "password";
   }
 });

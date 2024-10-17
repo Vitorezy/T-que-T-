@@ -27,24 +27,142 @@
       </div>
     </header>
     <main>
-      <form action="index.html" id="container_itens_carrinho">
+      <div action="index.html" id="container_itens_carrinho">
         <div id="header_itens">
           <h1>Extrato</h1>
         </div>
         <div id="conteudo_itens_carrinho">
           <h1>Obrigado por comprar conosco</h1>
-          <h3>Você adicionou <span id="numeroitensspan"> 0 </span> Itens no carrinho! isso lhe dá um total de <span id="valortotalfinalspan"> 0 </span>R$ </h3>
-          <div id="extrato_final">
-            <div id="extrato_final_valor">
-              <h1>Total a pagar:</h1>
-              <h1 id="totalpagar">10</h1>
+          <h3>
+            Você adicionou <span id="numeroitensspan"> 0 </span> Itens no
+            carrinho! isso lhe dá um total de
+            <span id="valortotalfinalspan"> 0 </span>R$
+          </h3>
+          <form action="#" method="post">
+            <div class="blocoitem">
+              <label for="nomecompletodados">
+                <h1>Nome Completo</h1>
+              </label>
+              <input
+                type="text"
+                name=""
+                id="nomecompletodados"
+                autocomplete="name"
+                placeholder="Seu nome completo"
+                required
+              />
             </div>
-            <div id="extrato_final_finalizar">
-              <input type="submit" value="Finalizar Compra" />
+            <div class="blocoitem">
+              <label for="cpfdados">
+                <h1>CPF</h1>
+              </label>
+              <input
+                type="text"
+                name=""
+                id="cpfdados"
+                minlength="11"
+                maxlength="11"
+                placeholder="seu CPF (11 Digitos)"
+                required
+              />
             </div>
-          </div>
+            <div class="blocoitem">
+              <label for="datadados">
+                <h1>Data de Nascimento</h1>
+              </label>
+              <input
+                type="date"
+                name=""
+                id="datadados"
+                autocomplete="bday"
+                required
+              />
+            </div>
+            <div class="blocoitem">
+              <label for="sexodados">
+                <h1>Sexo</h1>
+              </label>
+              <select id="sexodados" autocomplete="sex" required>
+                <option
+                  value="Selecione"
+                  disabled
+                  selected
+                  style="display: none"
+                >
+                  Selecione
+                </option>
+                <option value="Masculino">Masculino</option>
+                <option value="Feminino">Feminino</option>
+              </select>
+            </div>
+            <div class="blocoitem">
+              <label for="emaildados">
+                <h1>Email</h1>
+              </label>
+              <input
+                type="email"
+                name=""
+                id="emaildados"
+                autocomplete="email"
+                required
+                placeholder="SeuEmail@Gmail.com"
+              />
+            </div>
+            <div class="blocoitem">
+              <label for="telefonedados">
+                <h1>Telefone</h1>
+              </label>
+              <input
+                type="tel"
+                name=""
+                id="telefonedados"
+                minlength="8"
+                required
+                placeholder="Seu telefone (8-9 Digitos)"
+                maxlength="9"
+                autocomplete="tel"
+              />
+            </div>
+            <div class="blocoitem">
+              <label for="cepdados">
+                <h1>CEP</h1>
+              </label>
+              <input
+                type="text"
+                required
+                placeholder="Seu CEP (8 Digitos)"
+                name=""
+                id="cepdados"
+                maxlength="8"
+                minlength="8"
+              />
+            </div>
+
+            <div class="blocoitem">
+              <label for="enderecodados">
+                <h1>Endereço</h1>
+              </label>
+              <input
+                type="text"
+                name=""
+                id="enderecodados"
+                autocomplete="street-address"
+                placeholder="Seu endereço completo."
+                required
+              />
+            </div>
+            <div id="extrato_final">
+              <div id="extrato_final_valor">
+                <h1>Total a pagar:</h1>
+                <h1 id="totalpagar"></h1>
+              </div>
+              <div id="extrato_final_finalizar">
+                <input type="submit" value="Finalizar Compra" />
+              </div>
+            </div>
+          </form>
         </div>
-      </form>
+      </div>
     </main>
     <!--página de avaliação de atendimento-->
     <div id="avaliar_atendimento">

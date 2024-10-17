@@ -475,6 +475,7 @@ footer {
 #caixa_login {
   position: fixed;
   z-index: 1;
+  opacity: 99.5%;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -482,15 +483,17 @@ footer {
   height: 90%;
   background-image: linear-gradient(
     to bottom,
-    rgb(107, 41, 212),
-    rgb(90, 0, 200),
-    rgb(100, 25, 220)
+    rgb(115, 25, 230),
+    rgb(110, 25, 225),
+    rgb(105, 25, 220),
+    rgb(110, 25, 225),
+    rgb(115, 25, 230)
   );
 
   text-align: center;
-  border: 2px solid white;
+  border: 1px solid rgb(0, 0, 0);
   border-radius: 20px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 10px rgb(0, 0, 0);
 }
 #caixa_login form {
   position: absolute;
@@ -501,12 +504,12 @@ footer {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
-  flex-direction: row;
+  flex-direction: column;
 }
 #caixa_login h1 {
-  color: rgb(163, 34, 248);
+  color: rgb(195, 0, 255);
   font-size: 5rem;
-  text-shadow: -1px 0px 5px rgb(0, 0, 0);
+  text-shadow: -2px 3px 10px rgba(0, 0, 0, 0.795);
   letter-spacing: 5px;
   font-family: "luckiest", Arial, Helvetica, sans-serif;
 }
@@ -514,20 +517,33 @@ footer {
   display: inline-block;
   cursor: pointer;
 }
+#container_revelarsenha {
+  color: white;
+  font-size: 1.1rem;
+}
+#container_revelarsenha > input {
+  scale: 120%;
+}
 #caixa_login input[type="text"],
 input[type="password"] {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: black;
   letter-spacing: 1px;
   font-weight: bolder;
+  text-indent: 1%;
   text-shadow: 0px 0px 1px rgba(0, 0, 0, 0.5);
   margin-bottom: 20px;
   background-color: rgba(255, 255, 255, 0.911);
   border: 2px solid rgba(0, 0, 0, 0.5);
+  border-radius: 8px;
   width: 80%;
   height: 35px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   cursor: text;
+}
+#container_revelarsenha {
+  position: relative;
+  display: block;
 }
 #caixa_login #container_botoes > input {
   border-radius: 5px;
