@@ -2,6 +2,9 @@
   font-family: "bebas";
   src: url(../fontes/BebasNeue-Regular.ttf);
 }
+body { 
+  overflow-y: hidden;
+}
 /* parte de cima e logo */
 header {
   background-image: linear-gradient(
@@ -51,7 +54,7 @@ header > a > img {
   position: absolute;
   cursor: pointer;
   right: 0%;
-  height: 104%;
+  height: 100%;
   background-image: linear-gradient(
     to right,
     rgb(150, 57, 226),
@@ -114,14 +117,13 @@ header > a > img {
 }
 #nav_opcoes_usuario li {
   font-size: 1.8rem;
-  border-radius: 8px;
+  border-radius: 9px;
   font-family: "bebas", Arial, Helvetica, sans-serif;
   letter-spacing: 2px;
   font-weight: 400;
   text-shadow: -1px 1px 5px black;
   border: 3px solid rgb(15, 0, 58);
   width: 50%;
-
   box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.575);
   transition-duration: 0.2s;
   transition-timing-function: ease;
@@ -264,6 +266,9 @@ li#optexcluirconta {
   display: none;
   font-family: Arial, Helvetica, sans-serif;
 }
+#nome_usuario { 
+  font-size: 2.5rem;
+}
 select {
   border-radius: 10px;
   background-color: rgb(116, 41, 202);
@@ -316,17 +321,18 @@ form > p {
   background-color: rgb(115, 44, 196);
   color: rgb(239, 230, 240);
   cursor: pointer;
-  margin-right: 9px;
+  margin-right: 5px;
   font-size: 1rem;
   width: 28px;
-  height: 22px;
+  height: 18px;
   border-radius: 3px;
   transition-timing-function: ease;
+  border-radius: 8px;
   font-weight: 400;
 }
 #container_tamanho_orcamento input[type="radio"]:checked + label > div {
   width: 26px;
-  box-shadow: 0px 0px 8px rgb(212, 0, 255);
+  box-shadow: 0px 0px 5px rgb(212, 0, 255);
   font-weight: 500;
 }
 .label_tamanho_orcamento:hover {
@@ -364,6 +370,8 @@ textarea {
   left: 50%;
   transform: translate(-50%);
   resize: none;
+  border-radius: 10px;
+  text-indent: 0.5%;
 }
 #container_conteudo input[type="submit"] {
   background-color: rgb(90, 7, 185);

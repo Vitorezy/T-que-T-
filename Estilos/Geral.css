@@ -147,64 +147,22 @@ nav {
   position: fixed;
   width: 100%;
   top: 13%;
+  left: 50%;
+  transform: translate(-50%);
   height: 0%;
   box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
   z-index: 1;
   align-items: center;
-  gap: 0.2%;
+  gap: 0.1%;
   transition-duration: 0.8s;
   transition-timing-function: ease;
+  border-radius: 0px 0px 30px 30px
 }
 nav:hover {
   filter: brightness(130%);
 }
 /* imagens e textos presentes no menu suspenso */
-.imagem_exibição_nav {
-  margin: 0px 10px 0px 10px;
-  flex-shrink: 0;
-  flex-grow: 1;
-  position: relative;
-  border: 2px solid white;
-  border-radius: 10px;
-  width: 179px;
-  height: 90%;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.705);
-  font-family: arial;
-  filter: opacity(150%) grayscale(30%);
-  transition-duration: 0.5s;
-  transition-timing-function: ease;
-  transition-property: scale;
-}
-.imagem_exibição_nav:hover {
-  scale: 102%;
-  box-shadow: 0px 0px 5px rgb(255, 255, 255);
-  filter: opacity(100%) grayscale(0%);
-}
-.escrita_exibição_imagem_nav {
-  text-shadow: 0px 0px 10px black;
-  text-align: center;
-  position: relative;
-  width: 100%;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%);
-}
 
-.escrita_exibição_imagem_nav h1,
-p {
-  margin: 2px 0px 0px 0px;
-}
-.escrita_exibição_imagem_nav h1 {
-  background-color: rgba(0, 0, 0, 0.2);
-  font-size: clamp(1.5em, 1em + 1vw, 2em);
-}
-.escrita_exibição_imagem_nav p {
-  background-color: rgba(0, 0, 0, 0.5);
-  font-size: clamp(1em, 0.5em + 0.5vw, 1.2em);
-}
 /* Inicio do conteúdo principal */
 main {
   top: 60%;
@@ -221,7 +179,7 @@ main > h1 {
   letter-spacing: 1.05rem;
   font-family: "fanky", arial;
   font-variant: small-caps;
-  text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.8);
+  text-shadow: -5px 5px 3px rgba(0, 0, 0, 0.8);
   font-weight: bolder;
   font-size: clamp(5rem, 2vw, 3rem);
 }
@@ -232,7 +190,7 @@ main > h2 {
   font-family: arial;
   font-variant: small-caps;
   font-weight: 700;
-  text-shadow: 5px 5px 3px rgba(0, 0, 0, 0.8);
+  text-shadow: -5px 5px 3px rgba(0, 0, 0, 0.8);
 }
 /* botão de voltar para o topo da página*/
 #img-botão-voltar {
@@ -470,6 +428,7 @@ footer {
   left: 1%;
   width: 26px;
   height: 26px;
+  cursor: pointer;
 }
 /* Caixa de login de usuário */
 #caixa_login {

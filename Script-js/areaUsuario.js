@@ -15,6 +15,7 @@ arquivo_foto_usuario.addEventListener("change", (event) => {
     var foto_usuario = document.getElementById("foto_usuario");
     foto_usuario.style.backgroundImage =
       "url(" + URL.createObjectURL(arquivo_foto_usuario.files[0]) + ")";
+      sessionStorage.setItem('arquivo_foto_usuario', arquivo_foto_usuario.files[0])
   }
 });
 toggle_opcoes_usuario.addEventListener("click", () => {
@@ -41,9 +42,8 @@ toggle_opcoes_usuario.addEventListener("click", () => {
   }
 });
 window.onload = function () {
-  const nome_user_data = sessionStorage.getItem("nome_usuário_data");
   var campo_nome_usuario = document.getElementById("nome_usuario");
-  campo_nome_usuario.textContent = nome_user_data;
+  campo_nome_usuario.textContent = sessionStorage.getItem("nomeatual")
 };
 var body = document.getElementById("inicio");
 var Navbar = document.querySelector("nav");
