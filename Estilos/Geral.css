@@ -18,7 +18,7 @@
 body {
   padding: 0px;
   margin: 0%;
-  background-color: rgb(5, 0, 77);
+  background-color: rgb(30, 29, 44);
   font-family: arial;
 }
 /* Personalização da ScrollBar */
@@ -43,7 +43,7 @@ header {
     rgb(131, 18, 224)
   );
   width: 100%;
-  height: 13%;
+  height: 20%;
   position: fixed;
   z-index: 1;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
@@ -51,8 +51,8 @@ header {
 /* Logo da empresa*/
 header > a > img {
   position: absolute;
-  height: 76px;
-  width: 90px;
+  height: 86px;
+  width: 100px;
   left: 50%;
   top: 40%;
   z-index: 1;
@@ -71,11 +71,8 @@ header > a > img:hover {
   top: 40%;
   right: 0.4%;
   transform: translate(-0%, -50%);
-  gap: 1%;
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
 }
 #link_acesso > a {
   position: relative;
@@ -103,8 +100,10 @@ header > a > img:hover {
   );
 }
 .links_acesso img {
-  width: 70px;
-  height: 65px;
+  scale: 105%;
+}
+#linksladoesquerdo {
+  right: 90%;
 }
 a {
   color: rgb(190, 119, 119);
@@ -121,7 +120,7 @@ nav {
     rgb(0, 0, 220)
   );
   width: 100%;
-  height: 20%;
+  height: 18%;
   position: absolute;
   bottom: 0px;
   box-shadow: inset 0px 0px 2px rgba(0, 0, 0, 0.459);
@@ -146,7 +145,7 @@ nav {
   visibility: visible;
   position: fixed;
   width: 100%;
-  top: 13%;
+  top: 20%;
   left: 50%;
   transform: translate(-50%);
   height: 0%;
@@ -156,7 +155,7 @@ nav {
   gap: 0.1%;
   transition-duration: 0.8s;
   transition-timing-function: ease;
-  border-radius: 0px 0px 30px 30px
+  border-radius: 0px 0px 30px 30px;
 }
 nav:hover {
   filter: brightness(130%);
@@ -175,7 +174,7 @@ main {
   color: white;
 }
 main > h1 {
-  margin: 25px 0px 0px 0px;
+  margin: 60px 0px 0px 0px;
   letter-spacing: 1.05rem;
   font-family: "fanky", arial;
   font-variant: small-caps;
@@ -241,9 +240,10 @@ main > h2 {
     rgba(101, 40, 199, 0.993),
     rgba(66, 26, 131, 0.993)
   );
-  bottom: 14%;
-  width: 30%;
-  height: 70%;
+  left: 5%;
+  bottom: 10%;
+  width: 31%;
+  height: 65%;
   border-radius: 30px;
   letter-spacing: 1px;
   font-family: "luckiest", Arial, Helvetica, sans-serif;
@@ -262,6 +262,8 @@ main > h2 {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  align-items: center;
+  justify-content: center;
   width: 100%;
   bottom: 0%;
   left: 50%;
@@ -269,8 +271,9 @@ main > h2 {
   height: 15%;
 }
 #container_botoes_suporte > button {
-  width: 50%;
-  border-radius: 20px;
+  cursor: pointer;
+  width: 40%;
+  border-radius: 8px;
   box-shadow: -3px 3px 2px rgba(0, 0, 0, 0.5);
 }
 #container_mensagens {
@@ -278,8 +281,8 @@ main > h2 {
   top: 45%;
   left: 50%;
   transform: translate(-50%, -50%);
-  border: 2px solid black;
-  border-radius: 20px;
+  border: 1px solid black;
+  border-radius: 8px;
   box-shadow: -3px 3px 3px rgba(0, 0, 0, 0.3);
   width: 80%;
   height: 60%;
@@ -425,7 +428,7 @@ footer {
   background-color: rgb(255, 0, 60);
   position: fixed;
   bottom: 0%;
-  left: 1%;
+  left: 0%;
   width: 26px;
   height: 26px;
   cursor: pointer;
@@ -562,6 +565,7 @@ input[type="button"]:hover {
     width: 55px;
     height: 50px;
   }
+
   header > a > img {
     height: 55px;
     width: 68px;
@@ -624,10 +628,8 @@ input[type="button"]:hover {
     height: 65px;
   }
   header > a > img {
-    height: 60px;
-    width: 75px;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    height: 55px;
+    width: 70px;
   }
   #Caixa_suporte {
     background-image: linear-gradient(
@@ -684,17 +686,7 @@ input[type="button"]:hover {
     width: 65px;
     height: 60px;
   }
-  header > a > img {
-    height: 68px;
-    width: 80px;
-    left: 50%;
-    top: 40%;
-    transform: translate(-50%, -50%);
-  }
-  #Caixa_suporte {
-    left: 1.5%;
-    bottom: 15%;
-  }
+
   #caixa_suporte > h1 {
     top: 1%;
   }

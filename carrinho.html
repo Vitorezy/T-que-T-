@@ -7,29 +7,42 @@
     <link rel="stylesheet" href="Estilos/Geral.css" />
     <link rel="stylesheet" href="Estilos/carrinho.css" />
     <script defer src="Script-js/carrinho.js"></script>
+    <script defer src="Script-js/script.js"></script>
   </head>
   <body id="inicio">
     <header>
       <!--Logo-->
-      <a href="index.html">
+      <a href="Quem somos.html">
         <img src="Imagens/logo sem fundo.png" alt="Logo Tá que Tá" />
       </a>
       <!--Links de acesso para outras páginas-->
       <div class="links_acesso">
-        <div class="links_acesso">
-          <a href="index.html">
-            <img
-              src="Imagens/homeIcon.png"
-              alt="Botão de ir pro Usúario"
-              title="Página inicial"
-          /></a>
+        <a href="index.html">
+          <img
+            src="Imagens/homeIcon.png"
+            alt="Botão de ir pro Usúario"
+            title="Página inicial"
+        /></a>
+        <div id="botão_abrir_login" style="display: none">
+          <img
+            id="imagemabrirlogin"
+            src="Imagens/userIcon.png"
+            alt="Botão de ir pro Usúario"
+            tabindex="1"
+            title="Usuário"
+          />
         </div>
       </div>
+      <!--Nav com filtros para as peças da página-->
+      <nav tabindex="1" title="Clique para abrir/fechar" style="display: none">
+        Filtrar coleções!
+      </nav>
+      <div id="nav_aberta" style="display: none"></div>
     </header>
     <main>
       <div action="index.html" id="container_itens_carrinho">
         <div id="header_itens">
-          <h1>Extrato</h1>
+          <h1>Finalização</h1>
         </div>
         <div id="conteudo_itens_carrinho">
           <h1>Obrigado por comprar conosco</h1>
@@ -164,6 +177,71 @@
         </div>
       </div>
     </main>
+    <div id="caixa_login" style="display: none">
+      <h1 style="display: inline">Login</h1>
+      <label for="fechar_login">
+        <img class="botaofechar" src="Imagens/fecharIcon.png" alt=""
+      /></label>
+      <button id="fechar_login" style="display: none"></button>
+      <form id="formulario" method="post" action="areaUsuário.html">
+        <label for="nome_login"
+          ><img src="Imagens/inputNameIcon.png" alt="Nome"
+        /></label>
+        <input
+          type="text"
+          name="nome_login"
+          id="nome_login"
+          autocomplete="name"
+          required
+          placeholder="Digite seu nome"
+        />
+        <label for="senha_login">
+          <img src="Imagens/senhaIcon.png" alt="Senha"
+        /></label>
+        <input
+          type="password"
+          name="senha_login"
+          id="senha_login"
+          autocomplete="current-password"
+          required
+          minlength="8"
+          maxlength="15"
+          placeholder="Digite sua senha"
+        />
+        <div id="container_revelarsenha">
+          <input type="checkbox" name="" id="botaorevelarsenha" />
+          <label id="labelrevelarsenha" for="botaorevelarsenha"
+            >Revelar senha</label
+          >
+        </div>
+
+        <div id="container_botoes">
+          <input
+            type="submit"
+            id="botão_entrar_conta"
+            value="Entrar"
+            style="background-color: rgb(19, 55, 219)"
+          />
+          <input
+            type="button"
+            id="botão_criar_conta"
+            value="Criar conta"
+            style="background-color: rgb(153, 0, 255)"
+          />
+          <input
+            type="reset"
+            value="Resetar"
+            style="background-color: rgb(126, 0, 0)"
+          />
+        </div>
+        <ul id="requerimentos_login">
+          <li>O nome deve estar preenchido</li>
+          <li>
+            A senha precisa de no minímo 8 caractéres e máximo de 15 caractéres
+          </li>
+        </ul>
+      </form>
+    </div>
     <!--página de avaliação de atendimento-->
     <div id="avaliar_atendimento">
       <h1>Avalie o atendimento!</h1>
@@ -206,7 +284,12 @@
       </div>
     </div>
     <!--Botão de voltar ao inicio da página-->
-    <a id="botão-voltar" href="#inicio" title="Voltar para o início">
+    <a
+      id="botão-voltar"
+      href="#inicio"
+      title="Voltar para o início"
+      style="display: none"
+    >
       <img id="img-botão-voltar" src="Imagens/setaCima.png" alt="" />
     </a>
     <!--Caixa de suporte-->

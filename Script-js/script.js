@@ -157,4 +157,4 @@ botaorevelarsenha.addEventListener("click", () => {
     senha_login.type = "password";
   }
 });
-var imagemabrirlogin = document.getElementById('imagemabrirlogin')
+var imagemabrirlogin = document.getElementById("imagemabrirlogin");
