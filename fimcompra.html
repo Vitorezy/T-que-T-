@@ -1,0 +1,231 @@
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="Permissions-Policy" content="interest-cohort=()" />
+    <title>Pagina Inicial</title>
+    <!--320 - 480 celular
+    481 - 768 tablet
+    769 - 1024 telas laptop
+    1025 - 1200 pc -->
+    <link rel="stylesheet" href="Estilos/Geral.css" />
+    <link rel="stylesheet" href="Estilos/index.css" media="all" />
+    <link rel="shortcut icon" href="Imagens/favicon.ico" />
+    <script defer src="Script-js/script.js"></script>
+  </head>
+  <body id="inicio">
+    <header style="height: 11%;">
+      <!--Logo-->
+      <a href="Quem somos.html">
+        <img src="Imagens/logo sem fundo.png" alt="Logo Tá que Tá" style="  height: 71px;
+  width: 85px;" />
+      </a>
+      <!--Links de acesso para outras páginas-->
+      <div class="links_acesso" id="linksladoesquerdo" style="display: none;">
+        <a href="artistas.html">
+          <img
+            src="Imagens/artistaIcon.png"
+            alt="Botão de ir pro Usúario"
+            tabindex="1"
+            title="Nossos artistas"
+        /></a>
+        <a href="Quem somos.html">
+          <img
+            src="Imagens/Empresa.png"
+            alt="Botão de ir pro Usúario"
+            tabindex="1"
+            title="Quem somos"
+        /></a>
+      </div>
+      <div class="links_acesso">
+        <a href="index.html">
+          <img
+            src="Imagens/homeIcon.png"
+            alt="Botão de ir pro Usúario"
+            title="Página inicial"
+        /></a>
+        <label id="label_submitpecas" for="submit_pecas" style="display: none;">
+          <img
+            src="Imagens/carrinhoIcon.png"
+            alt=""
+            id="enviar_carrinho"
+            title="carrinho de compras"
+          />
+          <p id="numeroitenscarrinho">0</p>
+        </label>
+
+        <div id="botão_abrir_login" style="display: none;">
+          <img
+            id="imagemabrirlogin"
+            src="Imagens/userIcon.png"
+            alt="Botão de ir pro Usúario"
+            tabindex="1"
+            title="Usuário"
+          />
+        </div>
+      </div>
+      <!--Nav com filtros para as peças da página-->
+      <nav tabindex="1" title="Clique para abrir/fechar" style="display: none;">Filtrar coleções!</nav>
+      <div id="nav_aberta" style="height: 0%"> </div>
+      </header>
+      <main> 
+      <h1></h1>
+      </main>
+      <!--Página de login-->
+    <div id="caixa_login" style="display: none">
+      <h1 style="display: inline">Login</h1>
+      <label for="fechar_login">
+        <img class="botaofechar" src="Imagens/fecharIcon.png" alt=""
+      /></label>
+      <button id="fechar_login" style="display: none"></button>
+      <form id="formulario" method="post" action="areaUsuário.html">
+        <label for="nome_login"
+          ><img src="Imagens/inputNameIcon.png" alt="Nome"
+        /></label>
+        <input
+          type="text"
+          name="nome_login"
+          id="nome_login"
+          autocomplete="name"
+          required
+          placeholder="Digite seu nome"
+        />
+        <label for="senha_login">
+          <img src="Imagens/senhaIcon.png" alt="Senha"
+        /></label>
+        <input
+          type="password"
+          name="senha_login"
+          id="senha_login"
+          autocomplete="current-password"
+          required
+          minlength="8"
+          maxlength="15"
+          placeholder="Digite sua senha"
+        />
+        <div id="container_revelarsenha">
+          <input type="checkbox" name="" id="botaorevelarsenha" />
+          <label id="labelrevelarsenha" for="botaorevelarsenha"
+            >Revelar senha</label
+          >
+        </div>
+
+        <div id="container_botoes">
+          <input
+            type="submit"
+            id="botão_entrar_conta"
+            value="Entrar"
+            style="background-color: rgb(19, 55, 219)"
+          />
+          <input
+            type="button"
+            id="botão_criar_conta"
+            value="Criar conta"
+            style="background-color: rgb(153, 0, 255)"
+          />
+          <input
+            type="reset"
+            value="Resetar"
+            style="background-color: rgb(126, 0, 0)"
+          />
+        </div>
+        <ul id="requerimentos_login">
+          <li>O nome deve estar preenchido</li>
+          <li>
+            A senha precisa de no minímo 8 caractéres e máximo de 15 caractéres
+          </li>
+        </ul>
+      </form>
+    </div>
+    <!--página de avaliação de atendimento-->
+    <div id="avaliar_atendimento">
+      <h1>Avalie o atendimento!</h1>
+      <div id="avaliar_emojis">
+        <img
+          id="emojis_avaliacao_1"
+          class="emojis_avaliacao"
+          src="Imagens/nota5Icon.png"
+          alt=""
+          title="Ótimo"
+        />
+        <img
+          id="emojis_avaliacao_2"
+          class="emojis_avaliacao"
+          src="Imagens/nota4Icon.png"
+          alt=""
+          title="Bom"
+        />
+        <img
+          id="emojis_avaliacao_3"
+          class="emojis_avaliacao"
+          src="Imagens/nota3Icon.png"
+          alt=""
+          title="Mediano"
+        />
+        <img
+          id="emojis_avaliacao_4"
+          class="emojis_avaliacao"
+          src="Imagens/nota2Icon.png"
+          alt=""
+          title="Ruim"
+        />
+        <img
+          id="emojis_avaliacao_5"
+          class="emojis_avaliacao"
+          src="Imagens/nota1Icon.png"
+          alt=""
+          title="Péssimo"
+        />
+      </div>
+    </div>
+    <!--Botão de voltar ao inicio da página-->
+    <a id="botão-voltar" href="#inicio" title="Voltar para o início" style="display: none;">
+      <img id="img-botão-voltar" src="Imagens/setaCima.png" alt="" />
+    </a>
+    <!--Caixa de suporte-->
+    <div id="Caixa_suporte" style="display: none">
+      <h1>Suporte</h1>
+      <img
+        class="botaofechar"
+        id="botao_fechar_suporte"
+        src="Imagens/fecharIcon.png"
+        alt=""
+        style="right: 0%; position: absolute; width: 70px"
+      />
+      <div id="container_mensagens"></div>
+      <div id="container_botoes_suporte">
+        <button id="botao_mensagem_1">
+          Problemas com a navegação do site.
+        </button>
+        <button id="botao_mensagem_2">
+          Preciso de mais informações da empresa.
+        </button>
+        <button id="botao_mensagem_3">
+          Quero me tornar parceiro da Tá que Tá
+        </button>
+        <button id="botao_mensagem_4">Quero Denunciar uma situação.</button>
+        <img
+          id="apagar_historico"
+          src="Imagens/lixeiraIcon.png"
+          alt=""
+          title="Apagar conversa com o suporte."
+        />
+      </div>
+    </div>
+
+    <div id="botão-suporte" title="Suporte" style="display: none;">
+      <img id="img-botão-suporte" src="Imagens/suporteIcon.png" alt="" />
+    </div>
+    <!--Créditos-->
+    <img
+      id="creditos_toggle"
+      src="Imagens/expandirCreditoIcon.png"
+      alt=""
+      title="Alterar visibilidade dos créditos"
+    />
+    <footer>
+      Criado por:
+      <a href="https://github.com/Vitorezy" target="_blank"> Vitorezy </a>
+    </footer>
+  </body>
+</html>
