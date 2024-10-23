@@ -5,6 +5,9 @@
 body {
   overflow-y: hidden;
 }
+main { 
+  overflow: hidden;
+}
 /* parte de cima e logo */
 header {
   background-image: linear-gradient(
@@ -189,12 +192,12 @@ li#optexcluirconta {
 #container_conteudo {
   position: relative;
   z-index: 0;
-  top: 53.5%;
+  top: 56%;
   left: 52.8%;
   transform: translate(-50%, -50%);
   background-color: rgba(216, 188, 247, 0.918);
   width: 90%;
-  height: 80%;
+  height: 85%;
   box-shadow: inset 0px 0px 8px rgba(119, 0, 255, 0.9);
 }
 
@@ -286,6 +289,7 @@ select optgroup {
   background-color: rgb(90, 14, 141);
 }
 #container_data3 {
+  color: rgb(115, 44, 196);
   font-weight: 800;
   border: 2px solid rgb(152, 0, 190);
   border-radius: 5px;
@@ -314,6 +318,13 @@ form > p {
 #container_data3 > label {
   font-weight: 600;
   text-align: center;
+}
+.input_parceiro { 
+  background-color: rgb(116, 41, 202);
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  font-weight: 600;
+  text-indent: 1%;
 }
 .label_tamanho_orcamento > div {
   display: inline-block;
@@ -401,12 +412,6 @@ main {
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
   #conteudo_opcoes_usuario {
     top: 40%;
-  }
-  #container_conteudo {
-    top: 53.5%;
-    left: 52.8%;
-    width: 90%;
-    height: 85;
   }
   #nav_opcoes_usuario {
     top: 28%;

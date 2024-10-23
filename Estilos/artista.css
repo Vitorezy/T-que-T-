@@ -119,3 +119,8 @@ p {
   background-color: rgba(0, 0, 0, 0.5);
   font-size: clamp(1em, 0.5em + 0.5vw, 1.2em);
 }
+@media screen and (min-width: 1024px) and (max-width: 1440px) {
+  main > h1 {
+    margin: 120px 0px 0px 0px;
+  }
+}

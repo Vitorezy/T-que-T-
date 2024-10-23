@@ -99,9 +99,23 @@ optorcamento.addEventListener("click", () => {
 });
 var optvirarparceiro = document.getElementById("optvirarparceiro");
 optvirarparceiro.addEventListener("click", () => {
+  conjuntos_n.checked = false
   var container_data1 = document.getElementById("container_data1");
   var container_data2 = document.getElementById("container_data2");
   var container_data3 = document.getElementById("container_data3");
   var container_data4 = document.getElementById("container_data4");
-  container_conteudo.innerHTML = ``;
+  var header_conteudo_usuario = document.getElementById('header_conteudo_usuario')
+  var ptamanho = document.getElementById('ptamanho')
+  var pcor = document.getElementById('pcor')
+  var pdescricao = document.getElementById('pdescricao')
+  var descricao = document.getElementById('descricao')
+  header_conteudo_usuario.innerHTML = '<p> Pedido de Parceria </p>'
+  container_data1.style.display = 'none'
+  container_data2.innerHTML = '<p> nome: </p> <input class="input_parceiro" type="text" required/>'
+  container_data3.innerHTML = ' <p> Data de nascimento: </p> <input class="input_parceiro" type="date" required/>'
+  container_data4.innerHTML = '<p> CPF: </p> <input class="input_parceiro" required type="text" maxlength="8" minlength="8">'
+  ptamanho.style.display = 'none'
+  pcor.style.display = 'none'
+  pdescricao.innerHTML = 'Seus motivos:'
+  descricao.placeholder = 'Explique por quais motivos você deseja e acredita ser viável para trabalhar conosco, na Tá que Tá!'
 });

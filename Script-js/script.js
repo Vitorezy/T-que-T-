@@ -122,7 +122,7 @@ var nomeatual = null;
 botão_criar_conta.addEventListener("click", () => {
   if (nome_login.value.length !== 0 && senha_login.value.length >= 8) {
     senhaatual = senha_login.value;
-    nomeatual = nome_login.value;
+    nomeatual = (nome_login.value).toLowerCase();
     sessionStorage.setItem("nomeatual", nomeatual);
     sessionStorage.setItem("senhaatual", senhaatual);
     alert("Sua conta foi criada com sucesso! :)");
@@ -139,7 +139,7 @@ botão_criar_conta.addEventListener("click", () => {
 formulario.addEventListener("submit", (event) => {
   if (
     sessionStorage.getItem("senhaatual") == senha_login.value &&
-    sessionStorage.getItem("nomeatual") == nome_login.value
+    sessionStorage.getItem("nomeatual") == (nome_login.value).toLowerCase()
   ) {
     alert(`Seja bem vindo novamente, ${sessionStorage.getItem("nomeatual")}!`);
   } else {
