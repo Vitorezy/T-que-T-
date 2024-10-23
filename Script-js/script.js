@@ -123,8 +123,8 @@ botão_criar_conta.addEventListener("click", () => {
   if (nome_login.value.length !== 0 && senha_login.value.length >= 8) {
     senhaatual = senha_login.value;
     nomeatual = (nome_login.value).toLowerCase();
-    sessionStorage.setItem("nomeatual", nomeatual);
-    sessionStorage.setItem("senhaatual", senhaatual);
+    localStorage.setItem("nomeatual", nomeatual);
+    localStorage.setItem("senhaatual", senhaatual);
     alert("Sua conta foi criada com sucesso! :)");
     senha_login.value = null;
     nome_login.value = null;
@@ -138,10 +138,10 @@ botão_criar_conta.addEventListener("click", () => {
 });
 formulario.addEventListener("submit", (event) => {
   if (
-    sessionStorage.getItem("senhaatual") == senha_login.value &&
-    sessionStorage.getItem("nomeatual") == (nome_login.value).toLowerCase()
+    localStorage.getItem("senhaatual") == senha_login.value &&
+    localStorage.getItem("nomeatual") == (nome_login.value).toLowerCase()
   ) {
-    alert(`Seja bem vindo novamente, ${sessionStorage.getItem("nomeatual")}!`);
+    alert(`Seja bem vindo novamente, ${localStorage.getItem("nomeatual")}!`);
   } else {
     event.preventDefault();
     alert(

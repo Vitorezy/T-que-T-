@@ -15,10 +15,6 @@ arquivo_foto_usuario.addEventListener("change", (event) => {
     var foto_usuario = document.getElementById("foto_usuario");
     foto_usuario.style.backgroundImage =
       "url(" + URL.createObjectURL(arquivo_foto_usuario.files[0]) + ")";
-    sessionStorage.setItem(
-      "arquivo_foto_usuario",
-      arquivo_foto_usuario.files[0]
-    );
   }
 });
 toggle_opcoes_usuario.addEventListener("click", () => {
@@ -46,7 +42,7 @@ toggle_opcoes_usuario.addEventListener("click", () => {
 });
 window.onload = function () {
   var campo_nome_usuario = document.getElementById("nome_usuario");
-  campo_nome_usuario.textContent = sessionStorage.getItem("nomeatual");
+  campo_nome_usuario.textContent = localStorage.getItem("nomeatual");
 };
 var body = document.getElementById("inicio");
 var Navbar = document.querySelector("nav");
@@ -88,8 +84,8 @@ formulario_orcamento.addEventListener("submit", () => {
 var optexcluirconta = document.getElementById("optexcluirconta");
 optexcluirconta.addEventListener("click", () => {
   if (confirm("Você tem certeza que deseja excluir sua conta?") == true) {
-    sessionStorage.clear("senhaatual");
-    sessionStorage.clear("nomeatual");
+    localStorage.clear("senhaatual");
+    localStorage.clear("nomeatual");
     window.location.href = "index.html";
   }
 });
