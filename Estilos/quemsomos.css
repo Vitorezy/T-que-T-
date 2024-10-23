@@ -35,15 +35,14 @@ header > a > img {
 /* Seletor geral dos cards da pagina */
 div.card_home {
   position: relative;
-  width: 280px;
-  height: 280px;
+  width: 20%;
+  height: 20%;
   margin-left: 50px;
   box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.63);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   flex-shrink: 0;
-  scale: 115%;
 }
 /* classe que abrange cada caixa*/
 .container_home {
@@ -82,21 +81,19 @@ div.card_home {
   display: flex;
   flex-direction: row-reverse;
   flex-wrap: nowrap;
-  margin-right: 0px;
   left: 50%;
   transform: translate(-50%);
 }
 #container_ODS > div.card_home {
   position: relative;
-  margin-right: 35px;
   border-radius: 10px;
 }
 p {
   text-indent: 10px;
-  text-align: center;
+  text-align: center; 
   letter-spacing: 1px;
   font-weight: 500;
-  font-size: 1.8rem;
+  font-size: 110%;
   margin-left: 50px;
 }
 /* parte final das páginas com o download dos documentos */
@@ -119,12 +116,7 @@ p {
   text-decoration: underline;
 }
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
-  p {
-    font-size: 1.4rem;
-  }
-  div.card_home {
-    scale: 90%;
-  }
+
   #container_cards {
     position: absolute;
     width: 100%;
