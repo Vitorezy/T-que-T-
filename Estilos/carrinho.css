@@ -115,6 +115,40 @@ form select,
 input[type="date"] {
   cursor: pointer;
 }
+@media screen and (min-width: 1024px) and (max-width: 1440px) { 
+  header > a > img {
+    height: 56px;
+    width: 65px;
+  }
+  #container_itens_carrinho {
+    height: 85%;
+    width: 50%;
+  }
+  #header_itens {
+    font-size: 1.5rem;
+  }
+
+  #extrato_final {
+    height: 15%;
+  }
+  #extrato_final > div {
+    font-size: 0.8rem;
+  }
+  #extrato_final_finalizar > input[type="submit"] {
+    font-size: 1rem;
+    width: 20%;
+  }
+  .blocoitem h1 {
+    font-size: 1.8rem;
+  }
+  form input,
+  select {
+    font-size: 1.4rem;
+    width: 70%;
+    border-radius: 6px;
+    text-indent: 1%;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1024px) { 
   header > a > img {
     height: 46px;
@@ -150,5 +184,36 @@ input[type="date"] {
     width: 70%;
     border-radius: 6px;
     text-indent: 1%;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 768px)  { 
+  header > a > img {
+    height: 60px;
+    width: 69px;
+  }
+  #container_itens_carrinho {
+    height: 70%;
+    width: 95%;
+  }
+  #header_itens {
+    font-size: 1.5rem;
+  }
+
+  #extrato_final {
+    height: 15%;
+  }
+  #extrato_final > div {
+    font-size: 0.8rem;
+  }
+  #extrato_final_finalizar > input[type="submit"] {
+    width: 35%;
+  }
+  .blocoitem h1 {
+    font-size: 1.3rem;
+  }
+  form input,
+  select {
+    font-size: 1rem;
+    width: 90%;
   }
 }

@@ -409,12 +409,111 @@ main {
   top: 50%;
   left: 50%;
 }
+@media screen and (min-width: 320px) and (max-width: 768px)  { 
+  header > a > img {
+    position: absolute;
+    top: 50%;
+    height: 66px;
+    width: 80px;
+  }
+  #nav_opcoes_usuario {
+    top: 38%;
+  }
+  #nav_opcoes_usuario li {
+    font-size: 1.5rem;
+    width: 80%;
+  }
+  li#optorcamento {
+    background-image: linear-gradient(
+      to right,
+      rgb(100, 0, 182),
+      rgba(110, 0, 196, 0.98),
+      rgb(100, 0, 182)
+    );
+  }
+  /* Foto do usuário */
+  #foto_usuario {
+    width: 150px;
+    height: 150px;
+  }
+  /* Caixa para enviar imagem do usuario*/
+  #caixa_arquivo_input {
+    width: 110px;
+    height: 50px;
+  }
+  #conteudo_opcoes_usuario {
+    top: 39%;
+  }
+
+  #header_conteudo_usuario {
+    height: 8%;
+  }
+  #header_conteudo_usuario > p {
+    font-size: 190%;
+  }
+  #container_conteudo > form {
+    top: 5%;
+  }
+  #container_data1 {
+    width: 50%;
+    height: 6%;
+  }
+  #container_data1 label {
+    font-size: 0.9rem;
+    cursor: pointer;
+  }
+  #container_data2 {
+    width: 90%;
+    height: 7%;
+  }
+  #nome_usuario {
+    font-size: 2.5rem;
+  }
+  #container_data3 {
+    width: 90%;
+    height: 7%;
+  }
+  form > p {
+    font-size: 1.2rem;
+  }
+  .input_parceiro { 
+    background-color: rgb(116, 41, 202);
+    color: rgb(255, 255, 255);
+    border-radius: 10px;
+    font-weight: 600;
+    text-indent: 1%;
+  }
+  #container_data4 {
+    width: 90%;
+    height: 7%;
+  }
+  #container_data4 input {
+    margin: 0px 10px 0px 10px;
+    position: relative;
+  }
+  textarea {
+    width: 90%;
+  }
+  .botaofimorcamento {
+    width: 30%;
+  }
+}
+
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
+  header > a > img {
+    position: absolute;
+    top: 50%;
+    height: 66px;
+    width: 80px;
+  }
   #conteudo_opcoes_usuario {
     top: 40%;
   }
   #nav_opcoes_usuario {
     top: 35%;
+  }
+  #container_conteudo { 
+    height: 80%;
   }
   #container_conteudo > form {
     top: 3%;

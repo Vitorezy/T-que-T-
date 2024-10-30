@@ -216,7 +216,18 @@ div.peca_home:hover > .exibicao_hover_pecas {
   box-shadow: inset 0px 0px 30px rgba(0, 0, 0, 0.5);
   border: 4px solid black;
 }
-
+@media screen and (min-width: 320px) and (max-width: 768px)  { 
+  div.peca_home {
+    width: 30%;
+    height: 35%;
+  }
+  .exibicao_hover_pecas {
+    display: block;
+  }
+  form#pecas_home_container {
+    gap: 6%;
+  }
+}
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
   .escrita_exibição_imagem_pecas {
     top: 87%;

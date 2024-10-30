@@ -559,10 +559,15 @@ input[type="button"]:hover {
 }
 /*Celular*/
 @media screen and (min-width: 320px) and (max-width: 768px) {
-
+  main > h1 {
+    font-size: 400%;
+  }
+  main > h2 {
+    font-size: 250%;
+  }
   .links_acesso img {
     width: 47px;
-    height: 42px;
+    height: 45px;
   }
 
   #linksladoesquerdo {
@@ -620,6 +625,40 @@ input[type="button"]:hover {
     transition-timing-function: ease;
     transition-duration: 0.3s;
     transition-property: scale;
+  }
+  #caixa_login {
+    width: 90%;
+    height: 75%;
+  }
+
+  #caixa_login h1 {
+    font-size: 3.5rem;
+  }
+  #caixa_login  label > img {
+    width: 70px;
+    height: 70px;
+  }
+  #caixa_login input[type="text"],
+  input[type="password"] {
+    font-size: 1rem;
+    width: 50%;
+    height: 20px;
+  }
+  #caixa_login #container_botoes > input {
+    margin-bottom: 3px;
+    font-size: 1rem;
+    width: 100%;
+    height: 25px;
+  }
+  
+  #formulario > ul {
+    margin-left: 50px;
+    font-size: 1rem;
+  }
+  #container_botoes_suporte > button { 
+    height: 55%;
+    width: 45%;
+    font-size: 72%;
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
@@ -720,21 +759,53 @@ input[type="button"]:hover {
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
-  
+  header > a > img {
+    height: 70px;
+    width: 80px;
+  }
   
   .links_acesso img {
     width: 60px;
     height: 55px;
   }
+  #caixa_login {
+    width: 45%;
+    height: 80%;
+  }
 
+  #caixa_login h1 {
+    font-size: 4rem;
+  }
+  #caixa_login  label > img {
+    width: 70px;
+    height: 70px;
+  }
+  #caixa_login input[type="text"],
+  input[type="password"] {
+    font-size: 1rem;
+    width: 50%;
+    height: 20px;
+  }
+  #caixa_login #container_botoes > input {
+    margin-bottom: 3px;
+    font-size: 1rem;
+    width: 100%;
+    height: 25px;
+  }
+  
+  #formulario > ul {
+    margin-top: 5px;
+    font-size: 0.9rem;
+  }
   #caixa_suporte > h1 {
     top: 1%;
   }
 
   
   #container_botoes_suporte > button { 
-    height: 40%;
-    
+    font-size: 0.9rem;
+    height: 78%;
+    width: 45%;
   }
   #container_mensagens {
     top: 45%;

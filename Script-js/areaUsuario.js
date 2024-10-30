@@ -26,16 +26,16 @@ toggle_opcoes_usuario.addEventListener("click", () => {
   var conteudo_opcoes_usuario = document.getElementById(
     "conteudo_opcoes_usuario"
   );
-  if (container_opcoes_usuario.style.width == "35%") {
+  if (container_opcoes_usuario.style.width == "40%") {
     conteudo_opcoes_usuario.style.display = "none";
     nav_opcoes_usuario.style.display = "none";
-    container_opcoes_usuario.style.width = "5%";
+    container_opcoes_usuario.style.width = "7%";
     toggle_opcoes_usuario.style.width = "100%";
     seta_menu_opcoes_usuario.src = "Imagens/seta_direita.png";
   } else {
     conteudo_opcoes_usuario.style.display = "flex";
     nav_opcoes_usuario.style.display = "block";
-    container_opcoes_usuario.style.width = "35%";
+    container_opcoes_usuario.style.width = "40%";
     toggle_opcoes_usuario.style.width = "10%";
     seta_menu_opcoes_usuario.src = "Imagens/seta_esquerda.png";
   }
