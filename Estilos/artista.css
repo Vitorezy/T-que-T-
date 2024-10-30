@@ -35,6 +35,7 @@
 }
 /* Nome do autor */
 .autor-identificação {
+  position: fixed;
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.5);
   background-image: linear-gradient(
     to right,
@@ -42,12 +43,13 @@
     rgba(103, 0, 248, 0.95),
     rgba(100, 0, 218, 0.98)
   );
+  width: 100%;
 }
 /* Texto do artista*/
 #flex-container > div > .texto-artista > p {
   position: relative;
   bottom: 0%;
-  font-size: 2.22rem;
+  font-size: 220%;
   letter-spacing: 1px;
   font-weight: 500;
   text-shadow: 1px 1px 2px black;
@@ -119,8 +121,8 @@ p {
   background-color: rgba(0, 0, 0, 0.5);
   font-size: clamp(1em, 0.5em + 0.5vw, 1.2em);
 }
-@media screen and (min-width: 1024px) and (max-width: 1440px) {
-  main > h1 {
-    margin: 120px 0px 0px 0px;
+@media screen and (min-width: 768px) and (max-width: 1024px) { 
+  #flex-container > div > .texto-artista > p {
+    font-size: 166%;
   }
 }

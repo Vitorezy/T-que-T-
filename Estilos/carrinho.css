@@ -17,8 +17,8 @@ header {
 header > a > img {
   position: absolute;
   top: 50%;
-  height: 60px;
-  width: 74px;
+  height: 76px;
+  width: 90px;
 }
 /*container que abrange a caixa onde estão posicionados os itens do carrinho */
 #container_itens_carrinho {
@@ -32,11 +32,12 @@ header > a > img {
     rgba(60, 0, 109, 0.918),
     rgb(60, 0, 109)
   );
-  height: 85%;
-  width: 65%;
+  height: 80%;
+  width: 50%;
   box-shadow: 0px 0px 10px black;
   border: 1px solid black;
   border-radius: 15px 15px 15px 15px;
+  
 }
 
 #header_itens {
@@ -54,13 +55,7 @@ header > a > img {
   box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.459);
   border-radius: 15px 15px 0px 0px;
 }
-#conteudo_itens_carrinho {
-  width: 100%;
-  gap: 1%;
-  height: 100%;
-  overflow-y: auto;
-  overflow-x: hidden;
-}
+
 #extrato_final {
   position: fixed;
   bottom: 0%;
@@ -101,22 +96,59 @@ form {
   height: 68%;
   grid-template-columns: auto auto;
   justify-items: center;
-  overflow-y: auto;
+
 }
 .blocoitem {
   width: 100%;
 }
 .blocoitem h1 {
-  font-size: 1.7rem;
+  font-size: 2.3rem;
 }
 form input,
 select {
-  font-size: 1.4rem;
-  width: 70%;
+  font-size: 2rem;
+  width: 80%;
   border-radius: 6px;
   text-indent: 1%;
 }
 form select,
 input[type="date"] {
   cursor: pointer;
+}
+@media screen and (min-width: 768px) and (max-width: 1024px) { 
+  header > a > img {
+    height: 46px;
+    width: 55px;
+  }
+  #container_itens_carrinho {
+    height: 85%;
+    width: 75%;
+  }
+  #header_itens {
+    font-size: 1.1rem;
+  }
+
+  #extrato_final {
+    height: 10%;
+  }
+  #extrato_final > div {
+    font-size: 0.5rem;
+  }
+  #extrato_final_finalizar > input[type="submit"] {
+    position: absolute;
+    font-size: 0.8rem;
+    width: 20%;
+    left: 65%;
+    bottom: 20%;
+  }
+  .blocoitem h1 {
+    font-size: 1.5rem;
+  }
+  form input,
+  select {
+    font-size: 1.4rem;
+    width: 70%;
+    border-radius: 6px;
+    text-indent: 1%;
+  }
 }

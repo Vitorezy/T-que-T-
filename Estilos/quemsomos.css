@@ -60,7 +60,7 @@ div.card_home {
 #container_cards {
   position: relative;
   width: 100%;
-  top: 40%;
+  top: 2%;
   left: 50%;
   transform: translate(-50%);
   flex-wrap: wrap;
@@ -115,17 +115,20 @@ p {
 #final_pagina > a:hover {
   text-decoration: underline;
 }
+@media screen and (min-width: 768px) and (max-width: 1024px) { 
+
+  p {
+    font-size: 80%;
+  }
+  div.card_home  { 
+    width: 180px;
+    height: 180px;
+    margin-left: 10px;
+    scale: 85%;
+  }
+}
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
   div.card_home  { 
     scale: 90%;
-  }
-  #container_cards {
-    position: absolute;
-    width: 100%;
-    top: 45%;
-    left: 50%;
-    transform: translate(-50%);
-    flex-wrap: wrap;
-    flex-direction: row;
   }
 }

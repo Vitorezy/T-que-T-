@@ -52,8 +52,8 @@ header {
 /* Logo da empresa*/
 header > a > img {
   position: absolute;
-  height: 80px;
-  width: 89px;
+  height: 100px;
+  width: 115px;
   left: 50%;
   top: 50%;
   z-index: 1;
@@ -101,7 +101,9 @@ header > a > img:hover {
   );
 }
 .links_acesso img {
-  scale: 105%;
+  width: 75px;
+  height: 70px;
+  scale: 90%;
 }
 #linksladoesquerdo {
   right: 90%;
@@ -176,7 +178,6 @@ main {
   overflow-y: auto;
 }
 main > h1 {
-  margin: 60px 0px 0px 0px;
   letter-spacing: 1.05rem;
   font-family: "fanky", arial;
   font-variant: small-caps;
@@ -276,6 +277,8 @@ main > h2 {
   cursor: pointer;
   width: 40%;
   border-radius: 8px;
+  font-size: 101%;
+  height: 50%;
   box-shadow: -3px 3px 2px rgba(0, 0, 0, 0.5);
 }
 #container_mensagens {
@@ -443,8 +446,8 @@ footer {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 50%;
-  height: 90%;
+  width: 45%;
+  height: 80%;
   background-image: linear-gradient(
     to bottom,
     rgb(115, 25, 230),
@@ -460,10 +463,7 @@ footer {
   box-shadow: 0px 0px 10px rgb(0, 0, 0);
 }
 #caixa_login form {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -500,7 +500,7 @@ input[type="password"] {
   background-color: rgba(255, 255, 255, 0.911);
   border: 2px solid rgba(0, 0, 0, 0.5);
   border-radius: 8px;
-  width: 80%;
+  width: 50%;
   height: 35px;
   box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
   cursor: text;
@@ -534,6 +534,16 @@ input[type="button"]:hover {
   position: absolute;
   right: 0%;
 }
+#formulario > ul {
+  font-size: 1.3rem;
+  text-shadow: -1px 1px 3px black;
+  text-indent: 0%;
+  list-style-type: square;
+  padding: 0;
+  margin: 0;
+  color: white;
+  text-align: start;
+}
 .botaofechar {
   top: 0%;
   right: 0%;
@@ -549,30 +559,18 @@ input[type="button"]:hover {
 }
 /*Celular*/
 @media screen and (min-width: 320px) and (max-width: 768px) {
-  .escrita_exibição_imagem_nav h1 {
-    background-color: rgba(0, 0, 0, 0.2);
-    font-size: 1.2rem;
-  }
-  .escrita_exibição_imagem_nav p {
-    background-color: rgba(0, 0, 0, 0.5);
-    font-size: 1rem;
-  }
-  .escrita_exibição_imagem_nav {
-    width: 100%;
-    top: 130px;
-    left: 50%;
-    transform: translate(-50%);
-  }
+
   .links_acesso img {
-    width: 55px;
-    height: 50px;
+    width: 47px;
+    height: 42px;
   }
 
+  #linksladoesquerdo {
+    right: 75%;
+  }
   header > a > img {
-    height: 55px;
+    height: 60px;
     width: 68px;
-    left: 10%;
-    transform: translate(-50%, -50%);
   }
   #Caixa_suporte {
     background-image: linear-gradient(
@@ -581,9 +579,9 @@ input[type="button"]:hover {
       rgba(101, 40, 199, 0.993),
       rgba(66, 26, 131, 0.993)
     );
-    bottom: 14%;
-    width: 30%;
-    height: 70%;
+    bottom: 10%;
+    width: 75%;
+    height: 60%;
     letter-spacing: 1px;
   }
   #caixa_suporte > h1 {
@@ -625,12 +623,44 @@ input[type="button"]:hover {
   }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
+  #caixa_login {
+    width: 70%;
+    height: 95%;
+  }
+
+  #caixa_login h1 {
+    font-size: 3.5rem;
+  }
+  #caixa_login  label > img {
+    width: 70px;
+    height: 70px;
+  }
+  #caixa_login input[type="text"],
+  input[type="password"] {
+    font-size: 1rem;
+    width: 50%;
+    height: 20px;
+  }
+  #caixa_login #container_botoes > input {
+    margin-bottom: 3px;
+    font-size: 1rem;
+    width: 100%;
+    height: 25px;
+  }
+  
+  #formulario > ul {
+    margin-top: 5px;
+    font-size: 0.9rem;
+  }
+  #linksladoesquerdo {
+    right: 85%;
+  }
   .links_acesso img {
-    width: 65px;
-    height: 65px;
+    width: 50px;
+    height: 50px;
   }
   header > a > img {
-    height: 55px;
+    height: 60px;
     width: 70px;
   }
   #Caixa_suporte {
@@ -640,8 +670,9 @@ input[type="button"]:hover {
       rgba(101, 40, 199, 0.993),
       rgba(66, 26, 131, 0.993)
     );
-    bottom: 14%;
-    width: 30%;
+    bottom: 9%;
+    left: 11%;
+    width: 35%;
     height: 70%;
     letter-spacing: 1px;
   }
@@ -653,11 +684,16 @@ input[type="button"]:hover {
     height: 15%;
   }
   #container_mensagens {
-    top: 45%;
+    top: 45%; 
     width: 80%;
     height: 60%;
     gap: 3%;
     overflow-y: auto;
+  }
+  #container_botoes_suporte > button { 
+    height: 65%;
+    width: 50%;
+    font-size: 72%;
   }
   #apagar_historico {
     width: 60px;
@@ -684,49 +720,7 @@ input[type="button"]:hover {
   }
 }
 @media screen and (min-width: 1024px) and (max-width: 1440px) {
-  main > h1 {
-    margin: 110px 0px 0px 0px;
-  }
-  #caixa_login {
-    width: 55%;
-    height: 98%;
-  }
-  #caixa_login form {
-    top: 56%;
-  }
-  #caixa_login h1 {
-    color: rgb(195, 0, 255);
-    font-size: 4rem;
-    text-shadow: -2px 3px 10px rgba(0, 0, 0, 0.795);
-    letter-spacing: 5px;
-    font-family: "luckiest", Arial, Helvetica, sans-serif;
-  }
-  #caixa_login form > label {
-    display: inline-block;
-    cursor: pointer;
-  }
-  #container_revelarsenha {
-    color: white;
-    font-size: 1.1rem;
-  }
-  #container_revelarsenha > input {
-    scale: 120%;
-  }
-  #caixa_login input[type="text"],
-  input[type="password"] {
-    margin-bottom: 5px;
-
-    border: 1px solid rgba(0, 0, 0, 0.5);
-    width: 80%;
-    height: 25px;
-  }
-  #caixa_login #container_botoes > input {
-    margin-bottom: 5px;
-    font-size: 1.1rem;
-    border: 1px solid black;
-    width: 100%;
-    height: 25px;
-  }
+  
   
   .links_acesso img {
     width: 60px;
@@ -739,7 +733,8 @@ input[type="button"]:hover {
 
   
   #container_botoes_suporte > button { 
-    height: 65%;
+    height: 40%;
+    
   }
   #container_mensagens {
     top: 45%;
@@ -770,16 +765,6 @@ input[type="button"]:hover {
     transition-timing-function: ease;
     transition-duration: 0.3s;
     transition-property: scale;
-  }
-  #formulario > ul {
-    font-size: 1.3rem;
-    text-shadow: -1px 1px 3px black;
-    text-indent: 0%;
-    list-style-type: square;
-    padding: 0;
-    margin: 0;
-    color: white;
-    text-align: start;
   }
 }
 
