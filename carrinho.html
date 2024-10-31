@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Carrinho de Compras</title>
-    <link rel="stylesheet" href="Estilos/Geral.css" />
+    <link rel="stylesheet preload" href="Estilos/Geral.css" />
     <link rel="stylesheet" href="Estilos/carrinho.css" />
     <script defer src="Script-js/carrinho.js"></script>
     <script defer src="Script-js/script.js"></script>
@@ -20,7 +20,7 @@
         <a href="index.html">
           <img
             src="Imagens/homeIcon.png"
-            alt="Botão de ir pro Usúario"
+            alt="Botão de ir para página Inicial"
             title="Página inicial"
         /></a>
         <div id="botão_abrir_login" style="display: none">
@@ -180,12 +180,16 @@
     <div id="caixa_login" style="display: none">
       <h1 style="display: inline">Login</h1>
       <label for="fechar_login">
-        <img class="botaofechar" src="Imagens/fecharIcon.png" alt=""
+        <img
+          class="botaofechar"
+          src="Imagens/fecharIcon.png"
+          alt="Fechar Login"
+          loading="lazy"
       /></label>
       <button id="fechar_login" style="display: none"></button>
       <form id="formulario" method="get" action="areaUsuário.html">
         <label for="nome_login"
-          ><img src="Imagens/inputNameIcon.png" alt="Nome"
+          ><img src="Imagens/inputNameIcon.png" alt="Nome" loading="lazy"
         /></label>
         <input
           type="text"
@@ -196,7 +200,7 @@
           placeholder="Digite seu nome"
         />
         <label for="senha_login">
-          <img src="Imagens/senhaIcon.png" alt="Senha"
+          <img src="Imagens/senhaIcon.png" alt="Senha" loading="lazy"
         /></label>
         <input
           type="password"
@@ -247,38 +251,43 @@
       <h1>Avalie o atendimento!</h1>
       <div id="avaliar_emojis">
         <img
+          loading="lazy"
           id="emojis_avaliacao_1"
           class="emojis_avaliacao"
           src="Imagens/nota5Icon.png"
-          alt=""
+          alt="Ótimo"
           title="Ótimo"
         />
         <img
+          loading="lazy"
           id="emojis_avaliacao_2"
           class="emojis_avaliacao"
           src="Imagens/nota4Icon.png"
-          alt=""
+          alt="Bom"
           title="Bom"
         />
         <img
+          loading="lazy"
           id="emojis_avaliacao_3"
           class="emojis_avaliacao"
           src="Imagens/nota3Icon.png"
-          alt=""
+          alt="Mediano"
           title="Mediano"
         />
         <img
+          loading="lazy"
           id="emojis_avaliacao_4"
           class="emojis_avaliacao"
           src="Imagens/nota2Icon.png"
-          alt=""
+          alt="Ruim"
           title="Ruim"
         />
         <img
+          loading="lazy"
           id="emojis_avaliacao_5"
           class="emojis_avaliacao"
           src="Imagens/nota1Icon.png"
-          alt=""
+          alt="Péssimo"
           title="Péssimo"
         />
       </div>
@@ -290,16 +299,21 @@
       title="Voltar para o início"
       style="display: none"
     >
-      <img id="img-botão-voltar" src="Imagens/setaCima.png" alt="" />
+      <img
+        id="img-botão-voltar"
+        src="Imagens/setaCima.png"
+        alt="Voltar ao Início"
+      />
     </a>
     <!--Caixa de suporte-->
     <div id="Caixa_suporte" style="display: none">
       <h1>Suporte</h1>
       <img
+        loading="lazy"
         class="botaofechar"
         id="botao_fechar_suporte"
         src="Imagens/fecharIcon.png"
-        alt=""
+        alt="Fechar Suporte"
         style="right: 0%; position: absolute; width: 70px"
       />
       <div id="container_mensagens"></div>
@@ -315,22 +329,27 @@
         </button>
         <button id="botao_mensagem_4">Quero Denunciar uma situação.</button>
         <img
+          loading="lazy"
           id="apagar_historico"
           src="Imagens/lixeiraIcon.png"
-          alt=""
+          alt="Apagar Histórico"
           title="Apagar conversa com o suporte."
         />
       </div>
     </div>
 
     <div id="botão-suporte" title="Suporte">
-      <img id="img-botão-suporte" src="Imagens/suporteIcon.png" alt="" />
+      <img
+        id="img-botão-suporte"
+        src="Imagens/suporteIcon.png"
+        alt="Abrir Suporte"
+      />
     </div>
     <!--Créditos-->
     <img
       id="creditos_toggle"
       src="Imagens/expandirCreditoIcon.png"
-      alt=""
+      alt="Exibir Créditos"
       title="Alterar visibilidade dos créditos"
     />
     <footer>

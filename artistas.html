@@ -9,7 +9,7 @@
     481 - 768 tablet
     769 - 1024 telas laptop
     1025 - 1200 pc-->
-    <link rel="stylesheet" href="Estilos/Geral.css" media="all" />
+    <link rel="stylesheet preload" href="Estilos/Geral.css" media="all" />
     <link rel="stylesheet" href="Estilos/artista.css" />
     <link rel="shortcut icon" href="Imagens/favicon.ico" />
     <script defer src="Script-js/script.js"></script>
@@ -25,14 +25,14 @@
         <a href="artistas.html">
           <img
             src="Imagens/artistaIcon.png"
-            alt="Botão de ir pro Usúario"
+            alt="Botão de ir para os Artistas"
             tabindex="1"
             title="Nossos artistas"
         /></a>
         <a href="Quem somos.html">
           <img
             src="Imagens/Empresa.png"
-            alt="Botão de ir pro Usúario"
+            alt="Botão de ir para a Página sobre a Tá que Tá"
             tabindex="1"
             title="Quem somos"
         /></a>
@@ -41,7 +41,7 @@
         <a href="index.html">
           <img
             src="Imagens/homeIcon.png"
-            alt="Botão de ir pro Usúario"
+            alt="Botão de ir para a Página Inicial"
             title="Página inicial"
         /></a>
 
@@ -103,14 +103,14 @@
       </div>
     </header>
     <main>
-      <div id="inicio" style="height: 20%;"></div>
+      <div id="inicio" style="height: 20%"></div>
       <h1>Tá Que Tá</h1>
       <h2>Nossos Artistas</h2>
       <div id="flex-container">
         <!--container com as caixas de cada artista-->
         <div id="artista1" style="background-image: url(Imagens/wallpaper.jpg)">
           <div class="autor-identificação">
-            <img src="Imagens/usuário_icon_nav.png" alt="" />
+            <img src="Imagens/usuário_icon_nav.png" alt="Foto do autor" />
             <h2>Nome do Artista</h2>
           </div>
           <div class="imagem_do_artista"></div>
@@ -129,7 +129,11 @@
           style="background-image: url(Imagens/wallpaper.webp)"
         >
           <div class="autor-identificação">
-            <img src="Imagens/usuário_icon_nav.png" alt="" />
+            <img
+              src="Imagens/usuário_icon_nav.png"
+              alt="Foto do autor"
+              loading="lazy"
+            />
             <h2>Nome do Artista</h2>
           </div>
           <div class="imagem_do_artista"></div>
@@ -147,7 +151,11 @@
           style="background-image: url(Imagens/wallpaper2.jpg)"
         >
           <div class="autor-identificação">
-            <img src="Imagens/usuário_icon_nav.png" alt="" />
+            <img
+              src="Imagens/usuário_icon_nav.png"
+              alt="Foto do autor"
+              loading="lazy"
+            />
             <h2>Nome do Artista</h2>
           </div>
           <div class="imagem_do_artista"></div>
@@ -168,7 +176,11 @@
           "
         >
           <div class="autor-identificação">
-            <img src="Imagens/usuário_icon_nav.png" alt="" />
+            <img
+              src="Imagens/usuário_icon_nav.png"
+              alt="Foto do autor"
+              loading="lazy"
+            />
             <h2>Nome do Artista</h2>
           </div>
           <div class="imagem_do_artista"></div>
@@ -187,12 +199,16 @@
     <div id="caixa_login" style="display: none">
       <h1 style="display: inline">Login</h1>
       <label for="fechar_login">
-        <img class="botaofechar" src="Imagens/fecharIcon.png" alt=""
+        <img
+          class="botaofechar"
+          src="Imagens/fecharIcon.png"
+          alt="Fechar Login"
+          loading="lazy"
       /></label>
       <button id="fechar_login" style="display: none"></button>
       <form id="formulario" method="get" action="areaUsuário.html">
         <label for="nome_login"
-          ><img src="Imagens/inputNameIcon.png" alt="Nome"
+          ><img src="Imagens/inputNameIcon.png" alt="Nome" loading="lazy"
         /></label>
         <input
           type="text"
@@ -203,7 +219,7 @@
           placeholder="Digite seu nome"
         />
         <label for="senha_login">
-          <img src="Imagens/senhaIcon.png" alt="Senha"
+          <img src="Imagens/senhaIcon.png" alt="Senha" loading="lazy"
         /></label>
         <input
           type="password"
@@ -254,45 +270,54 @@
       <h1>Avalie o atendimento!</h1>
       <div id="avaliar_emojis">
         <img
+          loading="lazy"
           id="emojis_avaliacao_1"
           class="emojis_avaliacao"
           src="Imagens/nota5Icon.png"
-          alt=""
+          alt="Ótimo"
           title="Ótimo"
         />
         <img
+          loading="lazy"
           id="emojis_avaliacao_2"
           class="emojis_avaliacao"
           src="Imagens/nota4Icon.png"
-          alt=""
+          alt="Bom"
           title="Bom"
         />
         <img
+          loading="lazy"
           id="emojis_avaliacao_3"
           class="emojis_avaliacao"
           src="Imagens/nota3Icon.png"
-          alt=""
+          alt="Mediano"
           title="Mediano"
         />
         <img
+          loading="lazy"
           id="emojis_avaliacao_4"
           class="emojis_avaliacao"
           src="Imagens/nota2Icon.png"
-          alt=""
+          alt="Ruim"
           title="Ruim"
         />
         <img
+          loading="lazy"
           id="emojis_avaliacao_5"
           class="emojis_avaliacao"
           src="Imagens/nota1Icon.png"
-          alt=""
+          alt="Péssimo"
           title="Péssimo"
         />
       </div>
     </div>
     <!--Voltar ao topo-->
     <a id="botão-voltar" href="#inicio" title="Voltar para o início">
-      <img id="img-botão-voltar" src="Imagens/setaCima.png" alt="" />
+      <img
+        id="img-botão-voltar"
+        src="Imagens/setaCima.png"
+        alt="Voltar ao Topo da página"
+      />
     </a>
     <!--Suporte-->
     <div id="Caixa_suporte" style="display: none">
@@ -301,7 +326,7 @@
         class="botaofechar"
         id="botao_fechar_suporte"
         src="Imagens/fecharIcon.png"
-        alt=""
+        alt="Fechar Suporte"
         style="right: 0%; position: absolute; width: 70px"
       />
       <div id="container_mensagens"></div>
@@ -317,22 +342,27 @@
         </button>
         <button id="botao_mensagem_4">Quero Denunciar uma situação.</button>
         <img
+          loading="lazy"
           id="apagar_historico"
           src="Imagens/lixeiraIcon.png"
-          alt=""
+          alt="Apagar Histórico"
           title="Apagar conversa com o suporte."
         />
       </div>
     </div>
     <!--botão de chamar suporte-->
     <div id="botão-suporte" title="Suporte">
-      <img id="img-botão-suporte" src="Imagens/suporteIcon.png" alt="" />
+      <img
+        id="img-botão-suporte"
+        src="Imagens/suporteIcon.png"
+        alt="Abrir Suporte"
+      />
     </div>
     <!--Creditos e botão de abrir/fechar creditos-->
     <img
       id="creditos_toggle"
       src="Imagens/expandirCreditoIcon.png"
-      alt=""
+      alt="Exibir Créditos"
       title="Alterar visibilidade dos créditos"
     />
     <footer>
