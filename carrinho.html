@@ -76,11 +76,12 @@
               </label>
               <input
                 type="text"
-                name=""
+                name="nomecompletodados"
                 id="nomecompletodados"
                 autocomplete="name"
                 placeholder="Seu nome completo"
                 required
+                title="Seu nome completo"
               />
             </div>
             <div class="blocoitem">
@@ -89,12 +90,13 @@
               </label>
               <input
                 type="text"
-                name=""
+                name="cpfdados"
                 id="cpfdados"
                 minlength="11"
                 maxlength="11"
                 placeholder="seu CPF (11 Digitos)"
                 required
+                title="Seu CPF"
               />
             </div>
             <div class="blocoitem">
@@ -103,17 +105,23 @@
               </label>
               <input
                 type="date"
-                name=""
+                name="datanasc"
                 id="datadados"
                 autocomplete="bday"
                 required
+                title="Sua data de Nascimento"
               />
             </div>
             <div class="blocoitem">
               <label for="sexodados">
                 <h1>Sexo</h1>
               </label>
-              <select id="sexodados" autocomplete="sex" required>
+              <select
+                id="sexodados"
+                autocomplete="sex"
+                required
+                title="Selecione seu Sexo"
+              >
                 <option
                   value="Selecione"
                   disabled
@@ -132,11 +140,12 @@
               </label>
               <input
                 type="email"
-                name=""
+                name="emaildados"
                 id="emaildados"
                 autocomplete="email"
                 required
                 placeholder="SeuEmail@Gmail.com"
+                title="Seu EMAIL"
               />
             </div>
             <div class="blocoitem">
@@ -145,13 +154,14 @@
               </label>
               <input
                 type="tel"
-                name=""
+                name="telefonedados"
                 id="telefonedados"
                 minlength="8"
                 required
                 placeholder="Seu telefone (8-9 Digitos)"
                 maxlength="9"
                 autocomplete="tel"
+                title="Número de Telefone ou Celular"
               />
             </div>
             <div class="blocoitem">
@@ -162,10 +172,11 @@
                 type="text"
                 required
                 placeholder="Seu CEP (8 Digitos)"
-                name=""
+                name="cepdados"
                 id="cepdados"
                 maxlength="8"
                 minlength="8"
+                title="CEP completo"
               />
             </div>
 
@@ -175,20 +186,25 @@
               </label>
               <input
                 type="text"
-                name=""
+                name="enderecodados"
                 id="enderecodados"
                 autocomplete="street-address"
                 placeholder="Seu endereço completo."
                 required
+                title="Endereço"
               />
             </div>
             <div id="extrato_final">
               <div id="extrato_final_valor">
                 <h1>Total a pagar:</h1>
-                <h1 id="totalpagar"></h1>
+                <h1 id="totalpagar" title="Valor total a Pagar"></h1>
               </div>
               <div id="extrato_final_finalizar">
-                <input type="submit" value="Finalizar Compra" />
+                <input
+                  type="submit"
+                  value="Finalizar Compra"
+                  title="Finalizar Compra"
+                />
               </div>
             </div>
           </form>
@@ -231,7 +247,12 @@
           placeholder="Digite sua senha"
         />
         <div id="container_revelarsenha">
-          <input type="checkbox" name="" id="botaorevelarsenha" />
+          <input
+            type="checkbox"
+            name="botaorevelarsenha"
+            id="botaorevelarsenha"
+            title="Revelar Senha"
+          />
           <label id="labelrevelarsenha" for="botaorevelarsenha"
             >Revelar senha</label
           >

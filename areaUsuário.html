@@ -87,9 +87,11 @@
         </section>
         <section id="nav_opcoes_usuario">
           <ul>
-            <li id="optorcamento">Orçamento</li>
-            <li id="optvirarparceiro">Virar parceiro</li>
-            <li id="optexcluirconta">Excluir conta</li>
+            <li id="optorcamento" title="Criar um Orçamento">Orçamento</li>
+            <li id="optvirarparceiro" title="requerir Parceria">
+              Virar parceiro
+            </li>
+            <li id="optexcluirconta" title="Excluir Conta">Excluir conta</li>
           </ul>
         </section>
       </section>
@@ -189,12 +191,14 @@
             value="Enviar"
             id="botao_enviar_orcarmento"
             class="botaofimorcamento"
+            title="Enviar"
           />
           <input
             type="reset"
             value="Resetar"
             id="botao_resetar_orcarmento"
             class="botaofimorcamento"
+            title="Reiniciar formulário"
           />
         </form>
       </div>
@@ -235,7 +239,12 @@
           placeholder="Digite sua senha"
         />
         <div id="container_revelarsenha">
-          <input type="checkbox" name="" id="botaorevelarsenha" />
+          <input
+            type="checkbox"
+            name="botaorevelarsenha"
+            id="botaorevelarsenha"
+            title="Revelar Senha"
+          />
           <label id="labelrevelarsenha" for="botaorevelarsenha"
             >Revelar senha</label
           >
