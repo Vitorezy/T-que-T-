@@ -121,6 +121,24 @@ p {
   background-color: rgba(0, 0, 0, 0.5);
   font-size: clamp(1em, 0.5em + 0.5vw, 1.2em);
 }
+@media screen and (max-width: 320px) { 
+  #flex-container > div > .texto-artista > p {
+    font-size: 93.5%;
+  }
+  .imagem_do_artista {
+    height: 30%;
+    width: 95%;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 768px) { 
+  #flex-container > div > .texto-artista > p {
+    font-size: 105%;
+  }
+  .imagem_do_artista {
+    height: 30%;
+    width: 95%;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1024px) { 
   #flex-container > div > .texto-artista > p {
     font-size: 166%;

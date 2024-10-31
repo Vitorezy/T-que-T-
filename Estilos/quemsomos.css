@@ -115,6 +115,58 @@ p {
 #final_pagina > a:hover {
   text-decoration: underline;
 }
+@media screen and (max-width: 320px) { 
+  #img-botão-voltar { 
+    display: none;
+  }
+  main > h1 { 
+    font-size: 250%;
+  }
+  main > h2 { 
+    font-size: 150%;
+  }
+  p {
+    font-size: 35%;
+    margin-left: 10px;
+  }
+  div.card_home  { 
+    width: 80px;
+    height: 80px;
+    margin-left:0px;
+    scale: 85%;
+  }
+  #final_pagina {
+    font-size: 1rem;
+    border-radius: 0;
+    height: 5%;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 768px) { 
+  #img-botão-voltar { 
+    display: none;
+  }
+  main > h1 { 
+    font-size: 350%;
+  }
+  main > h2 { 
+    font-size: 220%;
+  }
+  p {
+    font-size: 40%;
+    margin-left: 10px;
+  }
+  div.card_home  { 
+    width: 115px;
+    height: 115px;
+    margin-left:0px;
+    scale: 85%;
+  }
+  #final_pagina {
+    font-size: 1.3rem;
+    border-radius: 0;
+    height: 5%;
+  }
+}
 @media screen and (min-width: 768px) and (max-width: 1024px) { 
 
   p {

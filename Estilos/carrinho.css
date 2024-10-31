@@ -186,7 +186,39 @@ input[type="date"] {
     text-indent: 1%;
   }
 }
-@media screen and (min-width: 320px) and (max-width: 768px)  { 
+@media screen and (max-width: 320px) { 
+  header > a > img {
+    height: 50px;
+    width: 59px;
+  }
+  #container_itens_carrinho {
+    height: 75%;
+    width: 95%;
+  }
+  #header_itens {
+    font-size: 1.1rem;
+  }
+
+  #extrato_final {
+    height: 15%;
+  }
+  #extrato_final > div {
+    font-size: 0.5rem;
+  }
+  #extrato_final_finalizar > input[type="submit"] {
+    font-size: 0.8rem;
+    width: 38%;
+  }
+  .blocoitem h1 {
+    font-size: 1rem;
+  }
+  form input,
+  select {
+    font-size: 0.8rem;
+    width: 95%;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 768px)  { 
   header > a > img {
     height: 60px;
     width: 69px;
@@ -196,7 +228,7 @@ input[type="date"] {
     width: 95%;
   }
   #header_itens {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
   }
 
   #extrato_final {

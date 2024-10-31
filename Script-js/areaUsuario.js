@@ -36,7 +36,7 @@ toggle_opcoes_usuario.addEventListener("click", () => {
     conteudo_opcoes_usuario.style.display = "flex";
     nav_opcoes_usuario.style.display = "block";
     container_opcoes_usuario.style.width = "40%";
-    toggle_opcoes_usuario.style.width = "10%";
+    toggle_opcoes_usuario.style.width = "18%";
     seta_menu_opcoes_usuario.src = "Imagens/seta_esquerda.png";
   }
 });

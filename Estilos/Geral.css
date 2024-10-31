@@ -558,7 +558,84 @@ input[type="button"]:hover {
   transition-duration: 0.3s;
 }
 /*Celular*/
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (max-width: 320px) { 
+  main > h1 {
+    font-size:300%;
+  }
+  main > h2 {
+    font-size: 220%;
+  }
+  .links_acesso img {
+    width: 40px;
+    height: 38px;
+  }
+
+  #linksladoesquerdo {
+    right: 75%;
+  }
+  header > a > img {
+    height: 55px;
+    width: 63px;
+  }
+  #Caixa_suporte {
+    bottom: 17%;
+    width: 75%;
+    height: 55%;
+    font-size: .9rem;
+  }
+  #apagar_historico {
+    bottom: 75%;
+    left: 75%;
+  }
+  .botaofechar {
+    scale: 80%;
+  }
+  #caixa_login {
+    width: 90%;
+    height: 75%;
+  }
+  #caixa_login h1 {
+    font-size: 3rem;
+  }
+  #caixa_login  label > img {
+    width: 55px;
+    height: 55px;
+  }
+  #caixa_login input[type="text"],
+  input[type="password"] {
+    font-size: 1rem;
+    width: 70%;
+    height: 15px;
+  }
+  #caixa_login #container_botoes > input {
+    margin-bottom: 3px;
+    font-size: .8rem;
+    height: 22px;
+  }
+  
+  #formulario > ul {
+    margin-left: 50px;
+    font-size: 1rem;
+  }
+  #container_botoes_suporte > button { 
+    height: 55%;
+    width: 45%;
+    font-size: 72%;
+  }
+  #avaliar_atendimento {
+
+    width: 90%;
+    height: 30%;
+    font-size: 110%;
+  }
+  #avaliar_emojis img {
+    cursor: pointer;
+    margin-top: 10%;
+    width: 50px;
+    height: 50px;
+  }
+}
+@media screen and (min-width: 321px) and (max-width: 768px) {
   main > h1 {
     font-size: 400%;
   }
@@ -660,6 +737,17 @@ input[type="button"]:hover {
     width: 45%;
     font-size: 72%;
   }
+  #avaliar_atendimento {
+
+    width: 90%;
+    height: 40%;
+    font-size: 110%;
+  }
+  #avaliar_emojis img {
+    cursor: pointer;
+    width: 60px;
+    height: 60px;
+  }
 }
 @media screen and (min-width: 768px) and (max-width: 1024px) {
   #caixa_login {
@@ -692,7 +780,7 @@ input[type="button"]:hover {
     font-size: 0.9rem;
   }
   #linksladoesquerdo {
-    right: 85%;
+    right: 83%;
   }
   .links_acesso img {
     width: 50px;
