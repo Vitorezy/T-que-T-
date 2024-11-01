@@ -30,16 +30,17 @@
   <body>
     <header>
       <!--Logo-->
-      <a href="Quem somos.html">
-        <img src="Imagens/logo sem fundo.png" alt="Logo Tá que Tá" />
+      <a href="Quem somos.html" draggable="false">
+        <img src="Imagens/logo sem fundo.png" alt="Logo Tá que Tá" draggable="false" />
       </a>
       <!--Links de acesso para outras páginas-->
       <div class="links_acesso">
-        <a href="index.html">
+        <a href="index.html" draggable="false">
           <img
             src="Imagens/homeIcon.png"
             alt="Botão de ir para página Inicial"
             title="Página inicial"
+            draggable="false"
         /></a>
         <div id="botão_abrir_login" style="display: none">
           <img
@@ -48,6 +49,7 @@
             alt="Botão de ir pro Usúario"
             tabindex="1"
             title="Usuário"
+            draggable="false"
           />
         </div>
       </div>
@@ -219,11 +221,12 @@
           src="Imagens/fecharIcon.png"
           alt="Fechar Login"
           loading="lazy"
+          draggable="false"
       /></label>
       <button id="fechar_login" style="display: none"></button>
       <form id="formulario" method="get" action="areaUsuário.html">
         <label for="nome_login"
-          ><img src="Imagens/inputNameIcon.png" alt="Nome" loading="lazy"
+          ><img src="Imagens/inputNameIcon.png" alt="Nome" loading="lazy" draggable="false"
         /></label>
         <input
           type="text"
@@ -234,7 +237,7 @@
           placeholder="Digite seu nome"
         />
         <label for="senha_login">
-          <img src="Imagens/senhaIcon.png" alt="Senha" loading="lazy"
+          <img src="Imagens/senhaIcon.png" alt="Senha" loading="lazy" draggable="false"
         /></label>
         <input
           type="password"
@@ -296,6 +299,7 @@
           src="Imagens/nota5Icon.png"
           alt="Ótimo"
           title="Ótimo"
+          draggable="false"
         />
         <img
           loading="lazy"
@@ -304,6 +308,7 @@
           src="Imagens/nota4Icon.png"
           alt="Bom"
           title="Bom"
+          draggable="false"
         />
         <img
           loading="lazy"
@@ -312,6 +317,7 @@
           src="Imagens/nota3Icon.png"
           alt="Mediano"
           title="Mediano"
+          draggable="false"
         />
         <img
           loading="lazy"
@@ -320,6 +326,7 @@
           src="Imagens/nota2Icon.png"
           alt="Ruim"
           title="Ruim"
+          draggable="false"
         />
         <img
           loading="lazy"
@@ -328,6 +335,7 @@
           src="Imagens/nota1Icon.png"
           alt="Péssimo"
           title="Péssimo"
+          draggable="false"
         />
       </div>
     </div>
@@ -337,11 +345,13 @@
       href="#inicio"
       title="Voltar para o início"
       style="display: none"
+      draggable="false"
     >
       <img
         id="img-botão-voltar"
         src="Imagens/setaCima.png"
         alt="Voltar ao Início"
+        draggable="false"
       />
     </a>
     <!--Caixa de suporte-->
@@ -354,6 +364,7 @@
         src="Imagens/fecharIcon.png"
         alt="Fechar Suporte"
         style="right: 0%; position: absolute; width: 70px"
+        draggable="false"
       />
       <div id="container_mensagens"></div>
       <div id="container_botoes_suporte">
@@ -373,6 +384,7 @@
           src="Imagens/lixeiraIcon.png"
           alt="Apagar Histórico"
           title="Apagar conversa com o suporte."
+          draggable="false"
         />
       </div>
     </div>
@@ -382,6 +394,7 @@
         id="img-botão-suporte"
         src="Imagens/suporteIcon.png"
         alt="Abrir Suporte"
+        draggable="false"
       />
     </div>
     <!--Créditos-->
@@ -390,10 +403,11 @@
       src="Imagens/expandirCreditoIcon.png"
       alt="Exibir Créditos"
       title="Alterar visibilidade dos créditos"
+      draggable="false"
     />
     <footer>
       Criado por:
-      <a href="https://github.com/Vitorezy" target="_blank"> Vitorezy </a>
+      <a href="https://github.com/Vitorezy" target="_blank" draggable="false"> Vitorezy </a>
     </footer>
   </body>
 </html>
