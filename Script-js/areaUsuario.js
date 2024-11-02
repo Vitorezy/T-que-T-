@@ -133,7 +133,7 @@ optvirarparceiro.addEventListener("click", () => {
     container_data3.innerHTML =
       ' <p> Data de nascimento: </p> <input class="input_parceiro" type="date" required/>';
     container_data4.innerHTML =
-      '<p> CPF: </p> <input class="input_parceiro" required type="text" maxlength="8" minlength="8">';
+      '<p> CPF: </p> <input class="input_parceiro" type="number"oninput="this.value=this.value.slice(0,this.maxLength)" maxlength="8" minlength="8">';
     ptamanho.style.display = "none";
     pcor.style.display = "none";
     pdescricao.innerHTML = "Seus motivos:";
