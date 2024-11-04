@@ -36,7 +36,11 @@
     <header>
       <!--Logo-->
       <a href="Quem somos.html" draggable="false">
-        <img src="Imagens/logo sem fundo.png" alt="Logo Tá que Tá" draggable="false" />
+        <img
+          src="Imagens/logo sem fundo.png"
+          alt="Logo Tá que Tá"
+          draggable="false"
+        />
       </a>
       <!--Links de acesso para outras páginas-->
       <div class="links_acesso">
@@ -75,29 +79,36 @@
             draggable="false"
           />
         </div>
-        <section id="conteudo_opcoes_usuario" style="display: none">
-          <h1 id="nome_usuario"></h1>
-          <div id="foto_usuario"></div>
-          <label for="arquivo_foto_usuario">
-            <div id="caixa_arquivo_input">Selecione um arquivo de imagem.</div>
-          </label>
-          <input
-            type="file"
-            name="arquivo_foto_usuario"
-            id="arquivo_foto_usuario"
-            style="visibility: hidden"
-          />
-        </section>
-        <section id="nav_opcoes_usuario">
-          <ul>
-            <li id="optorcamento" title="Criar um Orçamento">Orçamento</li>
-            <li id="optvirarparceiro" title="requerir Parceria">
-              Virar parceiro
-            </li>
-            <li id="optexcluirconta" title="Excluir Conta">Excluir conta</li>
-          </ul>
+        <div style="height: 11%; width: 100%"></div>
+        <section id="container_menu_conteudo">
+          <!---->
+          <section id="conteudo_opcoes_usuario" style="display: none">
+            <h1 id="nome_usuario"></h1>
+            <div id="foto_usuario"></div>
+            <label for="arquivo_foto_usuario">
+              <div id="caixa_arquivo_input">
+                Selecione um arquivo de imagem.
+              </div>
+            </label>
+            <input
+              type="file"
+              name="arquivo_foto_usuario"
+              id="arquivo_foto_usuario"
+              style="visibility: hidden"
+            />
+          </section>
+          <section id="nav_opcoes_usuario">
+            <ul>
+              <li id="optorcamento" title="Criar um Orçamento">Orçamento</li>
+              <li id="optvirarparceiro" title="requerir Parceria">
+                Virar parceiro
+              </li>
+              <li id="optexcluirconta" title="Excluir Conta">Excluir conta</li>
+            </ul>
+          </section>
         </section>
       </section>
+
       <!--Page 1 - orçamento-->
       <div id="container_conteudo">
         <div id="header_conteudo_usuario">
@@ -219,7 +230,11 @@
       <button id="fechar_login" style="display: none"></button>
       <form id="formulario" method="get" action="areaUsuário.html">
         <label for="nome_login"
-          ><img src="Imagens/inputNameIcon.png" alt="Nome" loading="lazy" draggable="false"
+          ><img
+            src="Imagens/inputNameIcon.png"
+            alt="Nome"
+            loading="lazy"
+            draggable="false"
         /></label>
         <input
           type="text"
@@ -230,7 +245,11 @@
           placeholder="Digite seu nome"
         />
         <label for="senha_login">
-          <img src="Imagens/senhaIcon.png" alt="Senha" loading="lazy" draggable="false"
+          <img
+            src="Imagens/senhaIcon.png"
+            alt="Senha"
+            loading="lazy"
+            draggable="false"
         /></label>
         <input
           type="password"
@@ -400,7 +419,12 @@
     />
     <footer>
       Criado por:
-      <a href="https://github.com/Vitorezy" target="_blank" style="height: 0%" draggable="false">
+      <a
+        href="https://github.com/Vitorezy"
+        target="_blank"
+        style="height: 0%"
+        draggable="false"
+      >
         Vitorezy
       </a>
     </footer>
