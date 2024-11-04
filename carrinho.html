@@ -91,7 +91,8 @@
                 <h1>CPF</h1>
               </label>
               <input
-                type="text"
+                type="number"
+                oninput="this.value=this.value.slice(0,this.maxLength)"
                 name="cpfdados"
                 id="cpfdados"
                 minlength="11"
@@ -159,10 +160,11 @@
                 type="tel"
                 name="telefonedados"
                 id="telefonedados"
+                pattern="[+]{2}[(]{2}[)][0-9]{5,4}"
                 minlength="8"
+                maxlength="9"
                 required
                 placeholder="Seu telefone (8-9 Digitos)"
-                maxlength="9"
                 autocomplete="tel"
                 title="Número de Telefone ou Celular"
               />
@@ -172,7 +174,8 @@
                 <h1>CEP</h1>
               </label>
               <input
-                type="text"
+                type="number"
+                oninput="this.value=this.value.slice(0,this.maxLength)"
                 required
                 placeholder="Seu CEP (8 Digitos)"
                 name="cepdados"
@@ -234,6 +237,8 @@
           name="nome_login"
           id="nome_login"
           autocomplete="name"
+          maxlength="12"
+          minlength="3"
           required
           placeholder="Digite seu nome"
         />
@@ -282,7 +287,7 @@
           />
         </div>
         <ul id="requerimentos_login">
-          <li>O nome deve estar preenchido</li>
+          <li>O nome deve estar preenchido O nome deve estar preenchido e pode ter de 3 a 12 caractéres</li>
           <li>
             A senha precisa de no minímo 8 caractéres e máximo de 15 caractéres
           </li>
